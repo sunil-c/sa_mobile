@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Stats</title>
+    <link rel="stylesheet" href="content/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="content/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-link" href="#">SalesApex </a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="/report-1.html">Reports</a></li>
+                    <li role="presentation"><a href="#/companyStats">Admin Stats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+            <div id="loginSection" class="container section show" data-route="login">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span>User Name</span>
+                    </div>
+                    <div class="col-xs-12">
+                        <input id="userNameInp" type="text" class="input-sm" />
+                    </div>
+                    <div class="col-xs-12">
+                        <span>Password</span>
+                    </div>
+                    <div class="col-xs-12">
+                        <input id="passwordInp" type="password"  class="input-sm" />
+                    </div>
+                    <div class="col-xs-12" style="padding-top: 5px;">
+                        <a id="loginBtn" href="#/login" class="btn btn-default btn-success"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Login</a>
+                    </div>
+                </div>
+            </div>
+
+            <script id="company-template" type="text/x-handlebars-template">
+                {{#each this}}
+                <div>
+                    <div class="card">
+                        <h1 data-id="{{custID}}">{{custName}}</h1>
+                        <p><h3>Logins: {{logins}}</h3> </p>
+                        <p><h3>Reports Run: {{reports}}</h3></p>
+                        <p><a href="#/companyReports" class="btn btn-sm btn-info company-reports" data-id="{{custID}}">See Report Usage<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a></p>
+                        <p><a href="#/loadStats" class="btn btn-sm btn-info details">See Data Load Stats&nbsp;<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a></p>
+                    </div>
+                </div>
+                {{/each}}
+            </script>
+            <div id="companyList" class="container section hide" data-route="companies">
+                <div class="container" id="companyListData">
+                </div>
+            </div>
+
+            <script id="report-detail-template" type="text/x-handlebars-template">
+                {{#each this}}
+                <tr>
+                    <td>{{reportName}}</td>
+                    <td>{{numRuns}}</td>
+                </tr>
+                {{/each}}
+            </script>
+            <div id="companyReports" class="container section hide" data-route="reports">
+                <div class="container">
+                    <a href="#/companyStats" class="btn btn-primary btn-sm company-reports"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    <div class="table-responsive card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Report Name</th>
+                                    <th># of Runs</th>
+                                </tr>
+                            </thead>
+                            <tbody id="companyReportsData"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <script id="load-detail-template" type="text/x-handlebars-template">
+                {{#each this}}
+                <tr>
+                    <td data-id="{{custID}}">{{custName}}</td>
+                    <td>{{lastLoadDate}}</td>
+                    <td>{{loadStatus}}</td>
+                    <td>{{linesLoaded}}</td>
+                    <td>{{dataVolume}}</td>
+                </tr>
+                {{/each}}
+            </script>
+            <div id="companyLoadStats" class="container section hide" data-route="loadStats">
+                <div class="container">
+                    <a href="#/companyStats" class="btn btn-primary btn-sm company-reports"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    <div class="table-responsive card">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Last Load Date</th>
+                                    <th>Status</th>
+                                    <th>Lines Loaded</th>
+                                    <th>Data Volume</th>
+                                </tr>
+                            </thead>
+                            <tbody id="companyLoadStatsData"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/director.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/handlebars.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

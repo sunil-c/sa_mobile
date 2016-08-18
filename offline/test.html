@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A Gentle Introduction 2</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+
+    <script src="https://rawgit.com/flatiron/director/master/build/director.min.js">
+    </script>
+
+    <script>
+    $('document').ready(function() {
+      //
+      // create some functions to be executed when
+      // the correct route is issued by the user.
+      //
+      var showAuthorInfo = function () { console.log("showAuthorInfo"); };
+      var listBooks = function () { console.log("listBooks"); };
+
+      var allroutes = function () {
+          //everything from the # onwards
+          var hash = window.location.hash;
+          //get the second token
+          var route = window.location.hash.slice(2);
+          //get a list of all sections
+          var sections = $('section');
+          var section;
+          //choose the one section we want
+          section = sections.filter('[data-route=' + route + ']');
+
+          if (section.length) {
+              //close all sections
+              sections.hide(250);
+              //open the one section
+              section.show(250);
+          }
+      };
+
+      //
+      // define the routing table.
+      //
+      var routes = {
+        '/author': showAuthorInfo,
+        '/books': listBooks
+      };
+
+      //
+      // instantiate the router.
+      //
+      var router = Router(routes);
+
+      //
+      // a global configuration setting.
+      //whenever any route is triggered
+      router.configure({
+        on: allroutes
+      });
+        //init the router
+      router.init();
+    });
+    </script>
+</head>
+
+<body>
+    <section data-route="author">Author Name</section>
+    <section data-route="books">Book1, Book2, Book3</section>
+    <ul>
+        <li><a href="#/author">#/author</a></li>
+        <li><a href="#/books">#/books</a></li>
+    </ul>
+</body>
+</html>

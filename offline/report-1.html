@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="content/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="content/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-link" href="#">SalesApex </a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="#/availableReports">Reports</a></li>
+                    <li role="presentation"><a href="/index.html">Admin Stats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div id="loginSection" class="container section show" data-route="login">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span>User Name</span>
+                </div>
+                <div class="col-xs-12">
+                    <input id="userNameInp" type="text" class="input-sm" />
+                </div>
+                <div class="col-xs-12">
+                    <span>Password</span>
+                </div>
+                <div class="col-xs-12">
+                    <input id="passwordInp" type="password" class="input-sm" />
+                </div>
+                <div class="col-xs-12" style="padding-top: 5px;">
+                    <a id="loginBtn" href="#/login" class="btn btn-default btn-success"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Login</a>
+                </div>
+            </div>
+        </div>
+
+        <script id="report-list-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <a href="#/report/{{reportID}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
+            {{/each}}
+        </script>
+        <div id="reportList" class="container section hide" data-route="reportList">
+
+            <h2>Available Reports</h2>
+            <div class="list-group" id="reportListData">
+
+            </div>
+        </div>
+
+        <script id="growdecl-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <tr>
+                <td>{{custName}}</td>
+                <td>{{salesVar}}</td>
+                <td>{{gmVar}}</td>
+                <td>{{gmPctVar}}</td>
+            </tr>
+            {{/each}}
+        </script>
+        <script id="sublist" type="x-handlebars-template">
+            {{#each items}} {{! Each item is an "li" }}
+            <li class="dropdown-item">
+                <a href="#">{{name}}</a>
+                {{#if items}} {{! Within the context of the current item }}
+                <ul class="inner-menu">
+                    {{> sublist}} {{! Recursively render the partial }}
+                </ul>
+                {{/if}}
+            </li>
+            {{/each}}
+        </script>
+        <script id="orglist" type="x-handlebars-template">
+            <button class="btn btn-sm dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Organization<span class="caret"></span></button>
+            {{! displays the li's from sublist }}
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                {{> sublist}}
+            </ul>
+        </script>
+        <div id="growdeclList" class="container section hide" data-route="growdecl">
+            <div class="container-fluid">
+                <div class="container-fluid mgn-bottom-5">
+                    <a id="test1" href="#/availableReports" class="btn btn-primary btn-sm pull-left mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    <div id="orgListArea1" class="dropdown pull-left">
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Sales Var</th>
+                                    <th>GM Var</th>
+                                    <th>GM% Var</th>
+                                </tr>
+                            </thead>
+                            <tbody id="growdeclListData"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script id="team-perf-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <h1 data-id="{{repID}}">{{repName}}</h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Curr</th>
+                            <th>Prior</th>
+                            <th>Var</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each rows}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{curr}}</td>
+                            <td>{{prior}}</td>
+                            <td>{{var}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            {{/each}}
+        </script>
+        <div id="teamPerfList" class="container section hide" data-route="teamPerf">
+            <div class="container-fluid mgn-bottom-5">
+                <a id="test2" href="#/availableReports" class="btn btn-primary btn-sm pull-left mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                <div id="orgListArea2" class="dropdown pull-left">
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="container" id="teamPerfListData">
+                </div>
+            </div>
+        </div>
+
+        <script id="new-cust-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <tr>
+                <td>{{custName}}</td>
+                <td>{{sales}}</td>
+                <td>{{gm}}</td>
+                <td>{{gmPct}}</td>
+                <td>{{orders}}</td>
+            </tr>
+            {{/each}}
+        </script>
+        <div id="newCustReport" class="container section hide" data-route="newCust">
+            <div class="container">
+                <div class="container-fluid mgn-bottom-5">
+                    <a id="test3" href="#/availableReports" class="btn btn-primary btn-sm pull-left  mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    <div id="orgListArea3" class="dropdown pull-left">
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Sales</th>
+                                    <th>GM</th>
+                                    <th>GM %</th>
+                                    <th>Orders</th>
+                                </tr>
+                            </thead>
+                            <tbody id="newCustData"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script id="late-orders-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <tr>
+                <td>{{custName}}</td>
+                <td>{{avgTBO}}</td>
+                <td>{{currTBO}}</td>
+                <td>{{var}}</td>
+            </tr>
+            {{/each}}
+        </script>
+        <div id="lateOrdersReport" class="container section hide" data-route="lateOrders">
+            <div class="container">
+                <div class="container-fluid mgn-bottom-5">
+                    <a id="test4" href="#/availableReports" class="btn btn-primary btn-sm pull-left  mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    <div id="orgListArea4" class="dropdown pull-left">
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Avg TBO</th>
+                                    <th>Curr TBO</th>
+                                    <th>Var</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lateOrdersData"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/director.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/handlebars.js"></script>
+    <script src="scripts/reports.js"></script>
+</body>
+
+</html>
