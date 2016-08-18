@@ -65,7 +65,7 @@
     <Content Include="content\ie10-viewport-bug-workaround.css" />
     <Content Include="data\items.json" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="index.html" />
+    <Content Include="usage-stats.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -74,7 +74,7 @@
     <Content Include="content\variables.less" />
     <Content Include="content\cosmo.less" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="report-1.html" />
+    <Content Include="reports.html" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\director.js" />
@@ -93,7 +93,7 @@
   <ItemGroup>
     <None Include="data\closets.json" />
     <Content Include="images\ajax-loader.gif" />
-    <Content Include="scripts\app.js" />
+    <Content Include="scripts\usage-stats.js" />
     <Content Include="scripts\handlebars.js" />
     <Content Include="scripts\reports.js" />
     <Content Include="test.html" />

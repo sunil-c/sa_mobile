@@ -74,17 +74,21 @@
             </script>
             <div id="companyReports" class="container section hide" data-route="reports">
                 <div class="container">
-                    <a href="#/companyStats" class="btn btn-primary btn-sm company-reports"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                    <div class="table-responsive card">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Report Name</th>
-                                    <th># of Runs</th>
-                                </tr>
-                            </thead>
-                            <tbody id="companyReportsData"></tbody>
-                        </table>
+                    <div class="container-fluid mgn-bottom-5">
+                        <a href="#/companyStats" class="btn btn-primary btn-sm company-reports"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="table-responsive card">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Report Name</th>
+                                        <th># of Runs</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="companyReportsData"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,20 +106,24 @@
             </script>
             <div id="companyLoadStats" class="container section hide" data-route="loadStats">
                 <div class="container">
-                    <a href="#/companyStats" class="btn btn-primary btn-sm company-reports"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                    <div class="table-responsive card">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Customer</th>
-                                    <th>Last Load Date</th>
-                                    <th>Status</th>
-                                    <th>Lines Loaded</th>
-                                    <th>Data Volume</th>
-                                </tr>
-                            </thead>
-                            <tbody id="companyLoadStatsData"></tbody>
-                        </table>
+                    <div class="container-fluid mgn-bottom-5">
+                        <a href="#/companyStats" class="btn btn-primary btn-sm company-reports"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="table-responsive card">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <th>Last Load Date</th>
+                                        <th>Status</th>
+                                        <th>Lines Loaded</th>
+                                        <th>Data Volume</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="companyLoadStatsData"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,7 +133,7 @@
     <script src="scripts/director.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/handlebars.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/usage-stats.js"></script>
 </body>
 
 </html>
