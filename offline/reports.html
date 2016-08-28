@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li role="presentation"><a href="#/availableReports">Reports</a></li>
-                    <li role="presentation"><a href="/index.html">Admin Stats</a></li>
+                    <li role="presentation"><a href="/usage-stats.html">Admin Stats</a></li>
                 </ul>
             </div>
         </div>
@@ -82,17 +82,34 @@
             {{/each}}
         </script>
         <script id="orglist" type="x-handlebars-template">
-            <button class="btn btn-sm dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Organization<span class="caret"></span></button>
+            <button class="btn btn-sm dropdown-toggle control-150" type="button" id="menu1" data-toggle="dropdown">Organization<span class="caret"></span></button>
             {{! displays the li's from sublist }}
             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 {{> sublist}}
             </ul>
         </script>
+        <script id="timelist" type="x-handlebars-template">
+            <button class="btn btn-sm dropdown-toggle control-150" type="button" id="timemenu" data-toggle="dropdown">Time Period<span class="caret"></span></button>
+            {{! displays the li's from sublist }}
+            <ul class="dropdown-menu" role="menu" aria-labelledby="timemenu">
+                {{> sublist}}
+            </ul>
+        </script>
         <div id="growdeclList" class="container section hide" data-route="growdecl">
-            <div class="container-fluid">
-                <div class="container-fluid mgn-bottom-5">
-                    <a id="test1" href="#/availableReports" class="btn btn-primary btn-sm pull-left mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                    <div id="orgListArea1" class="dropdown pull-left">
+            <div class="container">
+                <div class="container mgn-bottom-5">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <a href="#/availableReports" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <div id="orgListArea1" class="dropdown pull-left"></div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div id="timeListArea1" class="dropdown pull-left"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid">
@@ -141,9 +158,19 @@
             {{/each}}
         </script>
         <div id="teamPerfList" class="container section hide" data-route="teamPerf">
-            <div class="container-fluid mgn-bottom-5">
-                <a id="test2" href="#/availableReports" class="btn btn-primary btn-sm pull-left mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                <div id="orgListArea2" class="dropdown pull-left">
+            <div class="container mgn-bottom-5">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <a href="#/availableReports" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div id="orgListArea2" class="dropdown pull-left"></div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div id="timeListArea2" class="dropdown pull-left"></div>
+                    </div>
                 </div>
             </div>
             <div class="container-fluid">
@@ -165,14 +192,24 @@
         </script>
         <div id="newCustReport" class="container section hide" data-route="newCust">
             <div class="container">
-                <div class="container-fluid mgn-bottom-5">
-                    <a id="test3" href="#/availableReports" class="btn btn-primary btn-sm pull-left  mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                    <div id="orgListArea3" class="dropdown pull-left">
+                <div class="container mgn-bottom-5">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <a href="#/availableReports" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <div id="orgListArea3" class="dropdown pull-left"></div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div id="timeListArea3" class="dropdown pull-left"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table  table-striped">
                             <thead>
                                 <tr>
                                     <th>Customer</th>
@@ -202,14 +239,24 @@
         </script>
         <div id="lateOrdersReport" class="container section hide" data-route="lateOrders">
             <div class="container">
-                <div class="container-fluid mgn-bottom-5">
-                    <a id="test4" href="#/availableReports" class="btn btn-primary btn-sm pull-left  mgn-right-5"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                    <div id="orgListArea4" class="dropdown pull-left">
+                <div class="container mgn-bottom-5">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <a href="#/availableReports" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <div id="orgListArea4" class="dropdown pull-left"></div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div id="timeListArea4" class="dropdown pull-left"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>Customer</th>

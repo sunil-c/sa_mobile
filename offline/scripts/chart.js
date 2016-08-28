@@ -16,22 +16,7 @@
     var ESCAPE_KEY = 27;
     var TIME_INTERVAL = 30000; //30 secs
     var ABORT_AFTER_INTERVAL = 20000; //20 secs
-    var FILE_TO_CHECKFOR = "/check/online.html"; //you can change this to whatever
-    var CLOSET_NAMESPACE_PREFIX = "closet-";
-    var CLOSETS_NAMESPACE = "closets";
 
-    var setClosetID = function (val) {
-        gClosetID = val;
-    };
-    var getClosetID = function () {
-        return gClosetID;
-    };
-    var getOnlineStatus = function () {
-        return gOnline;
-    };
-    var setOnlineStatus = function (val) {
-        gOnline = val;
-    };
 
     if (window.location.host.indexOf('localhost') >= 0) {           // running from localhost
         gServicePath = 'http://localhost:25004/api';
@@ -158,29 +143,6 @@
         }
     };
 
-    //create a function that will dispatch a custom event
-    var fireEvent = function (name, data) {
-        var e = document.createEvent("Event");
-        e.initEvent(name, true, true);
-        e.data = data;
-        window.dispatchEvent(e);
-    };
-    //capture custom event and toggle some css when the event occurs
-    window.addEventListener("goodconnection", function (e) {
-        $(".info").toggleClass("onlineindicator-off", false);
-        setOnlineStatus(true);
-    });
-    //capture custom event and toggle some css when the event occurs
-    window.addEventListener("connectionerror", function (e) {
-        $(".info").toggleClass("onlineindicator-off", true);
-        setOnlineStatus(false);
-    });
-    //capture custom event and toggle some css when the event occurs
-    window.addEventListener("connectiontimeout", function (e) {
-        $(".info").toggleClass("onlineindicator-off", true);
-        setOnlineStatus(false);
-    });
-
 
     var availRoute = function () {
         console.log('availRoute');
@@ -294,7 +256,7 @@
             default:
                 break;
         }
-        
+
     };
 
     var renderOrgDD = function (orgListArea) {

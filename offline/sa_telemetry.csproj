@@ -59,12 +59,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cache.appcache" />
+    <Content Include="chart.html" />
     <Content Include="content\app.css" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\ie10-viewport-bug-workaround.css" />
     <Content Include="data\items.json" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="scripts\Canvas.js" />
+    <Content Include="scripts\chart.js" />
     <Content Include="usage-stats.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
