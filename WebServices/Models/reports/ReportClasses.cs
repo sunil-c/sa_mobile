@@ -9,5 +9,7 @@ namespace SA.WebServices.Models.Reports
     {
         public int reportID;
         public string reportName;
+        public bool hasRoute;
+        public string route;
     }
 }

@@ -7,16 +7,23 @@
         gAuthPath = "",
         gAuthorized = false,
         gToken = {},
-        gClosetID = 0,
-        gCompanyID = 0,
-        gOnline = true,
-        gCurrentCloset = {};
+        gCustID = 0,
+        gOnline = true;
 
     var ENTER_KEY = 13;
     var ESCAPE_KEY = 27;
     var TIME_INTERVAL = 30000; //30 secs
     var ABORT_AFTER_INTERVAL = 20000; //20 secs
+    var FILE_TO_CHECKFOR = "/check/online.html"; //you can change this to whatever
+    var CLOSET_NAMESPACE_PREFIX = "closet-";
+    var CLOSETS_NAMESPACE = "closets";
 
+    var getOnlineStatus = function () {
+        return gOnline;
+    };
+    var setOnlineStatus = function (val) {
+        gOnline = val;
+    };
 
     if (window.location.host.indexOf('localhost') >= 0) {           // running from localhost
         gServicePath = 'http://localhost:25004/api';
@@ -26,6 +33,8 @@
         gAuthPath = '/services/api';
         gServicePath = '/services/api';
     }
+
+
 
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
@@ -74,8 +83,9 @@
             return Math.floor(Math.random() * (max - min)) + min;
         },
         //turns a section on and all others off
-        showSection: function (route) {
+        showSection: function (route, hideotherSections) {
             console.log('showSection');
+            var hideOtherSections = hideotherSections || true;
             //get a list of all containers with section class
             var sections = $('.section');
             var section;
@@ -83,8 +93,11 @@
             section = sections.filter('[data-route=' + route + ']');
 
             if (section.length) {
-                sections.removeClass('show');
-                sections.addClass('hide');
+                if (hideotherSections === true) {
+                    sections.removeClass('show');
+                    sections.addClass('hide');
+                }
+
                 section.removeClass('hide');
                 section.addClass('show');
             }
@@ -143,36 +156,22 @@
         }
     };
 
-
-    var availRoute = function () {
-        console.log('availRoute');
-        if (gAuthorized) {
-            getAvailableReports();
-        }
-        else {
-            //tell authorize what to trigger after login
-            authorize.init(getAvailableReports);
-            util.showSection('login');
-        }
-    };
-    var reportRoute = function (reportID) {
-        console.log('getReportRoute');
-        if (gAuthorized) {
-            getReport(reportID);
-        }
-        else {
-            //tell authorize what to trigger after login
-            authorize.init(getAvailableReports);
-            util.showSection('login');
-        }
-    };
     var loginRoute = function () {
         console.log('loginRoute');
 
         if (!gAuthorized) {
             //call authorize code here
-            authorize.login($('#userNameInp').val, $('#passwordInp').val, getAvailableReports);
+            authorize.login($('#userNameInp').val, $('#passwordInp').val, showTopSection);
         }
+    };
+
+    var availRoute = function () {
+        location.href = "reports.html";
+    };
+
+    //customer selected in search dialog
+    var selectCustomer = function (custID) {
+        gCustID = custID;
     };
 
     var getOrgHierarchy = function () {
@@ -207,8 +206,14 @@
         data.push({ "id": "4", "name": "Prior Quarter", "parent": "", "level": "1", "items": [] });
         data.push({ "id": "5", "name": "Current YTD", "parent": "", "level": "1", "items": [] });
         data.push({ "id": "6", "name": "Prior Year", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "6", "name": "Prior 12 Months", "parent": "", "level": "1", "items": [] });
+        data.push({ "id": "7", "name": "Prior 12 Months", "parent": "", "level": "1", "items": [] });
         return data;
+    };
+
+    var showTopSection = function () {
+        renderOrgDD('orgListArea');
+        renderTimeDD("timeListArea");
+        util.showSection('criteria');
     };
 
     var getReport = function (reportID) {
@@ -216,42 +221,31 @@
         var data = [];
         var report = parseInt(reportID);
         switch (report) {
-            case 1:
-                //same as 2
-                console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "salesVar": "$1234.56", "gmVar": "$234.65", "gmPctVar": "5.8%" });
-                data.push({ "custID": "200", "custName": "Customer 200", "salesVar": "$2234.56", "gmVar": "$334.65", "gmPctVar": "6.8%" });
-                data.push({ "custID": "300", "custName": "Customer 300", "salesVar": "$3234.56", "gmVar": "$434.65", "gmPctVar": "7.8%" });
-                renderGrowDeclReport(data);
+            case 100:
+                //header info
+                data.push({ "name": "Brinkleys Bakery", "sales": "$12,389", "gp": "$3,556", "gpPct": "11.75%", "nCount": "1" });
+                data.push({ "name": "SIC Code 5500", "sales": "", "gp": "", "gpPct": "19.75%", "nCount": "218" });
+
+                renderHeaderReport(data);
                 break;
-            case 2:
-                //same as 1
-                console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "salesVar": "$1234.56", "gmVar": "$234.65", "gmPctVar": "5.8%" });
-                data.push({ "custID": "200", "custName": "Customer 200", "salesVar": "$2234.56", "gmVar": "$334.65", "gmPctVar": "6.8%" });
-                data.push({ "custID": "300", "custName": "Customer 300", "salesVar": "$3234.56", "gmVar": "$434.65", "gmPctVar": "7.8%" });
-                renderGrowDeclReport(data);
+            case 200:
+                //sales improvement
+                data.push({ "name": "Rolled Towels", "sales": "$12,389", "salespct": "12.66%", "potential": "$1,124", "salesPct2": "16.33%" });
+                data.push({ "name": "Napkins and Disposables", "sales": "$12,389", "salespct": "12.66%", "potential": "$1,124", "salesPct2": "16.33%" });
+                data.push({ "name": "Toilet Tissue", "sales": "$12,389", "salespct": "12.66%", "potential": "$1,124", "salesPct2": "16.33%" });
+                data.push({ "name": "Cleaning Chemicals", "sales": "$12,389", "salespct": "12.66%", "potential": "$1,124", "salesPct2": "16.33%" });
+                data.push({ "name": "Equipment", "sales": "$12,389", "salespct": "12.66%", "potential": "$1,124", "salesPct2": "16.33%" });
+                renderSalesImprovementReport(data);
                 break;
-            case 3:
-                console.log('report type = ' + reportID);
-                data.push({ "repID": "100", "repName": "John Smith", "rows": [{ "name": "Sales", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM%", "curr": "12.66%", "prior": "1.66%", "var": "1.00%" }] });
-                data.push({ "repID": "100", "repName": "Jane Doe", "rows": [{ "name": "Sales", "curr": "$2234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM%", "curr": "12.66%", "prior": "1.66%", "var": "1.00%" }] });
-                data.push({ "repID": "100", "repName": "Frank Jones", "rows": [{ "name": "Sales", "curr": "$3234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM%", "curr": "12.66%", "prior": "1.66%", "var": "1.00%" }] });
-                renderTeamPerfReport(data);
-                break;
-            case 4:
-                console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "sales": "$1234.56", "gm": "$234.65", "gmPct": "5.8%" });
-                data.push({ "custID": "200", "custName": "Customer 200", "sales": "$2234.56", "gm": "$334.65", "gmPct": "6.8%" });
-                data.push({ "custID": "300", "custName": "Customer 300", "sales": "$3234.56", "gm": "$434.65", "gmPct": "7.8%" });
-                renderNewCustReport(data);
-                break;
-            case 5:
-                console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "avgTBO": "12", "currTBO": "30", "var": "18" });
-                data.push({ "custID": "200", "custName": "Customer 200", "avgTBO": "23", "currTBO": "40", "var": "17" });
-                data.push({ "custID": "300", "custName": "Customer 300", "avgTBO": "21", "currTBO": "29", "var": "8" });
-                renderLateOrdersReport(data);
+            case 300:
+                //item pricing
+                data.push({ "name": "item #1", "sales": "$1,233", "gpPct": "11.45%", "opportunity": "7.89%", "improvement": "$645", "gpPct2": "15.77%" });
+                data.push({ "name": "item #2", "sales": "$1,233", "gpPct": "11.45%", "opportunity": "7.89%", "improvement": "$645", "gpPct2": "15.77%" });
+                data.push({ "name": "item #3", "sales": "$1,233", "gpPct": "11.45%", "opportunity": "7.89%", "improvement": "$645", "gpPct2": "15.77%" });
+                data.push({ "name": "item #4", "sales": "$1,233", "gpPct": "11.45%", "opportunity": "7.89%", "improvement": "$645", "gpPct2": "15.77%" });
+                data.push({ "name": "item #5", "sales": "$1,233", "gpPct": "11.45%", "opportunity": "7.89%", "improvement": "$645", "gpPct2": "15.77%" });
+                data.push({ "name": "item #6", "sales": "$1,233", "gpPct": "11.45%", "opportunity": "7.89%", "improvement": "$645", "gpPct2": "15.77%" });
+                renderItemPricingReport(data);
                 break;
             default:
                 break;
@@ -273,7 +267,6 @@
         $("#" + orgListArea).html(main({ items: items }));
 
     }
-
     var renderTimeDD = function (timeListArea) {
         console.log('renderTimeDD');
         var items = getTimeOptions();
@@ -287,55 +280,32 @@
         // Render the list.
         $("#" + timeListArea).html(main({ items: items }));
     };
-
-    var renderGrowDeclReport = function (data) {
-        console.log('renderGrowDeclReport');
-        renderOrgDD("orgListArea1");
-        renderTimeDD("timeListArea1");
-        var itemTemplate = Handlebars.compile($('#growdecl-template').html());
+    var renderHeaderReport = function (data) {
+        console.log('renderHeaderReport');
+        var itemTemplate = Handlebars.compile($('#potential-header-template').html());
         //add data to template
         var template = itemTemplate(data);
-        $('#growdeclListData').html(template);
+        $('#headerListData').html(template);
 
-        util.showSection('growdecl');
     };
-
-    var renderTeamPerfReport = function (data) {
-        console.log('renderTeamPerfReport');
-        renderOrgDD('orgListArea2');
-        renderTimeDD("timeListArea2");
-        var itemTemplate = Handlebars.compile($('#team-perf-template').html());
+    var renderItemPricingReport = function (data) {
+        console.log('renderItemPricingReport');
+        var itemTemplate = Handlebars.compile($('#potential-pricing-template').html());
         //add data to template
         var template = itemTemplate(data);
-        $('#teamPerfListData').html(template);
-        util.showSection('teamPerf');
-    };
+        $('#itemPricingListData').html(template);
 
-    var renderNewCustReport = function (data) {
-        console.log('renderNewCustReport');
-        renderOrgDD("orgListArea3");
-        renderTimeDD("timeListArea3");
-        var itemTemplate = Handlebars.compile($('#new-cust-template').html());
+    };
+    var renderSalesImprovementReport = function (data) {
+        console.log('renderSalesImprovementReport');
+        var itemTemplate = Handlebars.compile($('#potential-improvement-template').html());
         //add data to template
         var template = itemTemplate(data);
-        $('#newCustData').html(template);
+        $('#salesImprovementListData').html(template);
 
-        util.showSection('newCust');
     };
 
-    var renderLateOrdersReport = function (data) {
-        console.log('renderLateOrdersReport');
-        renderOrgDD("orgListArea4");
-        renderTimeDD("timeListArea4");
-        var itemTemplate = Handlebars.compile($('#late-orders-template').html());
-        //add data to template
-        var template = itemTemplate(data);
-        $('#lateOrdersData').html(template);
-
-        util.showSection('lateOrders');
-    };
-
-    var getAvailableReports = function () {
+    var dummyPlaceHolder = function () {
         console.log('getAvailableReports');
         //get the stats across all companies
 
@@ -366,24 +336,72 @@
         });
     };
 
-    var renderAvailableReports = function (reports) {
-        console.log('renderAvailableReports');
-        var itemTemplate = Handlebars.compile($('#report-list-template').html());
-        var template = itemTemplate(reports);
-        $('#reportListData').html(template);
-        util.showSection('reportList');
+    var searchCustomers = function (custSearchCriteria) {
+        console.log('searchCustomers');
+
+        //make the call to the server to get the data
+        var data = [];
+        data.push({ "custID": "100", "custAcctCode": "12345A", "custname": "customer 100", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "110", "custAcctCode": "12346A", "custname": "customer 110", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "120", "custAcctCode": "12347A", "custname": "customer 120", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "130", "custAcctCode": "12348A", "custname": "customer 130", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "140", "custAcctCode": "12349A", "custname": "customer 140", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "150", "custAcctCode": "12355A", "custname": "customer 150", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "160", "custAcctCode": "12365A", "custname": "customer 160", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "170", "custAcctCode": "12375A", "custname": "customer 170", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "180", "custAcctCode": "12385A", "custname": "customer 180", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "190", "custAcctCode": "12395A", "custname": "customer 190", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "200", "custAcctCode": "12445A", "custname": "customer 200", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "210", "custAcctCode": "12545A", "custname": "customer 210", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "220", "custAcctCode": "12645A", "custname": "customer 220", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "230", "custAcctCode": "12745A", "custname": "customer 230", "custAddr": "some address somewhere", "billTo": "false" });
+        data.push({ "custID": "240", "custAcctCode": "12845A", "custname": "customer 240", "custAddr": "some address somewhere", "billTo": "false" });
+        renderCustomers(data);
+
+    };
+    var renderCustomers = function (data) {
+        console.log('renderCustomers');
+
+        var itemTemplate = Handlebars.compile($('#custlist-template').html());
+        //add data to template
+        var template = itemTemplate(data);
+        $('#custListData').html(template);
+        $("#myModal").modal();
     };
 
     var routes = {
+        '/custSearch': searchCustomers,
         '/availableReports': availRoute,
-        '/login': loginRoute,
-        '/report/:reportID': reportRoute
+        '/report/:reportID': getReport,
+        '/selectCust/:custID': selectCustomer,
+        '/login': loginRoute
     };
 
     var router = Router(routes);
     router.init();
     console.log(router);
+
     $(document).ready(function () {
+        //button next to the search box
+        $("#goSearchBtn").off().click(function () {
+            console.log('goSearchBtn click');
+            searchCustomers($('#searchTxt').val());
+        });
+
+        //cancel btn in the customer select dialog
+        $("#cancelBtn").off().click(function () {
+            console.log('modal cancel button clicked');
+            gCustID = 0;
+        });
+
+        //ok button in the customer select dialog
+        $("#saveBtn").off().click(function () {
+            console.log('modal Ok button clicked');
+            getReport(100);
+            getReport(200);
+            getReport(300);
+            util.showSection('potential', false);
+        });
 
     });
 

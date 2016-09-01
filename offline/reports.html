@@ -48,7 +48,11 @@
 
         <script id="report-list-template" type="text/x-handlebars-template">
             {{#each this}}
-            <a href="#/report/{{reportID}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
+                {{#if hasRoute}}
+                    <a href="#/{{route}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
+                {{else}}
+                    <a href="#/report/{{reportID}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
+                {{/if}}
             {{/each}}
         </script>
         <div id="reportList" class="container section hide" data-route="reportList">
@@ -271,9 +275,35 @@
                 </div>
             </div>
         </div>
+
+        <div id="chartReport" class="container section hide" data-route="charts">
+            <div class="container">
+                <div class="container mgn-bottom-5">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <a href="#/availableReports" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <div id="orgListArea5" class="dropdown pull-left"></div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div id="timeListArea5" class="dropdown pull-left"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="chartContainer" style="height:350px; max-width:800px; margin:0 auto"></div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
-    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/dx.viz.js"></script>
     <script src="scripts/director.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/handlebars.js"></script>

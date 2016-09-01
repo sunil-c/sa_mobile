@@ -59,15 +59,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cache.appcache" />
-    <Content Include="chart.html" />
+    <Content Include="profile.html" />
     <Content Include="content\app.css" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\ie10-viewport-bug-workaround.css" />
     <Content Include="data\items.json" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="potential.html" />
     <Content Include="scripts\Canvas.js" />
-    <Content Include="scripts\chart.js" />
+    <Content Include="scripts\profile.js" />
     <Content Include="scripts\cldr.js" />
     <Content Include="scripts\cldr\event.js" />
     <Content Include="scripts\cldr\supplemental.js" />
@@ -91,6 +92,7 @@
     <Content Include="data\vectormap-data\europe.js" />
     <Content Include="data\vectormap-data\usa.js" />
     <Content Include="data\vectormap-data\world.js" />
+    <Content Include="scripts\potential.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.debug.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.node.js" />

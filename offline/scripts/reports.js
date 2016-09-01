@@ -245,8 +245,38 @@
         data.push({ "id": "4", "name": "Prior Quarter", "parent": "", "level": "1", "items": [] });
         data.push({ "id": "5", "name": "Current YTD", "parent": "", "level": "1", "items": [] });
         data.push({ "id": "6", "name": "Prior Year", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "6", "name": "Prior 12 Months", "parent": "", "level": "1", "items": [] });
+        data.push({ "id": "7", "name": "Prior 12 Months", "parent": "", "level": "1", "items": [] });
         return data;
+    };
+
+    var getChart = function () {
+        console.log('getChart');
+
+        var dataSource = [{
+            day: "Monday",
+            oranges: 3
+        }, {
+            day: "Tuesday",
+            oranges: 2
+        }, {
+            day: "Wednesday",
+            oranges: 3
+        }, {
+            day: "Thursday",
+            oranges: 4
+        }, {
+            day: "Friday",
+            oranges: 6
+        }, {
+            day: "Saturday",
+            oranges: 11
+        }, {
+            day: "Sunday",
+            oranges: 4
+        }];
+        //normally this is takes place after an ajax call to the ws to get data
+        renderCharts(dataSource);
+        return dataSource
     };
 
     var getReport = function (reportID) {
@@ -373,6 +403,27 @@
         util.showSection('lateOrders');
     };
 
+    var renderCharts = function (data) {
+        console.log('renderCharts');
+
+        renderOrgDD("orgListArea5");
+        renderTimeDD("timeListArea5");
+
+        $("#chartContainer").dxChart({
+            dataSource: data,
+            containerBackgroundColor: 'crimson',
+            legend: { visible: false },
+            series: {
+                argumentField: "day",
+                valueField: "oranges",
+                name: "My oranges",
+                type: "line",
+                color: '#ffa500'
+            }
+        });
+        util.showSection('charts');
+    };
+
     var getAvailableReports = function () {
         console.log('getAvailableReports');
         //get the stats across all companies
@@ -412,10 +463,25 @@
         util.showSection('reportList');
     };
 
+    var chartRoute = function () {
+        console.log('chartRoute');
+        if (gAuthorized) {
+            getChart();
+        }
+        else {
+            //tell authorize what to trigger after login
+            authorize.init(getAvailableReports);
+            util.showSection('login');
+        }
+    };
+
     var routes = {
         '/availableReports': availRoute,
         '/login': loginRoute,
-        '/report/:reportID': reportRoute
+        '/report/:reportID': reportRoute,
+        '/chart': chartRoute,
+        '/potential': function () { location.href = "potential.html" },
+        '/profile': function () { location.href = "profile.html" }
     };
 
     var router = Router(routes);
