@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cache.appcache" />
+    <Content Include="content\bootstrap-theme-flatly.css" />
+    <Content Include="content\bootstrap-theme-flatly.min.css" />
+    <Content Include="content\bootstrap-theme-superhero.css" />
+    <Content Include="content\bootstrap-theme-superhero.min.css" />
+    <Content Include="content\bootstrap-theme-united.css" />
+    <Content Include="content\bootstrap-theme-united.min.css" />
     <Content Include="profile.html" />
     <Content Include="content\app.css" />
     <Content Include="content\bootstrap-theme.css" />

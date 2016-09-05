@@ -26,7 +26,8 @@
 .inner-menu > li > a:focus {
   text-decoration: none;
   color: #ffffff;
-  background-color: #2780e3;
+  /*background-color: #2780e3;*/
+  background-color: #d9230f;
 }
 .inner-menu > .active > a,
 .inner-menu > .active > a:hover,
@@ -34,7 +35,8 @@
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #2780e3;
+  /*background-color: #2780e3;*/
+  background-color: #d9230f;
 }
 .inner-menu > .disabled > a,
 .inner-menu > .disabled > a:hover,
@@ -51,6 +53,9 @@
 }
 
 /* add this to anything you want to be XX px wide */
+.control-100{
+    width: 100px;
+}
 .control-150{
     width: 150px;
 }
@@ -62,6 +67,9 @@
 }
 /* add a top margin to control-150 for Landscape phones and tablets and down */
 @media (max-width: 780px) {
+    .control-100 {
+        margin-top: 5px;
+    }
     .control-150 {
         margin-top: 5px;
     }
