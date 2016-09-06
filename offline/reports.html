@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reports</title>
-    <link rel="stylesheet" href="content/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="content/bootstrap-theme-flatly.min.css" >
     <link rel="stylesheet" href="content/app.css">
 </head>
 
@@ -136,7 +136,7 @@
 
         <script id="team-perf-template" type="text/x-handlebars-template">
             {{#each this}}
-            <h1 data-id="{{repID}}">{{repName}}</h1>
+            <h3 data-id="{{repID}}">{{repName}}</h3>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -308,6 +308,7 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/handlebars.js"></script>
     <script src="scripts/authorize.js"></script>
+    <script src="scripts/sa-util.js"></script>
     <script src="scripts/reports.js"></script>
 </body>
 

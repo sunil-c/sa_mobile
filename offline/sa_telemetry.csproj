@@ -100,6 +100,7 @@
     <Content Include="data\vectormap-data\usa.js" />
     <Content Include="data\vectormap-data\world.js" />
     <Content Include="scripts\potential.js" />
+    <Content Include="scripts\sa-util.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.debug.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.node.js" />

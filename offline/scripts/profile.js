@@ -13,8 +13,6 @@
     var TIME_INTERVAL = 30000; //30 secs
     var ABORT_AFTER_INTERVAL = 20000; //20 secs
     var FILE_TO_CHECKFOR = "/check/online.html"; //you can change this to whatever
-    var CLOSET_NAMESPACE_PREFIX = "closet-";
-    var CLOSETS_NAMESPACE = "closets";
 
     var getOnlineStatus = function () {
         return gOnline;
@@ -33,74 +31,11 @@
     }
     //initialize the authorization object
     var authorize = new Authorize({}, gAuthPath);
-
+    //initialize the Util object
+    var util = new Util();
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
     });
-    var util = {
-        uuid: function () {
-            /*jshint bitwise:false */
-            console.log('util.uuid');
-            var i, random;
-            var uuid = '';
-
-            for (i = 0; i < 32; i++) {
-                random = Math.random() * 16 | 0;
-                if (i === 8 || i === 12 || i === 16 || i === 20) {
-                    uuid += '-';
-                }
-                uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
-            }
-
-            return uuid;
-        },
-        pluralize: function (count, word) {
-            console.log('util.pluralize');
-            return count === 1 ? word : word + 's';
-        },
-        store: function (namespace, data) {
-            console.log('util.store');
-            if (arguments.length > 1) {
-                return localStorage.setItem(namespace, JSON.stringify(data));
-            } else {
-                var store = localStorage.getItem(namespace);
-                return (store && JSON.parse(store)) || [];
-            }
-        },
-        remove: function (namespace) {
-            var nameLength = namespace.length;
-
-            Object.keys(localStorage)
-                .forEach(function (key) {
-                    if (key.substring(0, nameLength) === namespace) {
-                        localStorage.removeItem(key);
-                    }
-                });
-        },
-        getRandomInt: function (min, max) {
-            return Math.floor(Math.random() * (max - min)) + min;
-        },
-        //turns a section on and all others off depending on flag value
-        showSection: function (route, hideOtherSections) {
-            console.log('showSection');
-            hideOtherSections = hideOtherSections || true;
-            //get a list of all containers with section class
-            var sections = $('.section');
-            var section;
-            //choose the one section we want
-            section = sections.filter('[data-route=' + route + ']');
-
-            if (section.length) {
-                if (hideOtherSections === true) {
-                    sections.removeClass('show');
-                    sections.addClass('hide');
-                }
-
-                section.removeClass('hide');
-                section.addClass('show');
-            }
-        }
-    };
 
     var loginRoute = function () {
         console.log('loginRoute');

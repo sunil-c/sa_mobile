@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="content/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="content/bootstrap-theme-flatly.min.css">
     <link rel="stylesheet" href="content/app.css">
 </head>
 
@@ -103,7 +103,7 @@
             </div>
             <div id="profileArea" class="container section hide" data-route="profile">
                 <div class="container">
-                    <h2>General overview</h2>
+                    <h3>General overview</h3>
                     <script id="general-overview-template" type="text/x-handlebars-template">
                         {{#each this}}
                         <tr>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <h2>Sales Trend</h2>
+                    <h3>Sales Trend</h3>
                     <script id="sales-trend-template" type="text/x-handlebars-template">
                         {{#each this}}
                         <tr>
@@ -282,6 +282,7 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/handlebars.js"></script>
     <script src="scripts/authorize.js"></script>
+    <script src="scripts/sa-util.js"></script>
     <script src="scripts/profile.js"></script>
 </body>
 
