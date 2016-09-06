@@ -73,6 +73,7 @@
     <Content Include="data\items.json" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="potential.html" />
+    <Content Include="scripts\authorize.js" />
     <Content Include="scripts\Canvas.js" />
     <Content Include="scripts\profile.js" />
     <Content Include="scripts\cldr.js" />

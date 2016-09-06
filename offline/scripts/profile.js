@@ -5,11 +5,7 @@
 
     var gServicePath = "",
         gAuthPath = "",
-        gAuthorized = false,
-        gToken = {},
         gCustID = 0,
-        gGetPot = 0,
-        gGetPro = 0,
         gOnline = true;
 
     var ENTER_KEY = 13;
@@ -20,22 +16,6 @@
     var CLOSET_NAMESPACE_PREFIX = "closet-";
     var CLOSETS_NAMESPACE = "closets";
 
-    var clearReportFlags = function () {
-        gGetPot = 0;
-        gGetPro = 0;
-    };
-    var setPotentialFlag = function (val) {
-        gGetPot = val;
-    };
-    var setProfileFlag = function (val) {
-        gGetPro = val;
-    };
-    var getPotentialFlag = function () {
-        return gGetPot;
-    };
-    var getProfileFlag = function () {
-        return gGetPro;
-    };
     var getOnlineStatus = function () {
         return gOnline;
     };
@@ -51,8 +31,8 @@
         gAuthPath = '/services/api';
         gServicePath = '/services/api';
     }
-
-
+    //initialize the authorization object
+    var authorize = new Authorize({}, gAuthPath);
 
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
@@ -100,10 +80,10 @@
         getRandomInt: function (min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         },
-        //turns a section on and all others off
-        showSection: function (route, hideotherSections) {
+        //turns a section on and all others off depending on flag value
+        showSection: function (route, hideOtherSections) {
             console.log('showSection');
-            var hideOtherSections = hideotherSections || true;
+            hideOtherSections = hideOtherSections || true;
             //get a list of all containers with section class
             var sections = $('.section');
             var section;
@@ -111,7 +91,7 @@
             section = sections.filter('[data-route=' + route + ']');
 
             if (section.length) {
-                if (hideotherSections === true) {
+                if (hideOtherSections === true) {
                     sections.removeClass('show');
                     sections.addClass('hide');
                 }
@@ -122,62 +102,10 @@
         }
     };
 
-    var authorize = {
-        callBack: {},
-        init: function (callBack) {
-            //do something
-            this.callBack = callBack;
-        },
-        login: function (userName, password, callBack) {
-            //check the callback
-            if (typeof callBack === "function") {
-                this.callBack = callBack;
-            }
-            // collect the criteria for the call
-            var parameters = {
-                username: userName,
-                password: password
-            };
-            self = this;
-            //make a call
-            $.ajax({
-                type: 'POST',
-                data: JSON.stringify(parameters),
-                contentType: 'application/x-www-form-urlencoded',
-                url: gAuthPath + '/authorize/login',
-                dataType: "json",
-                beforeSend: function () {
-
-                },
-                success: function (data) {
-                    console.log("Login Success", data);
-                    //hide login controls
-                    $("#loginSection").removeClass("show");
-                    $("#loginSection").addClass("hide");
-
-                    gToken = data.token;
-                    gAuthorized = true;
-                    self.callBack.apply();
-                },
-                error: function (err) {
-                    console.log("Error loading closets: " + err.responseText);
-                    gToken = "";
-                    gAuthorized = false;
-                },
-                complete: function () {
-
-                }
-            });
-        },
-        logout: function () {
-            //call logout service
-        }
-    };
-
     var loginRoute = function () {
         console.log('loginRoute');
 
-        if (!gAuthorized) {
+        if (!authorize.isAuthorized()) {
             //call authorize code here
             authorize.login($('#userNameInp').val, $('#passwordInp').val, showTopSection);
         }
@@ -478,7 +406,6 @@
             getReport(100); //sales trend
             getReport(200); //gen overview
             getReport(500); //item downtrend
-            setProfileFlag(gCustID);
             util.showSection('profile', false);
         });
 

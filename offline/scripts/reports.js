@@ -5,27 +5,15 @@
 
     var gServicePath = "",
         gAuthPath = "",
-        gAuthorized = false,
-        gToken = {},
-        gClosetID = 0,
         gCompanyID = 0,
-        gOnline = true,
-        gCurrentCloset = {};
+        gOnline = true;
 
     var ENTER_KEY = 13;
     var ESCAPE_KEY = 27;
     var TIME_INTERVAL = 30000; //30 secs
     var ABORT_AFTER_INTERVAL = 20000; //20 secs
     var FILE_TO_CHECKFOR = "/check/online.html"; //you can change this to whatever
-    var CLOSET_NAMESPACE_PREFIX = "closet-";
-    var CLOSETS_NAMESPACE = "closets";
 
-    var setClosetID = function (val) {
-        gClosetID = val;
-    };
-    var getClosetID = function () {
-        return gClosetID;
-    };
     var getOnlineStatus = function () {
         return gOnline;
     };
@@ -41,6 +29,8 @@
         gAuthPath = '/services/api';
         gServicePath = '/services/api';
     }
+    //initialize the authorization object
+    var authorize = new Authorize({}, gAuthPath);
 
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
@@ -88,9 +78,10 @@
         getRandomInt: function (min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         },
-        //turns a section on and all others off
-        showSection: function (route) {
+        //turns a section on and all others off depending on flag value
+        showSection: function (route, hideOtherSections) {
             console.log('showSection');
+            hideOtherSections = hideOtherSections || true;
             //get a list of all containers with section class
             var sections = $('.section');
             var section;
@@ -98,63 +89,14 @@
             section = sections.filter('[data-route=' + route + ']');
 
             if (section.length) {
-                sections.removeClass('show');
-                sections.addClass('hide');
+                if (hideOtherSections === true) {
+                    sections.removeClass('show');
+                    sections.addClass('hide');
+                }
+
                 section.removeClass('hide');
                 section.addClass('show');
             }
-        }
-    };
-
-    var authorize = {
-        callBack: {},
-        init: function (callBack) {
-            //do something
-            this.callBack = callBack;
-        },
-        login: function (userName, password, callBack) {
-            //check the callback
-            if (typeof callBack === "function") {
-                this.callBack = callBack;
-            }
-            // collect the criteria for the call
-            var parameters = {
-                username: userName,
-                password: password
-            };
-            self = this;
-            //make a call
-            $.ajax({
-                type: 'POST',
-                data: JSON.stringify(parameters),
-                contentType: 'application/x-www-form-urlencoded',
-                url: gAuthPath + '/authorize/login',
-                dataType: "json",
-                beforeSend: function () {
-
-                },
-                success: function (data) {
-                    console.log("Login Success", data);
-                    //hide login controls
-                    $("#loginSection").removeClass("show");
-                    $("#loginSection").addClass("hide");
-
-                    gToken = data.token;
-                    gAuthorized = true;
-                    self.callBack.apply();
-                },
-                error: function (err) {
-                    console.log("Error loading closets: " + err.responseText);
-                    gToken = "";
-                    gAuthorized = false;
-                },
-                complete: function () {
-
-                }
-            });
-        },
-        logout: function () {
-            //call logout service
         }
     };
 
@@ -181,33 +123,30 @@
         setOnlineStatus(false);
     });
 
-
     var availRoute = function () {
         console.log('availRoute');
-        if (gAuthorized) {
+        if (authorize.isAuthorized()) {
             getAvailableReports();
         }
         else {
             //tell authorize what to trigger after login
-            authorize.init(getAvailableReports);
             util.showSection('login');
         }
     };
     var reportRoute = function (reportID) {
         console.log('getReportRoute');
-        if (gAuthorized) {
+        if (authorize.isAuthorized()) {
             getReport(reportID);
         }
         else {
             //tell authorize what to trigger after login
-            authorize.init(getAvailableReports);
             util.showSection('login');
         }
     };
     var loginRoute = function () {
         console.log('loginRoute');
 
-        if (!gAuthorized) {
+        if (!authorize.isAuthorized()) {
             //call authorize code here
             authorize.login($('#userNameInp').val, $('#passwordInp').val, getAvailableReports);
         }
@@ -424,6 +363,14 @@
         util.showSection('charts');
     };
 
+    var renderAvailableReports = function (reports) {
+        console.log('renderAvailableReports');
+        var itemTemplate = Handlebars.compile($('#report-list-template').html());
+        var template = itemTemplate(reports);
+        $('#reportListData').html(template);
+        util.showSection('reportList');
+    };
+
     var getAvailableReports = function () {
         console.log('getAvailableReports');
         //get the stats across all companies
@@ -431,12 +378,14 @@
         // collect the criteria for the call
         var parameters = {
         };
+        var self = this;
+        var token = authorize.getToken();
         //make a call
         $.ajax({
             type: 'GET',
             data: null,
             contentType: 'application/x-www-form-urlencoded',
-            url: gServicePath + '/reports/getavailablereports?token=' + gToken,
+            url: gServicePath + '/reports/getavailablereports?token=' + token,
             dataType: "json",
             beforeSend: function () {
 
@@ -455,22 +404,13 @@
         });
     };
 
-    var renderAvailableReports = function (reports) {
-        console.log('renderAvailableReports');
-        var itemTemplate = Handlebars.compile($('#report-list-template').html());
-        var template = itemTemplate(reports);
-        $('#reportListData').html(template);
-        util.showSection('reportList');
-    };
-
     var chartRoute = function () {
         console.log('chartRoute');
-        if (gAuthorized) {
+        if (authorize.isAuthorized()) {
             getChart();
         }
         else {
             //tell authorize what to trigger after login
-            authorize.init(getAvailableReports);
             util.showSection('login');
         }
     };
