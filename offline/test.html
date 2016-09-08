@@ -2,73 +2,114 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>A Gentle Introduction 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="content/bootstrap-theme-flatly.min.css">
+    <link rel="stylesheet" href="content/app.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-    </script>
-
-    <script src="https://rawgit.com/flatiron/director/master/build/director.min.js">
-    </script>
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/dx.viz.js"></script>
+    <script src="scripts/director.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/handlebars.js"></script>
+    <script src="scripts/sa-authorize.js"></script>
+    <script src="scripts/sa-util.js"></script>
+    <script src="scripts/sa-Report-Writer.js"></script>
+    <script src="scripts/reports.js"></script>
 
     <script>
-    $('document').ready(function() {
-      //
-      // create some functions to be executed when
-      // the correct route is issued by the user.
-      //
-      var showAuthorInfo = function () { console.log("showAuthorInfo"); };
-      var listBooks = function () { console.log("listBooks"); };
+        $('document').ready(function() {
+            
+            var colRpt = new ColumnReport();
+            var rowRpt = new RowReport();
 
-      var allroutes = function () {
-          //everything from the # onwards
-          var hash = window.location.hash;
-          //get the second token
-          var route = window.location.hash.slice(2);
-          //get a list of all sections
-          var sections = $('section');
-          var section;
-          //choose the one section we want
-          section = sections.filter('[data-route=' + route + ']');
+            var showColInfo = function () {
+                console.log("showColReport");
+            };
 
-          if (section.length) {
-              //close all sections
-              sections.hide(250);
-              //open the one section
-              section.show(250);
-          }
-      };
+            var showRowInfo = function () {
+                console.log("showRowReport");
+            };
 
-      //
-      // define the routing table.
-      //
-      var routes = {
-        '/author': showAuthorInfo,
-        '/books': listBooks
-      };
+            var getColData = function () {
+                console.log("getColData");
+                colRpt.getData(renderColTable, renderColTable);
+            };
 
-      //
-      // instantiate the router.
-      //
-      var router = Router(routes);
+            var getRowData = function () {
+                console.log("getColData");
+                rowRpt.getData(renderRowTable, renderRowTable);
+            };
 
-      //
-      // a global configuration setting.
-      //whenever any route is triggered
-      router.configure({
-        on: allroutes
-      });
-        //init the router
-      router.init();
-    });
+            var renderColTable = function (data) {
+                data = JSON.parse(data);
+                var x = colRpt.getResponsiveColumnTable(data, true);
+                $(x).appendTo('#col-data-out');
+            };
+
+            var renderRowTable = function (data) {
+                data = JSON.parse(data);
+                var x = rowRpt.getResponsiveRowTable(data, true);
+                $(x).appendTo('#row-data-out');
+            };
+
+            var allroutes = function () {
+                //everything from the # onwards
+                var hash = window.location.hash;
+                //get the second token
+                var route = window.location.hash.slice(2);
+                //get a list of all sections
+                var sections = $('section');
+                var section;
+                //choose the one section we want
+                section = sections.filter('[data-route=' + route + ']');
+
+                if (section.length) {
+                    //close all sections
+                    sections.hide(250);
+                    //open the one section
+                    section.show(250);
+                }
+            };
+
+            var routes = {
+                '/col': showColInfo,
+                '/row': showRowInfo,
+                '/getColData': getColData,
+                '/getRowData': getRowData
+            };
+
+            var router = Router(routes);
+            router.configure({
+                on: allroutes
+            });
+            router.init();
+        });
     </script>
 </head>
 
 <body>
-    <section data-route="author">Author Name</section>
-    <section data-route="books">Book1, Book2, Book3</section>
     <ul>
-        <li><a href="#/author">#/author</a></li>
-        <li><a href="#/books">#/books</a></li>
+        <li><a href="#/col">column report</a></li>
+        <li><a href="#/row">row report</a></li>
     </ul>
+
+    <section data-route="col" style="display:none;">
+        <h1>column data</h1>
+        <a href="#/getColData">Build Column Table</a>
+
+        <div id="col-data-out" >
+
+        </div>
+    </section>
+    <section data-route="row" style="display:none;">
+        <h1>row data</h1>
+        <a href="#/getRowData">Build Row Table</a>
+        <div id="row-data-out">
+
+        </div>
+    </section>
+
+
 </body>
 </html>

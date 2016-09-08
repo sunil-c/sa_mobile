@@ -1,0 +1,18 @@
+﻿[
+  {
+    "columns": {
+      "names":    [ "id", "Name", "Current", "Prior", "Variance" ],
+      "colMaps":  [ "id", "name", "current", "prior", "variance" ],
+      "colID":    [ ],
+      "hdrAttr":  [ "hide", "text-left info", "text-right info", "text-right info", "text-right info" ],
+      "cellAttr": [ "hide", "text-left", "text-right", "text-right", "text-right" ]
+    },
+    "rows": [
+      {"values": [ "12345", "Item #12345", "$1123.87", "$612.99", "12.34%" ]},
+      {"values": ["63346", "Item #12345", "$1,123.87", "$612.99", "12.34%"]},
+      {"values": ["71397", "Item #21762", "$923.87", "$416.07", "14.33%"]},
+      {"values": ["77748", "Item #45332", "$1,567.33", "$564.66", "12.99%"]},
+      {"values": ["89341", "Item #15366", "$1,345.33", "$676.67", "23.44%"]}
+    ]
+  }
+]

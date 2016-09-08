@@ -70,7 +70,6 @@
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\ie10-viewport-bug-workaround.css" />
-    <Content Include="data\items.json" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="potential.html" />
     <Content Include="scripts\sa-authorize.js" />
@@ -80,6 +79,8 @@
     <Content Include="scripts\cldr\event.js" />
     <Content Include="scripts\cldr\supplemental.js" />
     <Content Include="scripts\cldr\unresolved.js" />
+    <Content Include="data\col-report-data.json" />
+    <Content Include="data\row-report-data.json" />
     <None Include="scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="scripts\dx.viz.debug.js" />
     <Content Include="scripts\dx.viz.js" />
@@ -100,6 +101,7 @@
     <Content Include="data\vectormap-data\usa.js" />
     <Content Include="data\vectormap-data\world.js" />
     <Content Include="scripts\potential.js" />
+    <Content Include="scripts\sa-Report-Writer.js" />
     <Content Include="scripts\sa-util.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.debug.js" />
     <Content Include="scripts\vectormap-utils\dx.vectormaputils.js" />
@@ -127,7 +129,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="data\closets.json" />
     <Content Include="images\ajax-loader.gif" />
     <Content Include="scripts\usage-stats.js" />
     <Content Include="scripts\handlebars.js" />

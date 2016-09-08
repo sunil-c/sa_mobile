@@ -1,0 +1,17 @@
+﻿[
+  {
+    "columns": {
+      "names":    [ "id", "", "Product Cat 1", "Product Cat 2", "Product Cat 3" ],
+      "colMap":   [ ],
+      "colID":    [ "", "", "1256", "5436", "8788" ],
+      "hdrAttr":  [ "hide", "text-left", "text-right", "text-right", "text-right" ],
+      "cellAttr": [ "hide", "text-left info", "text-right", "text-right", "text-right" ]
+    },
+    "rows": [
+      { "values": [ "12345", "Customer 1", "4.3", "2.4", "2" ] },
+      { "values": [ "63346", "Customer 2", "2.5", "4.4", "2" ] },
+      { "values": [ "71397", "Customer 3", "3.5", "1.8", "3" ] },
+      { "values": [ "77748", "Customer 4", "4.5", "2.8", "5" ] }
+    ]
+  }
+]
