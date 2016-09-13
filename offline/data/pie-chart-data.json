@@ -1,0 +1,9 @@
+﻿[
+    { "continent": "Africa", "area": 30370000 },
+    { "continent": "Antarctica", "area": 13720000 },
+    { "continent": "Asia", "area": 43820000 },
+    { "continent": "Australia", "area": 9008500 },
+    { "continent": "Europe", "area": 10180000 },
+    { "continent": "North America", "area": 24490000 },
+    { "continent": "South America", "area": 17840000 }
+]

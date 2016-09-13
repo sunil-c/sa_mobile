@@ -1,0 +1,48 @@
+﻿[
+  {
+    "header": {
+      "title":  "Multi Series Chart",
+      "argumentField": "year",
+      "valueAxisFormat": "currency",
+      "series": [
+        {
+          "valueField": "sales",
+          "name": "Sales",
+          "type": "bar"
+        },
+        {
+          "valueField": "gm",
+          "name": "GM",
+          "type": "line"
+        }
+      ]
+    },
+    "data": [
+      {
+        "year": 2005,
+        "sales": 2450,
+        "gm": 1800
+      },
+      {
+        "year": 2006,
+        "sales": 2156,
+        "gm": 2105
+      },
+      {
+        "year": 2007,
+        "sales": 3650,
+        "gm": 3254
+      },
+      {
+        "year": 2008,
+        "sales": 4168,
+        "gm": 3894
+      },
+      {
+        "year": 2009,
+        "sales": 5623,
+        "gm": 4199
+      }
+    ]
+  }
+]

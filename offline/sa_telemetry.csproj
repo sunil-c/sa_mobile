@@ -81,6 +81,9 @@
     <Content Include="scripts\cldr\unresolved.js" />
     <Content Include="data\col-report-data.json" />
     <Content Include="data\row-report-data.json" />
+    <Content Include="data\simple-chart.json" />
+    <Content Include="data\series-chart-data.json" />
+    <Content Include="data\pie-chart-data.json" />
     <None Include="scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="scripts\dx.viz.debug.js" />
     <Content Include="scripts\dx.viz.js" />

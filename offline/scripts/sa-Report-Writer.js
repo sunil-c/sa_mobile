@@ -162,7 +162,124 @@ RowReport.prototype.getResponsiveRowTable = function (data, displayHeaders) {
     return d1;
 };
 
+/*****************************************************************************/
+//BAR CHART 
+/*****************************************************************************/
+var ChartReport = function () {
+    if (this instanceof ChartReport) {
+        this.callBack = {};
+        this.errCallBack = {};
+    } else {
+        return new ChartReport();
+    }
+}
+ChartReport.prototype.getCallBack = function () {
+    return this.callBack;
+};
+ChartReport.prototype.setCallBack = function (val) {
+    this.callBack = val;
+};
+ChartReport.prototype.getErrCallBack = function () {
+    return this.errCallBack;
+};
+ChartReport.prototype.setErrCallBack = function (val) {
+    this.errCallBack = val;
+};
+ChartReport.prototype.getData = function (url, callBack, errCallBack) {
+    /* arguments
+     * url = the url from where to get the data
+     * callBack = pointer to function to call upon success
+     * errCallBack = pointer to error handler
+     */
+    this.setCallBack(callBack);
+    this.setErrCallBack(errCallBack);
 
+    var self = this;
+    $.ajax({
+        method: "GET",
+        url: url,
+        dataType: "script",
+        beforeSend: function () {
+
+        },
+        success: function (data) {
+            var func = self.getCallBack();
+            func.call(null, data);
+        },
+        error: function (err) {
+            var func = self.getErrCallBack();
+            func.call(null, err);
+        }
+    });
+};
+ChartReport.prototype.renderChart = function (data, series, containerName, options) {
+    /* renders a simple one series chart
+     * arguments
+     * data: data to bind to the chart
+     * series: an array of chart series objects
+     * containerName: the div where you want chart rendered
+     * options: {showLegend = true/false, 
+     *           argumentField: name of x-axis field in data, 
+     *           valueAxisFormat: the format string for the Y axis
+     *           title: title for chart}
+     * Accepted Values for valueAxis format: 'currency' | 'fixedPoint' | 'percent' | 'decimal' | 'exponential' | 'largeNumber' | 'thousands' | 'millions' | 'billions' | 'trillions' | 'longDate' | 'longTime' | 'monthAndDay' | 'monthAndYear' | 'quarterAndYear' | 'shortDate' | 'shortTime' | 'millisecond' | 'day' | 'month' | 'quarter' | 'year'
+     */
+    return $("#" + containerName).dxChart({
+        dataSource: data,
+        commonSeriesSettings: {
+            type: "bar", //default, but series will override
+            argumentField: options.argumentField
+        },
+        series: series,
+        margin: {
+            bottom: 10
+        },
+        title: options.title,
+        argumentAxis: {
+            valueMarginsEnabled: false
+        },
+        valueAxis: {
+            label: {
+                format: options.valueAxisFormat
+            }
+        },
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center",
+            "visible": options.showLegend
+        }
+    }).dxChart("instance");
+};
+ChartReport.prototype.renderPieChart = function (data, containerName, options) {
+    /* renders a simple one series chart
+     * arguments
+     * data: data to bind to the chart
+     * containerName: the div whwere you want chart rendered
+     * options: {showLegend = true/false, 
+     *           argumentField: name of x-axis field in data, 
+     *           valueField: name of y-axis field in data,
+     *           title: title for chart}
+     */
+    return $("#" + containerName).dxPieChart({
+        "dataSource": data,
+        "legend": {
+            "visible": options.showLegend,
+            "orientation": "horizontal",
+            "verticalAlignment": "bottom"
+        },
+        "commonSeriesSettings": {
+            "label": {
+                "visible": options.showLabel
+            }
+        },
+        "series": {
+            "argumentField": options.argumentField,
+            "valueField": options.valueField
+        },
+        "title": options.title,
+        "palette": 'Soft'
+    }).dxPieChart("instance");
+}
 //[
 //  {
 //      "columns": {
@@ -181,3 +298,4 @@ RowReport.prototype.getResponsiveRowTable = function (data, displayHeaders) {
 //      ]
 //  }
 //]
+

@@ -1,0 +1,39 @@
+﻿[
+  {
+    "header": {
+      "title":  "single Series Chart",
+      "argumentField": "year",
+      "valueAxisFormat": "currency",
+      "series": [
+        {
+          "valueField": "sales",
+          "name": "Sales",
+          "type": "bar"
+        }
+      ]
+    },
+    "data": [
+      {
+        "year": 2005,
+        "sales": 2450
+      },
+      {
+        "year": 2006,
+        "sales": 2156
+      },
+      {
+        "year": 2007,
+        "sales": 3650
+      },
+      {
+        "year": 2008,
+        "sales": 4168
+      },
+      {
+        "year": 2009,
+        "sales": 5623
+      }
+    ]
+  }
+]
+
