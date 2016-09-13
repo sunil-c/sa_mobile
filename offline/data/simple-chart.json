@@ -2,10 +2,12 @@
   {
     "header": {
       "title":  "single Series Chart",
-      "argumentField": "year",
       "valueAxisFormat": "currency",
+      "showLegend": "true",
+      "showLabel": "false",
       "series": [
         {
+          "argumentField": "year",
           "valueField": "sales",
           "name": "Sales",
           "type": "bar"

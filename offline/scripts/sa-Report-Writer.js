@@ -221,14 +221,15 @@ ChartReport.prototype.renderChart = function (data, series, containerName, optio
      * options: {showLegend = true/false, 
      *           argumentField: name of x-axis field in data, 
      *           valueAxisFormat: the format string for the Y axis
-     *           title: title for chart}
+     *           title: title for chart
+     * }
      * Accepted Values for valueAxis format: 'currency' | 'fixedPoint' | 'percent' | 'decimal' | 'exponential' | 'largeNumber' | 'thousands' | 'millions' | 'billions' | 'trillions' | 'longDate' | 'longTime' | 'monthAndDay' | 'monthAndYear' | 'quarterAndYear' | 'shortDate' | 'shortTime' | 'millisecond' | 'day' | 'month' | 'quarter' | 'year'
      */
     return $("#" + containerName).dxChart({
         dataSource: data,
         commonSeriesSettings: {
-            type: "bar", //default, but series will override
-            argumentField: options.argumentField
+            type: "bar"//, //default, but series will override
+            //argumentField: options.argumentField
         },
         series: series,
         margin: {
@@ -250,52 +251,41 @@ ChartReport.prototype.renderChart = function (data, series, containerName, optio
         }
     }).dxChart("instance");
 };
-ChartReport.prototype.renderPieChart = function (data, containerName, options) {
+ChartReport.prototype.renderPieChart = function (data, series, containerName, options) {
     /* renders a simple one series chart
      * arguments
      * data: data to bind to the chart
+     * series: an array of chart series objects
      * containerName: the div whwere you want chart rendered
-     * options: {showLegend = true/false, 
-     *           argumentField: name of x-axis field in data, 
-     *           valueField: name of y-axis field in data,
-     *           title: title for chart}
+     * options: {showLegend = true/false,
+     *           showLabel = true/false shows pie section labels 
+     *           title: title for chart
+     *           valueAxisFormat: the format string for the Y axis
+     * }
+     * Accepted Values for valueAxis format: 'currency' | 'fixedPoint' | 'percent' | 'decimal' | 'exponential' | 'largeNumber' | 'thousands' | 'millions' | 'billions' | 'trillions' | 'longDate' | 'longTime' | 'monthAndDay' | 'monthAndYear' | 'quarterAndYear' | 'shortDate' | 'shortTime' | 'millisecond' | 'day' | 'month' | 'quarter' | 'year'
      */
     return $("#" + containerName).dxPieChart({
         "dataSource": data,
-        "legend": {
-            "visible": options.showLegend,
-            "orientation": "horizontal",
-            "verticalAlignment": "bottom"
-        },
+        "series": series,
+        "type": options.pieType || "pie",
+        "title": options.title,
         "commonSeriesSettings": {
             "label": {
                 "visible": options.showLabel
             }
         },
-        "series": {
-            "argumentField": options.argumentField,
-            "valueField": options.valueField
+        "valueAxis": {
+            "label": {
+                "format": options.valueAxisFormat
+            }
         },
-        "title": options.title,
-        "palette": 'Soft'
+        "legend": {
+            "visible": options.showLegend,
+            "orientation": "horizontal",
+            "verticalAlignment": "bottom",
+            "horizontalAlignment": "center"
+        },
     }).dxPieChart("instance");
 }
-//[
-//  {
-//      "columns": {
-//          "names": ["id", "Name", "Current", "Prior", "Variance"],
-//          "colMaps": ["id", "name", "current", "prior", "variance"],
-//          "colID": [],
-//          "hdrAttr": ["hide", "", "", "", ""],
-//          "cellAttr": ["hide", "pull-left", "pull-right", "pull-right", "pull-right"]
-//      },
-//      "rows": [
-//        { "values": ["12345", "Item #12345", "1123.87", "612.99", "0.01234"] },
-//        { "values": ["63346", "Item #12345", "1123.87", "612.99", "0.01234"] },
-//        { "values": ["71397", "Item #21762", "923.87", "416.07", "0.01433"] },
-//        { "values": ["77748", "Item #45332", "1567.33", "564.66", "0.01299"] },
-//        { "values": ["89341", "Item #15366", "1345.33", "676.67", "0.2344"] }
-//      ]
-//  }
-//]
+
 

@@ -1,9 +1,47 @@
 ﻿[
-    { "continent": "Africa", "area": 30370000 },
-    { "continent": "Antarctica", "area": 13720000 },
-    { "continent": "Asia", "area": 43820000 },
-    { "continent": "Australia", "area": 9008500 },
-    { "continent": "Europe", "area": 10180000 },
-    { "continent": "North America", "area": 24490000 },
-    { "continent": "South America", "area": 17840000 }
+  {
+    "header": {
+      "title":  "Pie Chart Fun",
+      "valueAxisFormat": "currency",
+      "showLegend": true,
+      "showLabel": false,
+      "series": [
+        {
+          "argumentField":  "continent",
+          "valueField": "area",
+          "name": "Area"
+        }
+      ]
+    },
+    "data": [
+  {
+    "continent": "Africa",
+    "area": 30370000
+  },
+  {
+    "continent": "Antarctica",
+    "area": 13720000
+  },
+  {
+    "continent": "Asia",
+    "area": 43820000
+  },
+  {
+    "continent": "Australia",
+    "area": 9008500
+  },
+  {
+    "continent": "Europe",
+    "area": 10180000
+  },
+  {
+    "continent": "North America",
+    "area": 24490000
+  },
+  {
+    "continent": "South America",
+    "area": 17840000
+  }
+    ]
+  }
 ]

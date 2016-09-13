@@ -87,19 +87,19 @@
                 console.log("renderPieChart");
                 //render the chart to screen
                 data = JSON.parse(data);
+                var series = data[0].header.series;
+                var dataSource = data[0].data;
                 if (chartInstance) {
                     //chartInstance = {};
                     $("#chart").empty();
                     $("#chart").removeData('dxPieChart');
                 }
-                chartInstance = chartRpt.renderPieChart(data, "chart", {
-                    title: "African Population",
-                    argumentField: "continent",
-                    valueField: "area",
-                    showLegend: false,
-                    showLabel: false
+                chartInstance = chartRpt.renderPieChart(dataSource, series, "chart", {
+                    valueAxisFormat: data[0].header.valueAxisFormat,
+                    title: data[0].header.title,
+                    showLegend: data[0].header.showLegend,
+                    showLabel: data[0].header.showLabel
                 });
-
 
             };
 

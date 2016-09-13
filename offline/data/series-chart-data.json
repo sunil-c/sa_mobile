@@ -2,15 +2,18 @@
   {
     "header": {
       "title":  "Multi Series Chart",
-      "argumentField": "year",
       "valueAxisFormat": "currency",
+      "showLegend": "true",
+      "showLabel": "false",
       "series": [
         {
+          "argumentField": "year",
           "valueField": "sales",
           "name": "Sales",
           "type": "bar"
         },
         {
+          "argumentField": "year",
           "valueField": "gm",
           "name": "GM",
           "type": "line"
