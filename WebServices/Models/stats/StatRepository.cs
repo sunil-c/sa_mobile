@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SA.WebServices.Models.Reports;
 
 namespace SA.WebServices.Models.Stats
 {
@@ -10,6 +11,7 @@ namespace SA.WebServices.Models.Stats
     {
         public IEnumerable<saCustomer> GetCustomers()
         {
+
             try
             {
                 List<saCustomer> list = new List<saCustomer>();
@@ -29,42 +31,99 @@ namespace SA.WebServices.Models.Stats
             }
         }
 
-        public IEnumerable<saCustomerStat> GetCustomerStats()
+        public saCommonReportData GetCustomerStats()
         {
-            List<saCustomerStat> list = new List<saCustomerStat>();
 
-            list.Add(new saCustomerStat { custID = 1, custName="Waxie", logins=123, reports=222, dataVolume=1194876, lastLoadDate="1/1/2016" });
-            list.Add(new saCustomerStat { custID = 2, custName = "HP Products", logins = 115, reports = 200, dataVolume = 1104527, lastLoadDate = "2/1/2016" });
+            int numCols = 6, numRows = 2;
+            saCommonReportData rd;
+            saRowValues rv;
 
-            return list;
+            //instantiate the common report data object
+            rd = new saCommonReportData(numRows, numCols);
+            //set up the header info
+            rd.columns.colMap = new string[] { "custID", "custName", "dataVolume", "lastLoadDate", "logins", "reports" };
+            rd.columns.names = new string[] { "custID", "Client", "Volume", "Last Load", "Logins", "Reports" };
+            rd.columns.hdrAttr = new string[] { "hide", "text-left info", "text-right info", "text-left info", "text-right info", "text-right info" };
+            rd.columns.cellAttr = new string[] { "hide", "text-left", "text-right", "text-left", "text-right", "text-right" };
+            //add the rows
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "1", "Waxie", "1194876", "1/1/2016", "1269", "222" };
+            rd.rows.Add(rv);
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "2", "HP Products", "1104527", "2/1/2016", "789", "223" };
+            rd.rows.Add(rv);
+
+            return rd;
         }
 
 
 
-        public IEnumerable<saCustomerStat> GetCustomerReportStats(int custID)
+        public saCommonReportData GetCustomerReportStats(int custID)
         {
-            List<saCustomerStat> list = new List<saCustomerStat>();
 
-            List<saCustomerReportStat> reportStats = new List<saCustomerReportStat>();
-            reportStats.Add(new saCustomerReportStat { reportID = 1, reportName = "Ranking", numRuns = 123 });
-            reportStats.Add(new saCustomerReportStat { reportID = 2, reportName = "P&L", numRuns = 98 });
-            reportStats.Add(new saCustomerReportStat { reportID = 3, reportName = "Trend Graph", numRuns = 71 });
-            reportStats.Add(new saCustomerReportStat { reportID = 4, reportName = "Matrix", numRuns = 55 });
-            reportStats.Add(new saCustomerReportStat { reportID = 5, reportName = "Customer Potential", numRuns = 33 });
+            int numCols = 3, numRows = 5;
+            saCommonReportData rd;
+            saRowValues rv;
 
-            list.Add(new saCustomerStat { custID = custID, reportStats = reportStats });
+            //instantiate the common report data object
+            rd = new saCommonReportData(numRows, numCols);
+            //set up the header info
+            rd.columns.colMap = new string[] { "reportID", "reportName", "numRuns"};
+            rd.columns.names = new string[] { "reportID", "Report", "# Runs"};
+            rd.columns.hdrAttr = new string[] { "hide", "text-left info", "text-right info" };
+            rd.columns.cellAttr = new string[] { "hide", "text-left", "text-right"};
+            //add the rows
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "1", "Ranking", "1194876", "123" };
+            rd.rows.Add(rv);
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "2", "P&L", "1104527", "89" };
+            rd.rows.Add(rv);
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "3", "Trend Graph", "71" };
+            rd.rows.Add(rv);
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "4", "Matrix", "55" };
+            rd.rows.Add(rv);
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "5", "Customer Potential", "33" };
+            rd.rows.Add(rv);
 
-            return list;
+            return rd;
         }
 
-        public IEnumerable<saCustomerStat> GetCustomerLoadStats()
+
+        public saCommonReportData GetCustomerLoadStats()
         {
-            List<saCustomerStat> list = new List<saCustomerStat>();
+            int numCols = 6, numRows = 2;
+            saCommonReportData rd;
+            saRowValues rv;
 
-            list.Add(new saCustomerStat { custID = 1, custName = "Waxie", dataVolume = 1194876, lastLoadDate = "1/1/2016", linesLoaded=1269, loadStatus="Success" });
-            list.Add(new saCustomerStat { custID = 2, custName = "HP Products", dataVolume = 1104527, lastLoadDate = "2/1/2016", linesLoaded=5344, loadStatus="Success" });
+            //instantiate the common report data object
+            rd = new saCommonReportData(numRows, numCols);
+            //set up the header info
+            rd.columns.colMap = new string[] { "custID", "custName", "dataVolume", "lastLoadDate", "linesLoaded", "loadStatus" };
+            rd.columns.names = new string[] { "custID", "Client", "Volume", "Last Load", "Num Lines", "Load Status" };
+            rd.columns.hdrAttr = new string[] { "hide", "text-left info", "text-right info", "text-left info", "text-right info", "text-left info" };
+            rd.columns.cellAttr = new string[] { "hide", "text-left", "text-right", "text-left", "text-right", "text-left" };
+            //add the rows
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "1", "Waxie", "1194876", "1/1/2016", "1269", "success" };
+            rd.rows.Add(rv);
+            //new row
+            rv = new saRowValues(numCols);
+            rv.values = new string[] { "2", "HP Products", "1104527", "2/1/2016", "5344", "success" };
+            rd.rows.Add(rv);
 
-            return list;
+            return rd;
 
         }
 

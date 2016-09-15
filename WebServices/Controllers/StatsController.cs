@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using SA.WebServices.Models.Stats;
 using SA.WebServices.Models.auth;
+using SA.WebServices.Models.Reports;
 
 namespace SA.WebServices.Controllers
 {
@@ -35,10 +36,10 @@ namespace SA.WebServices.Controllers
             }
         }
 
-        [HttpGet(), ActionName("getcustomerstats")]
-        public IEnumerable<saCustomerStat> GetStats(string token, int level, int custID)
+        [HttpGet(), ActionName("getstats")]
+        public saCommonReportData GetStats(string token, int level, int custID)
         {
-            IEnumerable<saCustomerStat> list;
+            saCommonReportData data;
 
             try
             {
@@ -47,20 +48,20 @@ namespace SA.WebServices.Controllers
                     switch (level)
                     {
                         case 0:
-                            list = repository.GetCustomerStats();
+                            data = repository.GetCustomerStats();
                             break;
                         case 1:
-                            list = repository.GetCustomerReportStats(custID);
+                            data = repository.GetCustomerReportStats(custID);
                             break;
                         case 2:
-                            list = repository.GetCustomerLoadStats();
+                            data = repository.GetCustomerLoadStats();
                             break;
                         default:
-                            list = repository.GetCustomerStats();
+                            data = repository.GetCustomerStats();
                             break;
                     }
 
-                    return list;
+                    return data;
                 }
                 else
                 {
@@ -74,6 +75,5 @@ namespace SA.WebServices.Controllers
                 throw;
             }
         }
-
     }
 }

@@ -163,7 +163,7 @@ RowReport.prototype.getResponsiveRowTable = function (data, displayHeaders) {
 };
 
 /*****************************************************************************/
-//BAR CHART 
+//CHARTING
 /*****************************************************************************/
 var ChartReport = function () {
     if (this instanceof ChartReport) {

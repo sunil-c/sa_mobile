@@ -38,6 +38,7 @@
     var util = new Util();
     //initialize the authorization object
     var authorize = new Authorize({}, gAuthPath);
+    var colRpt = new ColumnReport();
 
     //create a function that will dispatch a custom event
     var fireEvent = function (name, data) {
@@ -63,15 +64,6 @@
         setOnlineStatus(false);
     });
 
-    var statsRoute = function () {
-        console.log('statsRoute');
-        if (authorize.isAuthorized()) {
-            getStats();
-        }
-        else {
-            util.showSection('login');
-        }
-    };
     var companiesRoute = function () {
         console.log('companiesRoute');
         if (authorize.isAuthorized()) {
@@ -119,28 +111,29 @@
     var router = Router(routes);
     router.init();
 
-    var getStats = function () {
-        console.log('getStats');
-        //get the stats across all companies
-
+    //this is a common call to the web service
+    var getReportData = function (custID, level, callBack) {
+        console.log('getReport');
+        //get stats broken out by company 
         // collect the criteria for the call
-        var parameters = {
-        };
-        self = this;
+        var parameters = { };
+        var token = authorize.getToken();
+        var url = gAuthPath + '/stat/getstats?token=' + token + '&custID=' + custID.toString() + '&level=' + level.toString();
+        var func = callBack;
+
         //make a call
         $.ajax({
             type: 'GET',
             data: null,
             contentType: 'application/x-www-form-urlencoded',
-            url: gAuthPath + '/stat/getaggregatestats?token=' + self.authorize.getToken(),
+            url: url,
             dataType: "json",
             beforeSend: function () {
 
             },
             success: function (data) {
-                console.log("Get Stats", data);
-
-                renderStats(data);
+                console.log("Common Get Stats for Companies", data);
+                func.call(null, data);
             },
             error: function (err) {
                 console.log("Error obtaining stats: " + err.responseText);
@@ -150,154 +143,73 @@
             }
         });
 
-        return;
-    };
-
-    var renderStats = function (stats) {
-        console.log('renderStats');
-        var itemTemplate = Handlebars.compile($('#toplevel-template').html());
-        var template = itemTemplate(stats);
-        $('#stats').html(template);
-        util.showSection('stats');
         return;
     };
 
     var getCompanyStats = function () {
         console.log('getStatsForCompanies');
-        //get stats broken out by company 
-        // collect the criteria for the call
-        var parameters = {
-        };
-        //make a call
-        var self = this;
-        var token = authorize.getToken();
-        $.ajax({
-            type: 'GET',
-            data: null,
-            contentType: 'application/x-www-form-urlencoded',
-            url: gAuthPath + '/stat/getstats?token=' + token + '&custID=0&level=0',
-            dataType: "json",
-            beforeSend: function () {
-
-            },
-            success: function (data) {
-                console.log("Get Stats for Companies", data);
-
-                renderCompanyStats(data);
-            },
-            error: function (err) {
-                console.log("Error obtaining stats: " + err.responseText);
-            },
-            complete: function () {
-
-            }
-        });
+        getReportData(0, 0, renderCompanyStats);
+        return;
+    };
+    var getCompanyLoadStats = function () {
+        console.log('getCompanyLoadStats');
+        getReportData(0, 2, renderCompanyLoadStats);
 
         return;
     };
+    var getCompanyReports = function () {
+        console.log('getCompanyReports');
+        getReportData(0, 1, renderCompanyReports);
 
+        return;
+    };
+    var renderCompanyLoadStats = function (compData) {
+        console.log('renderCompanyLoadStats2');
+        //do something
+        compData = [compData];
+        //send data to colRpt to get rendering of table
+        var x = colRpt.getResponsiveColumnTable(compData, true);
+        $('#companyLoadStatsData').empty();
+        $(x).appendTo('#companyLoadStatsData');
+        util.showSection('loadStats');
+    };
+    var renderCompanyReports = function (compData) {
+        console.log('renderCompanyReports');
+        //do something
+        compData = [compData];
+        //send data to colRpt to get rendering of table
+        var x = colRpt.getResponsiveColumnTable(compData, true);
+        $('#companyReportsData').empty();
+        $(x).appendTo('#companyReportsData');
+        util.showSection('reports');
+    };
     var renderCompanyStats = function (compData) {
         console.log('renderCompanyStats');
+        var rows = [];
+        var row = {};
+        //deconstruct the common data structure
+        //create an array of rows to be applied to a handlebars template
+        for (var i = 0; i < compData.rows.length; i++) {
+            row = {};
+            for (var j = 0; j < compData.columns.colMap.length; j++) {
+                row[compData.columns.colMap[j]] = compData.rows[i].values[j];
+            }
+            rows[rows.length] = row;
+        }
+
+        //apply data to handlebars template
         var itemTemplate = Handlebars.compile($('#company-template').html());
         //add data to template
-        var template = itemTemplate(compData);
+        var template = itemTemplate(rows);
         $('#companyListData').html(template);
         //click event logic
         $(".company-reports")
             .off('click')
             .on('click', function () {
-                gCompanyID = $(this).attr('data-id'); 
+                gCompanyID = $(this).attr('data-id');
             }
         );
         util.showSection('companies');
-    };
-
-    var getCompanyLoadStats = function () {
-        console.log('getCompanyLoadStats');
-        //get stats broken out by company 
-        // collect the criteria for the call
-        var parameters = {
-        };
-        var self = this;
-        var token = authorize.getToken();
-        //make a call
-        $.ajax({
-            type: 'GET',
-            data: null,
-            contentType: 'application/x-www-form-urlencoded',
-            url: gAuthPath + '/stat/getstats?token=' + token + '&custID=0&level=2',
-            dataType: "json",
-            beforeSend: function () {
-
-            },
-            success: function (data) {
-                console.log("Get Stats for Companies", data);
-
-                renderCompanyLoadStats(data);
-            },
-            error: function (err) {
-                console.log("Error obtaining stats: " + err.responseText);
-            },
-            complete: function () {
-
-            }
-        });
-
-        return;
-    };
-
-    var renderCompanyLoadStats = function (compData) {
-        console.log('renderCompanyStats');
-        var itemTemplate = Handlebars.compile($('#load-detail-template').html());
-        //add data to template
-        var template = itemTemplate(compData);
-        $('#companyLoadStatsData').html(template);
-
-        util.showSection('loadStats');
-    };
-
-    var getCompanyReports = function () {
-        console.log('getCompanyReports');
-        //get report stats for a company 
-        // collect the criteria for the call
-        var parameters = {
-        };
-        var self = this;
-        var token = authorize.getToken();
-        //make a call
-        $.ajax({
-            type: 'GET',
-            data: null,
-            contentType: 'application/x-www-form-urlencoded',
-            url: gAuthPath + '/stat/getstats?token=' + token + '&custID=' + gCompanyID + '&level=1',
-            dataType: "json",
-            beforeSend: function () {
-
-            },
-            success: function (data) {
-                console.log("Get Stats for Companies", data);
-                renderCompanyReports(data);
-            },
-            error: function (err) {
-                console.log("Error obtaining stats: " + err.responseText);
-            },
-            complete: function () {
-
-            }
-        });
-        
-        return;
-    };
-
-    var renderCompanyReports = function (compData) {
-        console.log('renderCompanyReports');
-        //get the report stats from the data object passed back
-        var reportData = compData[0].reportStats;
-        var itemTemplate = Handlebars.compile($('#report-detail-template').html());
-        //add data to template
-        var template = itemTemplate(reportData);
-        $('#companyReportsData').html(template);
-        util.showSection('reports');
     };
 
     var loginClicked = function () {

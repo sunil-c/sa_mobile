@@ -2,7 +2,7 @@
   {
     "columns": {
       "names":    [ "id", "Name", "Current", "Prior", "Variance" ],
-      "colMaps":  [ "id", "name", "current", "prior", "variance" ],
+      "colMap":  [ "id", "name", "current", "prior", "variance" ],
       "colID":    [ ],
       "hdrAttr":  [ "hide", "text-left info", "text-right info", "text-right info", "text-right info" ],
       "cellAttr": [ "hide", "text-left", "text-right", "text-right", "text-right" ]
