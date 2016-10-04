@@ -6,20 +6,7 @@
     var gServicePath = "",
         gAuthPath = "",
         gCompanyID = 0,
-        gOnline = true;
-
-    var ENTER_KEY = 13;
-    var ESCAPE_KEY = 27;
-    var TIME_INTERVAL = 30000; //30 secs
-    var ABORT_AFTER_INTERVAL = 20000; //20 secs
-    var FILE_TO_CHECKFOR = "/check/online.html"; //you can change this to whatever
-
-    var getOnlineStatus = function () {
-        return gOnline;
-    };
-    var setOnlineStatus = function (val) {
-        gOnline = val;
-    };
+        gRenderedFilters = false;
 
     if (window.location.host.indexOf('localhost') >= 0) {           // running from localhost
         gServicePath = 'http://localhost:25004/api';
@@ -33,31 +20,12 @@
     var authorize = new Authorize({}, gAuthPath);
     //initialize the Util object
     var util = new Util();
+    var colRpt = new ColumnReport();
+    var rowRpt = new RowReport();
+    var chartRpt = new ChartReport();
+
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
-    });
-
-    //create a function that will dispatch a custom event
-    var fireEvent = function (name, data) {
-        var e = document.createEvent("Event");
-        e.initEvent(name, true, true);
-        e.data = data;
-        window.dispatchEvent(e);
-    };
-    //capture custom event and toggle some css when the event occurs
-    window.addEventListener("goodconnection", function (e) {
-        $(".info").toggleClass("onlineindicator-off", false);
-        setOnlineStatus(true);
-    });
-    //capture custom event and toggle some css when the event occurs
-    window.addEventListener("connectionerror", function (e) {
-        $(".info").toggleClass("onlineindicator-off", true);
-        setOnlineStatus(false);
-    });
-    //capture custom event and toggle some css when the event occurs
-    window.addEventListener("connectiontimeout", function (e) {
-        $(".info").toggleClass("onlineindicator-off", true);
-        setOnlineStatus(false);
     });
 
     var availRoute = function () {
@@ -89,40 +57,48 @@
         }
     };
 
-    var getOrgHierarchy = function () {
-        var data = [];
-        data.push({
-            "id": "1", "name": "John Smith", "parent": "", "level": "1",
-            "items": [{ "id": "2", "name": "James Pettibone", "parent": "1", "level": "2", "items": [] },
-                      { "id": "3", "name": "Frank Thomas", "parent": "1", "level": "2", "items": [] }]
-        });
+    var getOrgHierarchy = function (callBack) {
+        var data = {};
+        var url = "/data/org-hierarchy.json";
+        $.ajax({
+            method: "GET",
+            url: url,
+            data: data,
+            dataType: "script",
+            beforeSend: function () {
 
-        data.push({
-            "id": "4", "name": "Jane Doe", "parent": "", "level": "1",
-            "items": [{ "id": "5", "name": "Thomas Frank", "parent": "4", "level": "2", "items": [] },
-                      {
-                          "id": "6", "name": "Frank Thomas", "parent": "4", "level": "2",
-                          "items": [{ "id": "55", "name": "Jackie Sherill", "parent": "6", "level": "3", "items": [] }]
-                      }]
+            },
+            success: function (data) {
+                data = JSON.parse(data);
+                var func = callBack;
+                func.call(null, data);
+            },
+            error: function (err) {
+                console.log("error: " + err);
+            }
         });
-        data.push({
-            "id": "7", "name": "Todd Gatlin", "parent": "", "level": "1",
-            "items": []
-        });
-
-        return data;
     };
 
-    var getTimeOptions = function () {
-        var data = [];
-        data.push({ "id": "1", "name": "Current Month", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "2", "name": "Prior Month", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "3", "name": "Current Quarter", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "4", "name": "Prior Quarter", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "5", "name": "Current YTD", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "6", "name": "Prior Year", "parent": "", "level": "1", "items": [] });
-        data.push({ "id": "7", "name": "Prior 12 Months", "parent": "", "level": "1", "items": [] });
-        return data;
+    var getTimeOptions = function (callBack) {
+        var data = {};
+        var url = "/data/time-hierarchy.json";
+        $.ajax({
+            method: "GET",
+            url: url,
+            data: data,
+            dataType: "script",
+            beforeSend: function () {
+
+            },
+            success: function (data) {
+                data = JSON.parse(data);
+                var func = callBack;
+                func.call(null, data);
+            },
+            error: function (err) {
+                console.log("error: " + err);
+            }
+        });
     };
 
     var getChart = function () {
@@ -163,18 +139,12 @@
             case 1:
                 //same as 2
                 console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "salesVar": "$1234.56", "gmVar": "$234.65", "gmPctVar": "5.8%" });
-                data.push({ "custID": "200", "custName": "Customer 200", "salesVar": "$2234.56", "gmVar": "$334.65", "gmPctVar": "6.8%" });
-                data.push({ "custID": "300", "custName": "Customer 300", "salesVar": "$3234.56", "gmVar": "$434.65", "gmPctVar": "7.8%" });
-                renderGrowDeclReport(data);
+                colRpt.getData("/data/growing-accounts.json", { "reportID": reportID }, renderColumnReport, renderColumnReport);
                 break;
             case 2:
                 //same as 1
                 console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "salesVar": "$1234.56", "gmVar": "$234.65", "gmPctVar": "5.8%" });
-                data.push({ "custID": "200", "custName": "Customer 200", "salesVar": "$2234.56", "gmVar": "$334.65", "gmPctVar": "6.8%" });
-                data.push({ "custID": "300", "custName": "Customer 300", "salesVar": "$3234.56", "gmVar": "$434.65", "gmPctVar": "7.8%" });
-                renderGrowDeclReport(data);
+                colRpt.getData("/data/declining-accounts.json", { "reportID": reportID }, renderColumnReport, renderColumnReport);
                 break;
             case 3:
                 console.log('report type = ' + reportID);
@@ -185,17 +155,11 @@
                 break;
             case 4:
                 console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "sales": "$1234.56", "gm": "$234.65", "gmPct": "5.8%" });
-                data.push({ "custID": "200", "custName": "Customer 200", "sales": "$2234.56", "gm": "$334.65", "gmPct": "6.8%" });
-                data.push({ "custID": "300", "custName": "Customer 300", "sales": "$3234.56", "gm": "$434.65", "gmPct": "7.8%" });
-                renderNewCustReport(data);
+                colRpt.getData("/data/new-cust-revenue.json", { "reportID": reportID }, renderColumnReport, renderColumnReport);
                 break;
             case 5:
                 console.log('report type = ' + reportID);
-                data.push({ "custID": "100", "custName": "Customer 100", "avgTBO": "12", "currTBO": "30", "var": "18" });
-                data.push({ "custID": "200", "custName": "Customer 200", "avgTBO": "23", "currTBO": "40", "var": "17" });
-                data.push({ "custID": "300", "custName": "Customer 300", "avgTBO": "21", "currTBO": "29", "var": "8" });
-                renderLateOrdersReport(data);
+                colRpt.getData("/data/time-between-orders.json", { "reportID": reportID }, renderColumnReport, renderColumnReport);
                 break;
             default:
                 break;
@@ -203,9 +167,8 @@
         
     };
 
-    var renderOrgDD = function (orgListArea) {
+    var renderOrgDD = function (items) {
         console.log('renderOrgDD');
-        var items = getOrgHierarchy();
 
         // The main template.
         var main = Handlebars.compile($("#orglist").html());
@@ -214,13 +177,11 @@
         Handlebars.registerPartial("sublist", $("#sublist").html());
 
         // Render the list.
-        $("#" + orgListArea).html(main({ items: items }));
-
+        $("#" + "orgListArea").html(main({ items: items }));
     }
 
-    var renderTimeDD = function (timeListArea) {
+    var renderTimeDD = function (items) {
         console.log('renderTimeDD');
-        var items = getTimeOptions();
 
         // The main template
         var main = Handlebars.compile($("#timelist").html());
@@ -229,79 +190,63 @@
         Handlebars.registerPartial("sublist", $("#sublist").html());
 
         // Render the list.
-        $("#" + timeListArea).html(main({ items: items }));
+        $("#" + "timeListArea").html(main({ items: items }));
     };
 
-    var renderGrowDeclReport = function (data) {
-        console.log('renderGrowDeclReport');
-        renderOrgDD("orgListArea1");
-        renderTimeDD("timeListArea1");
-        var itemTemplate = Handlebars.compile($('#growdecl-template').html());
-        //add data to template
-        var template = itemTemplate(data);
-        $('#growdeclListData').html(template);
+    var getFilters = function () {
+        getTimeOptions(renderTimeDD);
+        getOrgHierarchy(renderOrgDD);
+        gRenderedFilters = true;
+    }
 
-        util.showSection('growdecl');
+    var toggleFilters = function (onOff) {
+        var filters = $('.filters');
+
+        if (onOff === "on") {
+            filters.removeClass("hide");
+            filters.addClass("show");
+        }
+        else {
+            filters.removeClass("show");
+            filters.addClass("hide");
+        }
+    }
+
+    var renderColumnReport = function (data) {
+        console.log('renderColumnReport');
+
+        if (!gRenderedFilters) {
+            getFilters()
+        }
+
+        data = JSON.parse(data);
+        var x = colRpt.getResponsiveColumnTable(data, true, true);
+        $(x).appendTo('#col-data-out');
+
+        toggleFilters("on");
+        util.showSection('col-data');
+
     };
 
     var renderTeamPerfReport = function (data) {
         console.log('renderTeamPerfReport');
-        renderOrgDD('orgListArea2');
-        renderTimeDD("timeListArea2");
-        var itemTemplate = Handlebars.compile($('#team-perf-template').html());
-        //add data to template
-        var template = itemTemplate(data);
-        $('#teamPerfListData').html(template);
-        util.showSection('teamPerf');
-    };
-
-    var renderNewCustReport = function (data) {
-        console.log('renderNewCustReport');
-        renderOrgDD("orgListArea3");
-        renderTimeDD("timeListArea3");
-        var itemTemplate = Handlebars.compile($('#new-cust-template').html());
-        //add data to template
-        var template = itemTemplate(data);
-        $('#newCustData').html(template);
-
-        util.showSection('newCust');
-    };
-
-    var renderLateOrdersReport = function (data) {
-        console.log('renderLateOrdersReport');
-        renderOrgDD("orgListArea4");
-        renderTimeDD("timeListArea4");
-        var itemTemplate = Handlebars.compile($('#late-orders-template').html());
-        //add data to template
-        var template = itemTemplate(data);
-        $('#lateOrdersData').html(template);
-
-        util.showSection('lateOrders');
+        if (!gRenderedFilters) {
+            renderFilters();
+        }
     };
 
     var renderCharts = function (data) {
         console.log('renderCharts');
 
-        renderOrgDD("orgListArea5");
-        renderTimeDD("timeListArea5");
+        if (!gRenderedFilters) {
+            getFilters();
+        }
 
-        $("#chartContainer").dxChart({
-            dataSource: data,
-            containerBackgroundColor: 'crimson',
-            legend: { visible: false },
-            series: {
-                argumentField: "day",
-                valueField: "oranges",
-                name: "My oranges",
-                type: "line",
-                color: '#ffa500'
-            }
-        });
-        util.showSection('charts');
     };
 
     var renderAvailableReports = function (reports) {
         console.log('renderAvailableReports');
+        toggleFilters("off");
         var itemTemplate = Handlebars.compile($('#report-list-template').html());
         var template = itemTemplate(reports);
         $('#reportListData').html(template);
@@ -363,7 +308,7 @@
 
     var router = Router(routes);
     router.init();
-    console.log(router);
+
     $(document).ready(function () {
 
     });

@@ -1,0 +1,22 @@
+﻿[
+  {
+    "columns": {
+      "names":    [ "custID", "Name", "Sales", "GM", "GM Pct" ],
+      "colMap":  [ "custID", "custName", "sales", "gm", "gmPct" ],
+      "colID":    [ ],
+      "hdrAttr":  [ "hide", "text-left info", "text-right info", "text-right info", "text-right info" ],
+      "cellAttr": [ "hide", "text-left", "text-right", "text-right", "text-right" ],
+      "ftrAttr": [ "hide", "", "text-right", "text-right", "text-right" ]
+    },
+    "rows": [
+      { "values": [ "12345", "Customer 100", "$1123.87", "$612.99", "12.34%" ] },
+      { "values": [ "63346", "Customer 200", "$1,123.87", "$612.99", "12.34%" ] },
+      { "values": [ "71397", "Customer 300", "$923.87", "$416.07", "14.33%" ] },
+      { "values": [ "77748", "Customer 400", "$1,567.33", "$564.66", "12.99%" ] },
+      { "values": [ "89341", "Customer 500", "$1,345.33", "$676.67", "23.44%" ] }
+    ],
+    "footer": [
+      { "values": [ "", "", "$12,3356", "$3,667", "17%"] }
+    ]
+  }
+]

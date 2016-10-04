@@ -33,6 +33,8 @@ namespace SA.WebServices.Models.Stats
 
         public saCommonReportData GetCustomerStats()
         {
+            //normally we would get data from database and figure out how many cols and rows
+            //then we would populate the saCommonReportData object and return it
 
             int numCols = 6, numRows = 2;
             saCommonReportData rd;
@@ -62,7 +64,8 @@ namespace SA.WebServices.Models.Stats
 
         public saCommonReportData GetCustomerReportStats(int custID)
         {
-
+            //normally we would get data from database and figure out how many cols and rows
+            //then we would populate the saCommonReportData object and return it
             int numCols = 3, numRows = 5;
             saCommonReportData rd;
             saRowValues rv;
@@ -102,6 +105,8 @@ namespace SA.WebServices.Models.Stats
 
         public saCommonReportData GetCustomerLoadStats()
         {
+            //normally we would get data from database and figure out how many cols and rows
+            //then we would populate the saCommonReportData object and return it
             int numCols = 6, numRows = 2;
             saCommonReportData rd;
             saRowValues rv;

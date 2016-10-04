@@ -1,0 +1,61 @@
+﻿[
+  {
+    "id": "1",
+    "name": "John Smith",
+    "parent": "",
+    "level": "1",
+    "items": [
+      {
+        "id": "2",
+        "name": "James Pettibone",
+        "parent": "1",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "3",
+        "name": "Frank Thomas",
+        "parent": "1",
+        "level": "2",
+        "items": [ ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Jane Doe",
+    "parent": "",
+    "level": "1",
+    "items": [
+      {
+        "id": "5",
+        "name": "Thomas Frank",
+        "parent": "4",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "6",
+        "name": "Frank Thomas",
+        "parent": "4",
+        "level": "2",
+        "items": [
+          {
+            "id": "55",
+            "name": "Jackie Sherill",
+            "parent": "6",
+            "level": "3",
+            "items": [ ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Todd Gatlin",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  }
+]

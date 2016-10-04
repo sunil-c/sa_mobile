@@ -21,17 +21,26 @@ ColumnReport.prototype.getErrCallBack = function () {
 ColumnReport.prototype.setErrCallBack = function (val) {
     this.errCallBack = val;
 };
-ColumnReport.prototype.getData = function (callBack, errCallBack) {
+ColumnReport.prototype.getData = function (url, data, callBack, errCallBack) {
+    /* arguments
+     * url = the url from where to get the data
+     * data = json object with parameters
+     * callBack = pointer to function to call upon success
+     * errCallBack = pointer to error handler
+     */
+    console.log("ColumnReport.getData");
+
     this.setCallBack(callBack);
     this.setErrCallBack(errCallBack);
 
     var self = this;
-    //
+    data = data || {};
     $.ajax({
         method: "GET",
-        url: "/data/col-report-data.json",
+        url: url,
+        data: data,
         dataType: "script",
-        beforeSend: function(){
+        beforeSend: function () {
 
         },
         success: function (data) {
@@ -43,16 +52,24 @@ ColumnReport.prototype.getData = function (callBack, errCallBack) {
             func.call(null, err);
         }
     });
-
 };
-ColumnReport.prototype.getResponsiveColumnTable = function (data, displayHeaders) {
+ColumnReport.prototype.getResponsiveColumnTable = function (data, displayHeaders, displayFooter) {
     //creates a responsive table based on the data object displayed at the bottom of this file
 
-    //some variables
     var cols, rows, row, colCount, rowCount;
-    colCount = data[0].columns.names.length;
-    rowCount = data[0].rows.length;
-
+    var hasColumnsProperty = data[0].hasOwnProperty("columns");
+    var hasRowProperty = data[0].hasOwnProperty("rows");
+    var hasFooterProperty = data[0].hasOwnProperty("footer");
+    //if no column property then return empty div 
+    if (!hasColumnsProperty) {
+        return $('<div/>')
+    }
+    else {
+        colCount = data[0].columns.names.length;
+    }
+    //if no rows property set rows to 0
+    rowCount = !hasRowProperty ? 0 : data[0].rows.length;
+    
     var d1 = $('<div/>').addClass("container-fluid");
     var d2 = $('<div/>').addClass("table-responsive").appendTo(d1);
     var t1 = $('<table/>').addClass("table table-striped table-hover").appendTo(d2);
@@ -60,7 +77,7 @@ ColumnReport.prototype.getResponsiveColumnTable = function (data, displayHeaders
     var b1 = $('<tbody/>').appendTo(t1);
 
     //create the header row
-    if (displayHeaders === true) {
+    if (displayHeaders === true && hasColumnsProperty && data[0].columns.hasOwnProperty("names")) {
         var row = $('<tr/>').appendTo(h1);
         //create column headers
         for (cols = 0; cols < colCount; cols++) {
@@ -69,12 +86,22 @@ ColumnReport.prototype.getResponsiveColumnTable = function (data, displayHeaders
     }
 
     //create the data rows
-    for (rows = 0; rows < rowCount; rows++) {
-        //create row
-        row = $('<tr/>').appendTo(b1);
-        //create cells
+    if (hasRowProperty && data[0].rows.length > 0) {
+        for (rows = 0; rows < rowCount; rows++) {
+            //create row
+            row = $('<tr/>').appendTo(b1);
+            //create cells
+            for (cols = 0; cols < colCount; cols++) {
+                $('<td/>').text(data[0].rows[rows].values[cols]).addClass(data[0].columns.cellAttr[cols]).appendTo(row);
+            }
+        }
+    }
+
+    if (displayFooter === true && hasFooterProperty && (data[0].footer.length > 0)) {
+        var row = $('<tr/>').appendTo(b1);
+        //create footers
         for (cols = 0; cols < colCount; cols++) {
-            $('<td/>').text(data[0].rows[rows].values[cols]).addClass(data[0].columns.cellAttr[cols]).appendTo(row);
+            $('<td/>').text(data[0].footer[0].values[cols]).addClass(data[0].columns.ftrAttr[cols]).appendTo(row);
         }
     }
     return d1;
@@ -103,15 +130,22 @@ RowReport.prototype.getErrCallBack = function () {
 RowReport.prototype.setErrCallBack = function (val) {
     this.errCallBack = val;
 };
-RowReport.prototype.getData = function (callBack, errCallBack) {
+RowReport.prototype.getData = function (url, data, callBack, errCallBack) {
+    /* arguments
+     * url = the url from where to get the data
+     * data = json object with parameters
+     * callBack = pointer to function to call upon success
+     * errCallBack = pointer to error handler
+     */
     this.setCallBack(callBack);
     this.setErrCallBack(errCallBack);
 
     var self = this;
-    //
+    data = data || {};
     $.ajax({
         method: "GET",
-        url: "/data/row-report-data.json",
+        url: url,
+        data: data,
         dataType: "script",
         beforeSend: function () {
 
@@ -125,7 +159,6 @@ RowReport.prototype.getData = function (callBack, errCallBack) {
             func.call(null, err);
         }
     });
-
 };
 RowReport.prototype.getResponsiveRowTable = function (data, displayHeaders) {
     //creates a responsive table based on the data object displayed at the bottom of this file
@@ -185,9 +218,10 @@ ChartReport.prototype.getErrCallBack = function () {
 ChartReport.prototype.setErrCallBack = function (val) {
     this.errCallBack = val;
 };
-ChartReport.prototype.getData = function (url, callBack, errCallBack) {
+ChartReport.prototype.getData = function (url, data, callBack, errCallBack) {
     /* arguments
      * url = the url from where to get the data
+     * data = json object with parameters
      * callBack = pointer to function to call upon success
      * errCallBack = pointer to error handler
      */
@@ -195,9 +229,11 @@ ChartReport.prototype.getData = function (url, callBack, errCallBack) {
     this.setErrCallBack(errCallBack);
 
     var self = this;
+    data = data || {};
     $.ajax({
         method: "GET",
         url: url,
+        data: data,
         dataType: "script",
         beforeSend: function () {
 

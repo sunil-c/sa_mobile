@@ -1,0 +1,17 @@
+﻿[
+  {
+    "columns": {
+      "names":    [ "custID", "Name", "Avg TBO", "Curr TBO", "Variance" ],
+      "colMap":  [ "custID", "custName", "avgTBO", "currTBO", "var" ],
+      "colID":    [ ],
+      "hdrAttr":  [ "hide", "text-left info", "text-right info", "text-right info", "text-right info" ],
+      "cellAttr": [ "hide", "text-left", "text-right", "text-right", "text-right" ]
+    },
+    "rows": [
+      { "values": [ "12345", "Customer 100", "12", "30", "18" ] },
+      { "values": [ "63346", "Customer 200", "12", "29", "17" ] },
+      { "values": [ "71397", "Customer 300", "10", "26", "16" ] }
+    ],
+    "footer": [ ]
+  }
+]

@@ -84,6 +84,13 @@
     <Content Include="data\simple-chart.json" />
     <Content Include="data\series-chart-data.json" />
     <Content Include="data\pie-chart-data.json" />
+    <Content Include="data\org-hierarchy.json" />
+    <Content Include="data\time-hierarchy.json" />
+    <Content Include="data\growing-accounts.json" />
+    <Content Include="data\declining-accounts.json" />
+    <Content Include="data\new-cust-revenue.json" />
+    <Content Include="data\time-between-orders.json" />
+    <Content Include="data\team-performance.json" />
     <None Include="scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="scripts\dx.viz.debug.js" />
     <Content Include="scripts\dx.viz.js" />

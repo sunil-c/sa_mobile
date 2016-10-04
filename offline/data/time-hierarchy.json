@@ -1,0 +1,52 @@
+﻿[
+  {
+    "id": "1",
+    "name": "Current Month",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  },
+  {
+    "id": "2",
+    "name": "Prior Month",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  },
+  {
+    "id": "3",
+    "name": "Current Quarter",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  },
+  {
+    "id": "4",
+    "name": "Prior Quarter",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  },
+  {
+    "id": "5",
+    "name": "Current YTD",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  },
+  {
+    "id": "6",
+    "name": "Prior Year",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  },
+  {
+    "id": "7",
+    "name": "Prior 12 Months",
+    "parent": "",
+    "level": "1",
+    "items": [ ]
+  }
+
+]

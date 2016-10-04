@@ -1,0 +1,34 @@
+﻿[
+  {
+    "masterColumns": {
+      "names": [ "repID", "Name" ],
+      "colMap": [ "repID", "repName"],
+      "colID": [ ],
+      "hdrAttr": [ "hide", "header3"],
+      "cellAttr": [ "hide", "header3"]
+    },
+    "masterRows": [
+      { "values": [ "36457", "John Smith" ] },
+      { "values": [ "87635", "Jane Doe"  ] },
+      { "values": [ "99647", "Charlie Dobbs"  ] }
+    ],
+    "columns": {
+      "names":    [ "repID", "Name", "Current", "Prior", "Variance" ],
+      "colMap":   [ "repID", "name", "curr", "prior", "var" ],
+      "colID":    [ ],
+      "hdrAttr":  [ "hide", "text-left", "text-right info", "text-right info", "text-right info" ],
+      "cellAttr": [ "hide", "text-left info", "text-right", "text-right", "text-right" ]
+    },
+    "rows": [
+      { "values": [ "36457", "Sales", "$1009.90", "$990.00", "29.90" ] },
+      { "values": [ "36457", "GM", "$700.00", "$600.00", "$100.00" ] },
+      { "values": [ "36457", "GM Pct", "19.88%", "20.99%", "-1.11%" ] },
+      { "values": [ "87635", "Sales", "$1009.90", "$990.00", "29.90" ] },
+      { "values": [ "87635", "GM", "$700.00", "$600.00", "$100.00" ] },
+      { "values": [ "87635", "GM Pct", "19.88%", "20.99%", "-1.11%" ] },
+      { "values": [ "99647", "Sales", "$1009.90", "$990.00", "29.90" ] },
+      { "values": [ "99647", "GM", "$700.00", "$600.00", "$100.00" ] },
+      { "values": [ "99647", "GM Pct", "19.88%", "20.99%", "-1.11%" ] }
+    ]
+  }
+]

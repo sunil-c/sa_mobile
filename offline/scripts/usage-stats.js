@@ -114,7 +114,7 @@
     //this is a common call to the web service
     var getReportData = function (custID, level, callBack) {
         console.log('getReport');
-        //get stats broken out by company 
+
         // collect the criteria for the call
         var parameters = { };
         var token = authorize.getToken();

@@ -48,11 +48,11 @@
 
         <script id="report-list-template" type="text/x-handlebars-template">
             {{#each this}}
-                {{#if hasRoute}}
-                    <a href="#/{{route}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
-                {{else}}
-                    <a href="#/report/{{reportID}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
-                {{/if}}
+            {{#if hasRoute}}
+            <a href="#/{{route}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
+            {{else}}
+            <a href="#/report/{{reportID}}" class="list-group-item company-reports" data-id="{{reportID}}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;{{reportName}}</a>
+            {{/if}}
             {{/each}}
         </script>
         <div id="reportList" class="container section hide" data-route="reportList">
@@ -63,105 +63,33 @@
             </div>
         </div>
 
-        <script id="growdecl-template" type="text/x-handlebars-template">
-            {{#each this}}
-            <tr>
-                <td>{{custName}}</td>
-                <td>{{salesVar}}</td>
-                <td>{{gmVar}}</td>
-                <td>{{gmPctVar}}</td>
-            </tr>
-            {{/each}}
-        </script>
-        <script id="sublist" type="x-handlebars-template">
-            {{#each items}} {{! Each item is an "li" }}
-            <li class="dropdown-item">
-                <a href="#">{{name}}</a>
-                {{#if items}} {{! Within the context of the current item }}
-                <ul class="inner-menu">
-                    {{> sublist}} {{! Recursively render the partial }}
+        <div class="container filters hide">
+            <script id="sublist" type="x-handlebars-template">
+                {{#each items}} {{! Each item is an "li" }}
+                <li class="dropdown-item">
+                    <a href="#">{{name}}</a>
+                    {{#if items}} {{! Within the context of the current item }}
+                    <ul class="inner-menu">
+                        {{> sublist}} {{! Recursively render the partial }}
+                    </ul>
+                    {{/if}}
+                </li>
+                {{/each}}
+            </script>
+            <script id="orglist" type="x-handlebars-template">
+                <button class="btn btn-sm dropdown-toggle control-150" type="button" id="menu1" data-toggle="dropdown">Organization<span class="caret"></span></button>
+                {{! displays the li's from sublist }}
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    {{> sublist}}
                 </ul>
-                {{/if}}
-            </li>
-            {{/each}}
-        </script>
-        <script id="orglist" type="x-handlebars-template">
-            <button class="btn btn-sm dropdown-toggle control-150" type="button" id="menu1" data-toggle="dropdown">Organization<span class="caret"></span></button>
-            {{! displays the li's from sublist }}
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                {{> sublist}}
-            </ul>
-        </script>
-        <script id="timelist" type="x-handlebars-template">
-            <button class="btn btn-sm dropdown-toggle control-150" type="button" id="timemenu" data-toggle="dropdown">Time Period<span class="caret"></span></button>
-            {{! displays the li's from sublist }}
-            <ul class="dropdown-menu" role="menu" aria-labelledby="timemenu">
-                {{> sublist}}
-            </ul>
-        </script>
-        <div id="growdeclList" class="container section hide" data-route="growdecl">
-            <div class="container">
-                <div class="container mgn-bottom-5">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <a href="#/availableReports" class="btn btn-primary btn-sm control-100"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <div id="orgListArea1" class="dropdown pull-left"></div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div id="timeListArea1" class="dropdown pull-left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Customer</th>
-                                    <th>Sales Var</th>
-                                    <th>GM Var</th>
-                                    <th>GM% Var</th>
-                                </tr>
-                            </thead>
-                            <tbody id="growdeclListData"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script id="team-perf-template" type="text/x-handlebars-template">
-            {{#each this}}
-            <h3 data-id="{{repID}}">{{repName}}</h3>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>&nbsp;</th>
-                            <th>Curr</th>
-                            <th>Prior</th>
-                            <th>Var</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each rows}}
-                        <tr>
-                            <td>{{name}}</td>
-                            <td>{{curr}}</td>
-                            <td>{{prior}}</td>
-                            <td>{{var}}</td>
-                        </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
-            </div>
-            {{/each}}
-        </script>
-        <div id="teamPerfList" class="container section hide" data-route="teamPerf">
+            </script>
+            <script id="timelist" type="x-handlebars-template">
+                <button class="btn btn-sm dropdown-toggle control-150" type="button" id="timemenu" data-toggle="dropdown">Time Period<span class="caret"></span></button>
+                {{! displays the li's from sublist }}
+                <ul class="dropdown-menu" role="menu" aria-labelledby="timemenu">
+                    {{> sublist}}
+                </ul>
+            </script>
             <div class="container mgn-bottom-5">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-3">
@@ -169,137 +97,36 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-3 col-md-3">
-                        <div id="orgListArea2" class="dropdown pull-left"></div>
+                        <div id="orgListArea" class="dropdown pull-left"></div>
                     </div>
 
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div id="timeListArea2" class="dropdown pull-left"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="container" id="teamPerfListData">
-                </div>
-            </div>
-        </div>
-
-        <script id="new-cust-template" type="text/x-handlebars-template">
-            {{#each this}}
-            <tr>
-                <td>{{custName}}</td>
-                <td>{{sales}}</td>
-                <td>{{gm}}</td>
-                <td>{{gmPct}}</td>
-                <td>{{orders}}</td>
-            </tr>
-            {{/each}}
-        </script>
-        <div id="newCustReport" class="container section hide" data-route="newCust">
-            <div class="container">
-                <div class="container mgn-bottom-5">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <a href="#/availableReports" class="btn btn-primary btn-sm control-100"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <div id="orgListArea3" class="dropdown pull-left"></div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div id="timeListArea3" class="dropdown pull-left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="table-responsive">
-                        <table class="table  table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Customer</th>
-                                    <th>Sales</th>
-                                    <th>GM</th>
-                                    <th>GM %</th>
-                                    <th>Orders</th>
-                                </tr>
-                            </thead>
-                            <tbody id="newCustData"></tbody>
-                        </table>
+                        <div id="timeListArea" class="dropdown pull-left"></div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="container">
+            <section class="section hide" data-route="col-data">
+                <div class="data-area" id="col-data-out">
 
-        <script id="late-orders-template" type="text/x-handlebars-template">
-            {{#each this}}
-            <tr>
-                <td>{{custName}}</td>
-                <td>{{avgTBO}}</td>
-                <td>{{currTBO}}</td>
-                <td>{{var}}</td>
-            </tr>
-            {{/each}}
-        </script>
-        <div id="lateOrdersReport" class="container section hide" data-route="lateOrders">
-            <div class="container">
-                <div class="container mgn-bottom-5">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <a href="#/availableReports" class="btn btn-primary btn-sm control-100"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <div id="orgListArea4" class="dropdown pull-left"></div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div id="timeListArea4" class="dropdown pull-left"></div>
-                        </div>
-                    </div>
                 </div>
-                <div class="container-fluid">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Customer</th>
-                                    <th>Avg TBO</th>
-                                    <th>Curr TBO</th>
-                                    <th>Var</th>
-                                </tr>
-                            </thead>
-                            <tbody id="lateOrdersData"></tbody>
-                        </table>
-                    </div>
+            </section>
+
+            <section class="section hide" data-route="row-data">
+                <div class="data-area" id="row-data-out">
+
                 </div>
-            </div>
+            </section>
+
+            <section class="section hide" style="width: 400px; height: 400px;"  data-route="chart-data">
+                <div id="chart">
+
+                </div>
+            </section>
+
         </div>
-
-        <div id="chartReport" class="container section hide" data-route="charts">
-            <div class="container">
-                <div class="container mgn-bottom-5">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <a href="#/availableReports" class="btn btn-primary btn-sm control-100"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <div id="orgListArea5" class="dropdown pull-left"></div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div id="timeListArea5" class="dropdown pull-left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div id="chartContainer" style="height:350px; max-width:800px; margin:0 auto"></div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
     <script src="scripts/jquery-1.11.3.min.js"></script>
@@ -307,6 +134,7 @@
     <script src="scripts/director.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/handlebars.js"></script>
+    <script src="scripts/sa-Report-Writer.js"></script>
     <script src="scripts/sa-authorize.js"></script>
     <script src="scripts/sa-util.js"></script>
     <script src="scripts/reports.js"></script>

@@ -79,12 +79,16 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorizeController.cs" />
+    <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\StatsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\auth\AuthClasses.cs" />
+    <Compile Include="Models\filters\FilterClasses.cs" />
+    <Compile Include="Models\filters\FiltersRepository.cs" />
+    <Compile Include="Models\filters\IFiltersRepository.cs" />
     <Compile Include="Models\reports\IReportsRepository.cs" />
     <Compile Include="Models\reports\ReportClasses.cs" />
     <Compile Include="Models\reports\ReportsRepository.cs" />

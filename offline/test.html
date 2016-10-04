@@ -39,27 +39,27 @@
 
             var getColData = function () {
                 console.log("getColData");
-                colRpt.getData(renderColTable, renderColTable);
+                colRpt.getData("/data/col-report-data.json", {}, renderColTable, renderColTable);
             };
 
             var getRowData = function () {
                 console.log("getColData");
-                rowRpt.getData(renderRowTable, renderRowTable);
+                rowRpt.getData("/data/row-report-data.json", {}, renderRowTable, renderRowTable);
             };
 
             var getChartData = function () {
                 console.log("getChartData");
-                chartRpt.getData("/data/simple-chart.json", renderSeriesChart, renderSeriesChart)
+                chartRpt.getData("/data/simple-chart.json", {}, renderSeriesChart, renderSeriesChart)
             };
 
             var getPieChartData = function () {
                 console.log("getPieChartData");
-                chartRpt.getData("/data/pie-chart-data.json", renderPieChart, renderPieChart)
+                chartRpt.getData("/data/pie-chart-data.json", {}, renderPieChart, renderPieChart)
             };
 
             var getMultiChartData = function () {
                 console.log("getMultiChartData");
-                chartRpt.getData("/data/series-chart-data.json", renderSeriesChart, renderSeriesChart)
+                chartRpt.getData("/data/series-chart-data.json", {}, renderSeriesChart, renderSeriesChart)
             };
 
             var renderSeriesChart = function (data) {
@@ -105,7 +105,7 @@
 
             var renderColTable = function (data) {
                 data = JSON.parse(data);
-                var x = colRpt.getResponsiveColumnTable(data, true);
+                var x = colRpt.getResponsiveColumnTable(data, true, true);
                 $(x).appendTo('#col-data-out');
             };
 

@@ -13,6 +13,30 @@ namespace SA.WebServices.Models.Reports
         public string route;
     }
 
+    public class saReportParams
+    {
+        /// <summary>
+        /// token - security token
+        /// </summary>
+        public string token; //used to validate user
+        /// <summary>
+        /// filterSelections - pipe delimite string of selected filters
+        /// </summary>
+        public string filterSelections; //pipe delimited string of selected filters
+        /// <summary>
+        /// selectedInt - generic integer
+        /// </summary>
+        public int selectedInt; //generic integer -- could be used for a selected report of some kind
+        /// <summary>
+        /// selectedString - generic string 
+        /// </summary>
+        public string selectedString; //generic string parameter
+        /// <summary>
+        /// selectedBool - generic boolean
+        /// </summary>
+        public bool selectedBool; //generic boolean parameter
+    }
+
     public class saCommonReportData
     {
         public saColumnHeaderInfo columns;

@@ -9,5 +9,6 @@ namespace SA.WebServices.Models.Reports
     interface IReportsRepository
     {
         IEnumerable<saReport> GetReports();
+        saCommonReportData GetReport(saReportParams param);
     }
 }
