@@ -91,6 +91,7 @@
     <Content Include="data\new-cust-revenue.json" />
     <Content Include="data\time-between-orders.json" />
     <Content Include="data\team-performance.json" />
+    <None Include="Properties\PublishProfiles\tst-m.pubxml" />
     <None Include="scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="scripts\dx.viz.debug.js" />
     <Content Include="scripts\dx.viz.js" />
@@ -151,9 +152,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -13,8 +13,8 @@
         gAuthPath = 'http://localhost:25004/api';
     }
     else {                                                // on web server
-        gAuthPath = '/services/api';
-        gServicePath = '/services/api';
+        gAuthPath = '/api';
+        gServicePath = '/api';
     }
     //initialize the authorization object
     var authorize = new Authorize({}, gAuthPath);
