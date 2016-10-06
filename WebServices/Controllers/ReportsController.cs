@@ -36,7 +36,7 @@ namespace SA.WebServices.Controllers
         }
 
         [HttpGet(), ActionName("getavailablereports")]
-        public IEnumerable<saReport> GetReports(string token, int custID, int reportID)
+        public IEnumerable<saReport> GetReports(string token)
         {
             try
             {

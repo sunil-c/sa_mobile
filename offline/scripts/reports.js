@@ -261,6 +261,7 @@
 
         // collect the criteria for the call
         var parameters = {
+
         };
         var self = this;
         var token = authorize.getToken();

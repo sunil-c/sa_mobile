@@ -5,8 +5,11 @@ using System.Web;
 
 namespace SA.WebServices.Models.Filters
 {
-    public class FiltersRepository: IFiltersRepository
+    public class FiltersRepository : IFiltersRepository
     {
-
+        public IEnumerable<string> GetFilterNames()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
