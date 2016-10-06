@@ -106,7 +106,46 @@ ColumnReport.prototype.getResponsiveColumnTable = function (data, displayHeaders
     }
     return d1;
 };
+ColumnReport.prototype.getMasterDtlTable = function (data, displayHeaders) {
+    //creates a responsive table with a header for the master record 
 
+    //some variables
+    var mstrRow, mstrRow, mstrColCount, mstrRowCount;
+    var mstrCellAttr = [], mstrHdrAttr = [], mstrRows = [], strVal = "", idVal = 0, label = "";
+    var dtlData = [], newRows = [], saveRows = [];
+
+    //master cell and header attrs
+    mstrCellAttr = data[0].columns.cellAttr;
+    mstrHdrAttr = data[0].columns.hdrAttr;
+    //get the master rows
+    mstrRows = data[0].rows;
+    mstrColCount = data[0].columns.names.length;
+    mstrRowCount = data[0].rows.length;
+    saveRows = data[1].rows;
+
+    var d1 = $('<div/>').addClass("container-fluid");
+    for (mstrRow = 0; mstrRow < mstrRowCount; mstrRow++) {
+        //build the label above the detail table
+        strVal = mstrRows[mstrRow].values[1];
+        idVal = mstrRows[mstrRow].values[0];
+        label = $('<h3/>').text(strVal).attr('data-id', idVal).addClass(mstrHdrAttr[1]).appendTo(d1);
+        //get the detail object
+        dtlData[0] = data[1];
+        //iterate the saved rows and save the ones that match the id val from teh master record
+        newRows = [];
+        $.each(saveRows, function (index, value) {
+            if (value.values[0] == idVal) {
+                newRows[newRows.length] = value;
+            }
+        });
+        //replace the rows array with the new array
+        dtlData[0].rows = newRows;
+        d1.append(this.getResponsiveColumnTable(dtlData, false, false));
+    }
+
+
+    return d1;
+};
 /*****************************************************************************/
 //RESPONSIVE ROW TABLE
 /*****************************************************************************/

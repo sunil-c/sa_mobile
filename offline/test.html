@@ -49,17 +49,17 @@
 
             var getChartData = function () {
                 console.log("getChartData");
-                chartRpt.getData("/data/simple-chart.json", {}, renderSeriesChart, renderSeriesChart)
+                chartRpt.getData("/data/simple-chart.json", {}, renderSeriesChart, renderSeriesChart);
             };
 
             var getPieChartData = function () {
                 console.log("getPieChartData");
-                chartRpt.getData("/data/pie-chart-data.json", {}, renderPieChart, renderPieChart)
+                chartRpt.getData("/data/pie-chart-data.json", {}, renderPieChart, renderPieChart);
             };
 
             var getMultiChartData = function () {
                 console.log("getMultiChartData");
-                chartRpt.getData("/data/series-chart-data.json", {}, renderSeriesChart, renderSeriesChart)
+                chartRpt.getData("/data/series-chart-data.json", {}, renderSeriesChart, renderSeriesChart);
             };
 
             var renderSeriesChart = function (data) {

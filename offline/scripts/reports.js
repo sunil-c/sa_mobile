@@ -23,6 +23,7 @@
     var colRpt = new ColumnReport();
     var rowRpt = new RowReport();
     var chartRpt = new ChartReport();
+    var chartInstance = {};
 
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
@@ -104,31 +105,7 @@
     var getChart = function () {
         console.log('getChart');
 
-        var dataSource = [{
-            day: "Monday",
-            oranges: 3
-        }, {
-            day: "Tuesday",
-            oranges: 2
-        }, {
-            day: "Wednesday",
-            oranges: 3
-        }, {
-            day: "Thursday",
-            oranges: 4
-        }, {
-            day: "Friday",
-            oranges: 6
-        }, {
-            day: "Saturday",
-            oranges: 11
-        }, {
-            day: "Sunday",
-            oranges: 4
-        }];
-        //normally this is takes place after an ajax call to the ws to get data
-        renderCharts(dataSource);
-        return dataSource
+        chartRpt.getData("/data/series-chart-data.json", {}, renderCharts, renderCharts)
     };
 
     var getReport = function (reportID) {
@@ -148,10 +125,7 @@
                 break;
             case 3:
                 console.log('report type = ' + reportID);
-                data.push({ "repID": "100", "repName": "John Smith", "rows": [{ "name": "Sales", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM%", "curr": "12.66%", "prior": "1.66%", "var": "1.00%" }] });
-                data.push({ "repID": "100", "repName": "Jane Doe", "rows": [{ "name": "Sales", "curr": "$2234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM%", "curr": "12.66%", "prior": "1.66%", "var": "1.00%" }] });
-                data.push({ "repID": "100", "repName": "Frank Jones", "rows": [{ "name": "Sales", "curr": "$3234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM", "curr": "$1234.56", "prior": "$1234.56", "var": "$1234.56" }, { "name": "GM%", "curr": "12.66%", "prior": "1.66%", "var": "1.00%" }] });
-                renderTeamPerfReport(data);
+                colRpt.getData('/data/team-performance.json', { "reportID": reportID }, renderMstrDtlReport, renderMstrDtlReport)
                 break;
             case 4:
                 console.log('report type = ' + reportID);
@@ -221,6 +195,7 @@
 
         data = JSON.parse(data);
         var x = colRpt.getResponsiveColumnTable(data, true, true);
+        $('#col-data-out').empty();
         $(x).appendTo('#col-data-out');
 
         toggleFilters("on");
@@ -228,11 +203,21 @@
 
     };
 
-    var renderTeamPerfReport = function (data) {
-        console.log('renderTeamPerfReport');
+    var renderMstrDtlReport = function (data) {
+        console.log('renderColumnReport');
+
         if (!gRenderedFilters) {
-            renderFilters();
+            getFilters()
         }
+
+        data = JSON.parse(data);
+        var x = colRpt.getMasterDtlTable(data, true);
+        $('#mstr-dtl-data-out').empty();
+        $(x).appendTo('#mstr-dtl-data-out');
+
+        toggleFilters("on");
+        util.showSection('mstr-dtl-data');
+
     };
 
     var renderCharts = function (data) {
@@ -242,6 +227,23 @@
             getFilters();
         }
 
+        //render the chart to screen
+        data = JSON.parse(data);
+        var series = data[0].header.series;
+        var dataSource = data[0].data;
+        if (chartInstance) {
+            $("#chart").empty();
+            $("#chart").removeData('dxChart');
+        }
+
+        chartInstance = chartRpt.renderChart(dataSource, series, "chart", {
+            title: data[0].header.title,
+            argumentField: data[0].header.argumentField,
+            valueAxisFormat: data[0].header.valueAxisFormat
+        });
+
+        toggleFilters("on");
+        util.showSection('chart-data');
     };
 
     var renderAvailableReports = function (reports) {
