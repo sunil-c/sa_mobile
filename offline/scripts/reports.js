@@ -58,50 +58,6 @@
         }
     };
 
-    var getOrgHierarchy = function (callBack) {
-        var data = {};
-        var url = "/data/org-hierarchy.json";
-        $.ajax({
-            method: "GET",
-            url: url,
-            data: data,
-            dataType: "script",
-            beforeSend: function () {
-
-            },
-            success: function (data) {
-                data = JSON.parse(data);
-                var func = callBack;
-                func.call(null, data);
-            },
-            error: function (err) {
-                console.log("error: " + err);
-            }
-        });
-    };
-
-    var getTimeOptions = function (callBack) {
-        var data = {};
-        var url = "/data/time-hierarchy.json";
-        $.ajax({
-            method: "GET",
-            url: url,
-            data: data,
-            dataType: "script",
-            beforeSend: function () {
-
-            },
-            success: function (data) {
-                data = JSON.parse(data);
-                var func = callBack;
-                func.call(null, data);
-            },
-            error: function (err) {
-                console.log("error: " + err);
-            }
-        });
-    };
-
     var getChart = function () {
         console.log('getChart');
 
@@ -141,35 +97,33 @@
         
     };
 
+    var renderFilter = function (items, label, id) {
+        console.log('renderFilter');
+        var filter = new Filter();
+        var nodes = filter.processFilterData(items);
+        var f = filter.getDropDownFilter(nodes, label, id);
+        var row = $('<div class="col-xs-12 col-sm-3 col-md-3" />').append(f);
+        $("#filterArea").append(row);
+    }
+
     var renderOrgDD = function (items) {
         console.log('renderOrgDD');
-
-        // The main template.
-        var main = Handlebars.compile($("#orglist").html());
-
-        // Register the list partial that "main" uses.
-        Handlebars.registerPartial("sublist", $("#sublist").html());
-
-        // Render the list.
-        $("#" + "orgListArea").html(main({ items: items }));
-    }
+        renderFilter(items, "Org", "orgID");
+    };
 
     var renderTimeDD = function (items) {
         console.log('renderTimeDD');
-
-        // The main template
-        var main = Handlebars.compile($("#timelist").html());
-
-        // Register the list partial that "main" uses.
-        Handlebars.registerPartial("sublist", $("#sublist").html());
-
-        // Render the list.
-        $("#" + "timeListArea").html(main({ items: items }));
+        renderFilter(items, "Time", "timeID");
     };
 
     var getFilters = function () {
-        getTimeOptions(renderTimeDD);
-        getOrgHierarchy(renderOrgDD);
+        //normally there would be a call to the service to get the filters
+        //and then some coe to iterate and render them
+        var filter = new Filter();
+        filter.getData("/data/nichols.json", {}, renderOrgDD, renderOrgDD);
+        filter = new Filter();
+        filter.getData("/data/time-hierarchy.json", {}, renderTimeDD, renderTimeDD);
+        
         gRenderedFilters = true;
     }
 

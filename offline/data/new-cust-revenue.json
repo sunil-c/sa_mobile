@@ -6,7 +6,7 @@
       "colID":    [ ],
       "hdrAttr":  [ "hide", "text-left info", "text-right info", "text-right info", "text-right info" ],
       "cellAttr": [ "hide", "text-left", "text-right", "text-right", "text-right" ],
-      "ftrAttr": [ "hide", "", "text-right", "text-right", "text-right" ]
+      "ftrAttr": [ "hide", "", "text-right info", "text-right", "text-right" ]
     },
     "rows": [
       { "values": [ "12345", "Customer 100", "$1123.87", "$612.99", "12.34%" ] },

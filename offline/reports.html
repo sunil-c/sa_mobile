@@ -64,45 +64,13 @@
         </div>
 
         <div class="container filters hide">
-            <script id="sublist" type="x-handlebars-template">
-                {{#each items}} {{! Each item is an "li" }}
-                <li class="dropdown-item">
-                    <a href="#">{{name}}</a>
-                    {{#if items}} {{! Within the context of the current item }}
-                    <ul class="inner-menu">
-                        {{> sublist}} {{! Recursively render the partial }}
-                    </ul>
-                    {{/if}}
-                </li>
-                {{/each}}
-            </script>
-            <script id="orglist" type="x-handlebars-template">
-                <button class="btn btn-sm dropdown-toggle control-150" type="button" id="menu1" data-toggle="dropdown">Organization<span class="caret"></span></button>
-                {{! displays the li's from sublist }}
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    {{> sublist}}
-                </ul>
-            </script>
-            <script id="timelist" type="x-handlebars-template">
-                <button class="btn btn-sm dropdown-toggle control-150" type="button" id="timemenu" data-toggle="dropdown">Time Period<span class="caret"></span></button>
-                {{! displays the li's from sublist }}
-                <ul class="dropdown-menu" role="menu" aria-labelledby="timemenu">
-                    {{> sublist}}
-                </ul>
-            </script>
             <div class="container mgn-bottom-5">
-                <div class="row">
+                <div class="row" id="filterArea">
                     <div class="col-xs-12 col-sm-3 col-md-3">
                         <a href="#/availableReports" class="btn btn-primary btn-sm control-100"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;Back</a>
                     </div>
 
-                    <div class="col-xs-12 col-sm-3 col-md-3">
-                        <div id="orgListArea" class="dropdown pull-left"></div>
-                    </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div id="timeListArea" class="dropdown pull-left"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -142,6 +110,7 @@
     <script src="scripts/sa-Report-Writer.js"></script>
     <script src="scripts/sa-authorize.js"></script>
     <script src="scripts/sa-util.js"></script>
+    <script src="scripts/sa-filter.js"></script>
     <script src="scripts/reports.js"></script>
 </body>
 

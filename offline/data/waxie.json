@@ -1,0 +1,3871 @@
+[{
+	"id": "100011",
+	"name": "Entire Organization",
+	"parent": "",
+	"level": "1",
+	"items": [{
+	"id": "958158",
+	"name": "CALIFORNIA REGION",
+	"parent": "100011",
+	"level": "2",
+	"items": [{
+	"id": "958164",
+	"name": "02 - SANTA ANA",
+	"parent": "958158",
+	"level": "3",
+	"items": [{
+	"id": "958165",
+	"name": "02 SANTA ANA HOUSE",
+	"parent": "958164",
+	"level": "4",
+	"items": [{
+	"id": "957582",
+	"name": "Available - 02001",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957591",
+	"name": "Available - 02201",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957595",
+	"name": "Available - 02203",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957614",
+	"name": "Available - 02255",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957601",
+	"name": "Available - 02256",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957584",
+	"name": "Available - 02259",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957597",
+	"name": "Available - 02266",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957599",
+	"name": "Available - 02267",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957602",
+	"name": "Available - 02268",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "1109830",
+	"name": "Available - 02269",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957628",
+	"name": "Available - 02270",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "958688",
+	"name": "Available - 02284",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957585",
+	"name": "Available - 02291",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957589",
+	"name": "Corporate Account - 02294",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957593",
+	"name": "John Berry - 02295",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957596",
+	"name": "Samples - 02297",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957592",
+	"name": "House - 02299",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957587",
+	"name": "Corporate Account - 02901",
+	"parent": "958165",
+	"level": "5",
+	"items": []},{
+	"id": "957588",
+	"name": "Corporate Account - 02902",
+	"parent": "958165",
+	"level": "5",
+	"items": []}},{
+	"id": "958166",
+	"name": "02 SANTA ANA SHOP",
+	"parent": "958164",
+	"level": "4",
+	"items": [{
+	"id": "957598",
+	"name": "Service Manager - 02800",
+	"parent": "958166",
+	"level": "5",
+	"items": []},{
+	"id": "1111297",
+	"name": "Erwin Cruz - 02801",
+	"parent": "958166",
+	"level": "5",
+	"items": []},{
+	"id": "1111466",
+	"name": "Luis Miramontes - 02802",
+	"parent": "958166",
+	"level": "5",
+	"items": []}},{
+	"id": "958167",
+	"name": "02 SANTA ANA SALES TEAM",
+	"parent": "958164",
+	"level": "4",
+	"items": [{
+	"id": "957594",
+	"name": "Lars Johnson - 02661",
+	"parent": "958167",
+	"level": "5",
+	"items": []},{
+	"id": "957586",
+	"name": "Corporate Account - 02900",
+	"parent": "958167",
+	"level": "5",
+	"items": []},{
+	"id": "958762",
+	"name": "02 Santa Ana Chantarapan Team",
+	"parent": "958167",
+	"level": "5",
+	"items": [{
+	"id": "957619",
+	"name": "Mark Petty - 02219",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957604",
+	"name": "Erik Chantarapan - 02220",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "958750",
+	"name": "Available - 02223",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957629",
+	"name": "Available - 02224",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957615",
+	"name": "Guy Fiandaca - 02225",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957600",
+	"name": "Availablei - 02229",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "1112181",
+	"name": "Brian Montoya - 02232",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957624",
+	"name": "Cullen Lethin - 02236",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957605",
+	"name": "Available - 02238",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957590",
+	"name": "Kimbra Klopfer - 02239",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "963638",
+	"name": "Available - 02246",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957610",
+	"name": "Available - 02247",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957622",
+	"name": "Jason Meek - 02250",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957606",
+	"name": "Brandon Lester - 02251",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "957617",
+	"name": "Kevin Sadakane - 02253",
+	"parent": "958762",
+	"level": "6",
+	"items": []},{
+	"id": "958239",
+	"name": "Available - 02283",
+	"parent": "958762",
+	"level": "6",
+	"items": []}},{
+	"id": "958763",
+	"name": "02 Santa Ana Torgerson Team",
+	"parent": "958167",
+	"level": "5",
+	"items": [{
+	"id": "957616",
+	"name": "John Torgerson - 02202",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "963845",
+	"name": "Jamie Roberts - 02221",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957608",
+	"name": "Nicolas Yuan - 02228",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957603",
+	"name": "Edwin Montoya - 02230",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957612",
+	"name": "Available - 02231",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957609",
+	"name": "Francisco Ortiz - 02233",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957621",
+	"name": "Oz Guerra - 02234",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957613",
+	"name": "Available - 02237",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957583",
+	"name": "Brandon Goldberg - 02242",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957625",
+	"name": "Available - 02243",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957618",
+	"name": "Luis Marquez - 02244",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957607",
+	"name": "Andrew Duncan - 02249",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957627",
+	"name": "Kaplowitz/Marquez - 2257",
+	"parent": "958763",
+	"level": "6",
+	"items": []},{
+	"id": "957611",
+	"name": "Ed Kaplowitz - 02260",
+	"parent": "958763",
+	"level": "6",
+	"items": []}},{
+	"id": "958764",
+	"name": "02 Santa Ana Other Team",
+	"parent": "958167",
+	"level": "5",
+	"items": [{
+	"id": "976295",
+	"name": "Alice Sawaya - 02200",
+	"parent": "958764",
+	"level": "6",
+	"items": []},{
+	"id": "970255",
+	"name": "Alisa Konsulian - 02222",
+	"parent": "958764",
+	"level": "6",
+	"items": []},{
+	"id": "957626",
+	"name": "Scott Schaffer - 02226",
+	"parent": "958764",
+	"level": "6",
+	"items": []},{
+	"id": "957620",
+	"name": "Michael Gould - 02241",
+	"parent": "958764",
+	"level": "6",
+	"items": []},{
+	"id": "957623",
+	"name": "Phyllis Tomin - 02265",
+	"parent": "958764",
+	"level": "6",
+	"items": []}}}},{
+	"id": "958168",
+	"name": "03 - ONTARIO",
+	"parent": "958158",
+	"level": "3",
+	"items": [{
+	"id": "958170",
+	"name": "03 ONTARIO HOUSE TEAM",
+	"parent": "958168",
+	"level": "4",
+	"items": [{
+	"id": "957632",
+	"name": "Available - 03001",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957643",
+	"name": "Bob Gattis - 03302",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957668",
+	"name": "Corporate Accounts - 03337",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957688",
+	"name": "Robert Gattis - 03377",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957689",
+	"name": "Open Accounts - 03379",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957655",
+	"name": "Available - 03387",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957641",
+	"name": "Available - 03388",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957666",
+	"name": "Corporate Account - 03397",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957637",
+	"name": "Samples - 03398",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957634",
+	"name": "House - 03399",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957662",
+	"name": "Corporate Account - 03902",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957663",
+	"name": "Corporate Account - 03903",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957664",
+	"name": "Corporate Account - 03905",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957725",
+	"name": "Do Not Use - 04403",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957729",
+	"name": "Do Not Use - 04404",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957728",
+	"name": "Do Not Use - 04405",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957710",
+	"name": "Do Not Use - 04406",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957746",
+	"name": "Do Not Use - 04407",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "958537",
+	"name": "Do Not Use - 04408",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957747",
+	"name": "Do Not Use - 04409",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957734",
+	"name": "Do Not Use - 04410",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957727",
+	"name": "Do Not Use - 04411",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957711",
+	"name": "Do Not Use - 04412",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957717",
+	"name": "Do Not Use - 04413",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957715",
+	"name": "Do Not Use - 04414",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957724",
+	"name": "Do Not Use - 04415",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957741",
+	"name": "Do Not Use - 04416",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957751",
+	"name": "Do Not Use - 04417",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957712",
+	"name": "Do Not Use - 04418",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957742",
+	"name": "Do Not Use - 04420",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957716",
+	"name": "Do Not Use - 04421",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957756",
+	"name": "Do Not Use - 04422",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "958240",
+	"name": "Do Not Use - 04423",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957736",
+	"name": "Do Not Use - 04425",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957758",
+	"name": "Do Not Use - 04426",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "1111924",
+	"name": "Do Not Use - 04427",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957755",
+	"name": "Do Not Use - 04430",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957714",
+	"name": "Do Not Use - 04431",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957761",
+	"name": "Do Not Use - 04432",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957757",
+	"name": "Do Not Use - 04436",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957720",
+	"name": "Do Not Use - 04433",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957723",
+	"name": "Do Not Use - 04437",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "958757",
+	"name": "Do Not Use - 04438",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957745",
+	"name": "Do Not Use - 04441",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957722",
+	"name": "Do Not Use - 04442",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957752",
+	"name": "Do Not Use - 04444",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957744",
+	"name": "Do Not Use - 04445",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957735",
+	"name": "Do Not Use - 04446",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957760",
+	"name": "Do Not Use - 04447",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957721",
+	"name": "Do Not Use - 04448",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "958241",
+	"name": "Do Not Use - 04449",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957739",
+	"name": "Do Not Use - 04450",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957713",
+	"name": "Do Not Use - 04452",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957753",
+	"name": "Do Not Use - 04451",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957740",
+	"name": "Do Not Use - 04453",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957737",
+	"name": "Do Not Use- 04454",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957726",
+	"name": "Do Not Use - 04455",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957707",
+	"name": "Do Not Use - 04470",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957719",
+	"name": "Do Not Use  - 04476",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957754",
+	"name": "Do Not Use - 04472",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957738",
+	"name": "Do Not Use - 04474",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957718",
+	"name": "Do Not Use - 04481",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957748",
+	"name": "Do Not Use - 04483",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957749",
+	"name": "Do Not Use - 04486",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957759",
+	"name": "Do Not Use - 04487",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957709",
+	"name": "Do Not Use - 04497",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957708",
+	"name": "Do Not Use - 04499",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957750",
+	"name": "Do Not Use - 04661",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "958704",
+	"name": "Do Not Use - 04800",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957730",
+	"name": "Do Not Use - 04900",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957731",
+	"name": "Do Not Use - 04901",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957732",
+	"name": "Do Not Use - 04902",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957733",
+	"name": "Do Not Use - 04903",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957635",
+	"name": "House - 08899",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957639",
+	"name": "Available - 12171",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957692",
+	"name": "Available - 12172",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "964758",
+	"name": "House - 12199",
+	"parent": "958170",
+	"level": "5",
+	"items": []},{
+	"id": "957665",
+	"name": "Corporate Account Split - 12900",
+	"parent": "958170",
+	"level": "5",
+	"items": []}},{
+	"id": "1111126",
+	"name": "03 ONTARIO SHOP",
+	"parent": "958168",
+	"level": "4",
+	"items": [{
+	"id": "957630",
+	"name": "Mat Hamilton - 03800",
+	"parent": "1111126",
+	"level": "5",
+	"items": []},{
+	"id": "1109919",
+	"name": "Joshua Franks - 03801",
+	"parent": "1111126",
+	"level": "5",
+	"items": []},{
+	"id": "1109918",
+	"name": "Freddy Hernandez - 03802",
+	"parent": "1111126",
+	"level": "5",
+	"items": []},{
+	"id": "1111481",
+	"name": "Available - 03803",
+	"parent": "1111126",
+	"level": "5",
+	"items": []},{
+	"id": "957633",
+	"name": "Laura Hibbard - 03804",
+	"parent": "1111126",
+	"level": "5",
+	"items": []}},{
+	"id": "958171",
+	"name": "03 ONTARIO SALES TEAM",
+	"parent": "958168",
+	"level": "4",
+	"items": [{
+	"id": "957661",
+	"name": "Corporate Account - 03900",
+	"parent": "958171",
+	"level": "5",
+	"items": []},{
+	"id": "958172",
+	"name": "03 ONTARIO CUMMINS TEAM",
+	"parent": "958171",
+	"level": "5",
+	"items": [{
+	"id": "957702",
+	"name": "Scott Peron - 03322",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957650",
+	"name": "Amy J. Estermeyer - 03326",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957670",
+	"name": "Francisco Cervantes - 03329",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957642",
+	"name": "Theresa Cummins - 03330",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957696",
+	"name": "Steven Byers - 03343",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957698",
+	"name": "Available - 03346",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957685",
+	"name": "Available - 03347",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957705",
+	"name": "Tony Barron - 03350",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957677",
+	"name": "Jay Johnson - 03352",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957687",
+	"name": "Available - 03354",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957652",
+	"name": "Available - 03361",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957700",
+	"name": "Main/Johnson - 03365",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957683",
+	"name": "Nicholas Bidart - 03373",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957659",
+	"name": "Cindy Price - 03374",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957669",
+	"name": "Estermyer/Hibbard - 03376",
+	"parent": "958172",
+	"level": "6",
+	"items": []},{
+	"id": "957660",
+	"name": "Available - 03390",
+	"parent": "958172",
+	"level": "6",
+	"items": []}},{
+	"id": "958173",
+	"name": "03 ONTARIO BONNAUD TEAM",
+	"parent": "958171",
+	"level": "5",
+	"items": [{
+	"id": "957679",
+	"name": "Steve Woodson - 03300",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957694",
+	"name": "Abel Garcia - 03301",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957699",
+	"name": "Michael Parnass - 03333",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957656",
+	"name": "Roman Scott - 03335",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957646",
+	"name": "Tom Lavoise - 03336",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957706",
+	"name": "Robert Hudson - 03353",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957680",
+	"name": "Tom Ciccarone - 03356",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957645",
+	"name": "Chad Payne - 03339",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957657",
+	"name": "Chris Bonnaud - 03360",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957672",
+	"name": "Available - 03364",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957671",
+	"name": "Jeff Kothe - 03367",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957640",
+	"name": "Jon Nekovar - 03372",
+	"parent": "958173",
+	"level": "6",
+	"items": []},{
+	"id": "957631",
+	"name": "Randy Smith - 03382",
+	"parent": "958173",
+	"level": "6",
+	"items": []}},{
+	"id": "958174",
+	"name": "03 ONTARIO CAPRIOTTI TEAM",
+	"parent": "958171",
+	"level": "5",
+	"items": [{
+	"id": "957684",
+	"name": "Available - 03324",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957697",
+	"name": "Sherry Oldendorf - 03325",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957704",
+	"name": "Tim Myers - 03332",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957678",
+	"name": "Jeff Olinger - 03334",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957651",
+	"name": "Available - 03340",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957648",
+	"name": "Available - 03348",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957667",
+	"name": "Jose Abraham - 03349",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957675",
+	"name": "Fred Capriotti - 03351",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957653",
+	"name": "Eddie Vargas - 03355",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957638",
+	"name": "Available - 03357",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957703",
+	"name": "Oldendorf/Myers - 03359",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957674",
+	"name": "Available - 03362",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957644",
+	"name": "Ted Portillo - 03371",
+	"parent": "958174",
+	"level": "6",
+	"items": []},{
+	"id": "957682",
+	"name": "James Breitigan - 03384",
+	"parent": "958174",
+	"level": "6",
+	"items": []}},{
+	"id": "958175",
+	"name": "03 ONTARIO OPEN TEAM",
+	"parent": "958171",
+	"level": "5",
+	"items": []},{
+	"id": "958753",
+	"name": "03 ONTARIO RAMIREZ TEAM",
+	"parent": "958171",
+	"level": "5",
+	"items": [{
+	"id": "957686",
+	"name": "Miguel Alonso - 03323",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957681",
+	"name": "Colleen Ramirez - 03327",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "963404",
+	"name": "Available - 03328",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957693",
+	"name": "Available - 03341",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "958536",
+	"name": "Kirstin Moore - 03342",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957701",
+	"name": "Moore/Noblett - 03344",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957647",
+	"name": "Manuel Castillo - 03345",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957690",
+	"name": "Patricia Sarratt - 03358",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957658",
+	"name": "Tim Grahek - 03368",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957676",
+	"name": "Sarratt/DeLaFuente -3369",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "957654",
+	"name": "Chad Hackman - 03370",
+	"parent": "958753",
+	"level": "6",
+	"items": []},{
+	"id": "970256",
+	"name": "Russell De La Fuente - 03375",
+	"parent": "958753",
+	"level": "6",
+	"items": []}},{
+	"id": "958176",
+	"name": "03 ONTARIO MINI TEAM",
+	"parent": "958171",
+	"level": "5",
+	"items": [{
+	"id": "957673",
+	"name": "Don Lloyd - 03303",
+	"parent": "958176",
+	"level": "6",
+	"items": []},{
+	"id": "957695",
+	"name": "Scott Schaffer - 03331",
+	"parent": "958176",
+	"level": "6",
+	"items": []},{
+	"id": "957649",
+	"name": "Available - 03338",
+	"parent": "958176",
+	"level": "6",
+	"items": []},{
+	"id": "957691",
+	"name": "Phyllis Tomin - 03363",
+	"parent": "958176",
+	"level": "6",
+	"items": []},{
+	"id": "957636",
+	"name": "Lars Johnson - 03661",
+	"parent": "958176",
+	"level": "6",
+	"items": []}}}},{
+	"id": "958169",
+	"name": "16 - LIVERMORE",
+	"parent": "958158",
+	"level": "3",
+	"items": [{
+	"id": "958185",
+	"name": "16 LIVERMORE HOUSE",
+	"parent": "958169",
+	"level": "4",
+	"items": [{
+	"id": "1111410",
+	"name": "Available - 16001",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "958713",
+	"name": "Available - 16100",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "1111620",
+	"name": "Nick Rosner - 16101",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957958",
+	"name": "Available - 16102",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957964",
+	"name": "Available - 16110",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "958776",
+	"name": "Dale Pesavento - 16117",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957968",
+	"name": "Available - 16127",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "958714",
+	"name": "Available - 16128",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957945",
+	"name": "Available - 16130",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957939",
+	"name": "Teleservice - 16182",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957951",
+	"name": "Corporate Account - 16190",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957937",
+	"name": "House - 16199",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957962",
+	"name": "Lars Johnson - 16661",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957948",
+	"name": "Corporate Account - 16902",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957949",
+	"name": "Corporate Account - 16903",
+	"parent": "958185",
+	"level": "5",
+	"items": []},{
+	"id": "957950",
+	"name": "Corporate Account - 16904",
+	"parent": "958185",
+	"level": "5",
+	"items": []}},{
+	"id": "958186",
+	"name": "16 LIVERMORE SHOP",
+	"parent": "958169",
+	"level": "4",
+	"items": [{
+	"id": "957938",
+	"name": "Sal Barba - 16800",
+	"parent": "958186",
+	"level": "5",
+	"items": []},{
+	"id": "970257",
+	"name": "Sal Barba - 16801",
+	"parent": "958186",
+	"level": "5",
+	"items": []},{
+	"id": "1111165",
+	"name": "Joel Rubio - 16802",
+	"parent": "958186",
+	"level": "5",
+	"items": []}},{
+	"id": "958187",
+	"name": "16 LIVERMORE TEAM",
+	"parent": "958169",
+	"level": "4",
+	"items": [{
+	"id": "1111953",
+	"name": "Gary Rogers - 16608",
+	"parent": "958187",
+	"level": "5",
+	"items": []},{
+	"id": "957947",
+	"name": "Corporate Account - 16900",
+	"parent": "958187",
+	"level": "5",
+	"items": []},{
+	"id": "958190",
+	"name": "16 LIVERMORE OPEN TEAM",
+	"parent": "958187",
+	"level": "5",
+	"items": [{
+	"id": "957966",
+	"name": "Robert Deleon - 16104",
+	"parent": "958190",
+	"level": "6",
+	"items": []},{
+	"id": "957942",
+	"name": "Available - 16114",
+	"parent": "958190",
+	"level": "6",
+	"items": []},{
+	"id": "957955",
+	"name": "Available - 16119",
+	"parent": "958190",
+	"level": "6",
+	"items": []},{
+	"id": "957952",
+	"name": "Available - 16126",
+	"parent": "958190",
+	"level": "6",
+	"items": []}},{
+	"id": "958189",
+	"name": "16 LIVERMORE SMITH TEAM",
+	"parent": "958187",
+	"level": "5",
+	"items": [{
+	"id": "957969",
+	"name": "Scott Jackson - 16105",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957936",
+	"name": "Ryan Hinkle - 16108",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957963",
+	"name": "Marklin L. Alford - 16109",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957961",
+	"name": "Kurt Lang - 16111",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957959",
+	"name": "Ivan Lopez - 16112",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "1111610",
+	"name": "Available - 16115",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957946",
+	"name": "Available - 16116",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957957",
+	"name": "Available - 16122",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957953",
+	"name": "Available - 16123",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957941",
+	"name": "Available - 16124",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957944",
+	"name": "Available - 16129",
+	"parent": "958189",
+	"level": "6",
+	"items": []},{
+	"id": "957965",
+	"name": "Available - 16135",
+	"parent": "958189",
+	"level": "6",
+	"items": []}},{
+	"id": "958188",
+	"name": "16 LIVERMORE MCLAUGHLIN TEAM",
+	"parent": "958187",
+	"level": "5",
+	"items": [{
+	"id": "957960",
+	"name": "John Strickland - 16103",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "957970",
+	"name": "Tiffany McLaughlin - 16106",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "957967",
+	"name": "Roberto Reyes - 16107",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "1111668",
+	"name": "Jessica Calleran - 16113",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "957943",
+	"name": "Armando P. Soto - 16118",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "957954",
+	"name": "Available - 16121",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "957940",
+	"name": "Paul Giamona - 16125",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "957956",
+	"name": "Fred Kalbrosky - 16131",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "958788",
+	"name": "Suzanne Garcia - 16132",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "959760",
+	"name": "Julie Meredith - 16133",
+	"parent": "958188",
+	"level": "6",
+	"items": []},{
+	"id": "1111754",
+	"name": "Julie Meredith - UCSF - 16134",
+	"parent": "958188",
+	"level": "6",
+	"items": []}}}},{
+	"id": "958160",
+	"name": "01 - SAN DIEGO",
+	"parent": "958158",
+	"level": "3",
+	"items": [{
+	"id": "958161",
+	"name": "01 SAN DIEGO HOUSE TEAM",
+	"parent": "958160",
+	"level": "4",
+	"items": [{
+	"id": "957521",
+	"name": "Available - 01001",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "1111260",
+	"name": "Available - 01102",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957545",
+	"name": "Available - 01105",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957558",
+	"name": "Keith Schneringer - 01108",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "1111624",
+	"name": "Available - 01113",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957540",
+	"name": "Corporate Account - 01112",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957519",
+	"name": "Andy Vanderwiel - 01129",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957544",
+	"name": "Don Schuldies - 01130",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "959759",
+	"name": "Available - 01150",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957573",
+	"name": "Rick Hazard - 01170",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957569",
+	"name": "Available - 01174",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957552",
+	"name": "Available - 01176",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957570",
+	"name": "Available - 01178",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957538",
+	"name": "Corporate Account - 01179",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957539",
+	"name": "Corporate Account - 01180",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957564",
+	"name": "Marc Morlett - 01183",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957556",
+	"name": "Available - 01184",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "1111414",
+	"name": "Training - 01191",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957547",
+	"name": "Frank Luna - 01194",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957541",
+	"name": "Customer Service - 01195",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957580",
+	"name": "Wax - 01197",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957579",
+	"name": "Transfers - 01198",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957549",
+	"name": "House - 01199",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957536",
+	"name": "Corporate Account Split - 01901",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957550",
+	"name": "House - 10199",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "1111235",
+	"name": "Available - 10800",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "976294",
+	"name": "House - 11199",
+	"parent": "958161",
+	"level": "5",
+	"items": []},{
+	"id": "957548",
+	"name": "Harry Babb - 01196",
+	"parent": "958161",
+	"level": "5",
+	"items": []}},{
+	"id": "958162",
+	"name": "01 SAN DIEGO SHOP",
+	"parent": "958160",
+	"level": "4",
+	"items": [{
+	"id": "957518",
+	"name": "Available - 01800",
+	"parent": "958162",
+	"level": "5",
+	"items": []},{
+	"id": "957565",
+	"name": "Mark Kline - 01801",
+	"parent": "958162",
+	"level": "5",
+	"items": []},{
+	"id": "957562",
+	"name": "Available - 01802",
+	"parent": "958162",
+	"level": "5",
+	"items": []},{
+	"id": "957575",
+	"name": "Available - 01803",
+	"parent": "958162",
+	"level": "5",
+	"items": []},{
+	"id": "959757",
+	"name": "Jorge Salgado - 01804",
+	"parent": "958162",
+	"level": "5",
+	"items": []}},{
+	"id": "958163",
+	"name": "01 SAN DIEGO TEAM",
+	"parent": "958160",
+	"level": "4",
+	"items": [{
+	"id": "957576",
+	"name": "San Diego Division Historical - 01101",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "957520",
+	"name": "Available - 01103",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "1111666",
+	"name": "Jeff Blodgett - 01110",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "957542",
+	"name": "Available - 01120",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "957568",
+	"name": "Team Mike - 01177",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "957560",
+	"name": "Lars Johnson - 01661",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "957535",
+	"name": "Corporate Account - 01900",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "957537",
+	"name": "Corporate Account - 11900",
+	"parent": "958163",
+	"level": "5",
+	"items": []},{
+	"id": "1111230",
+	"name": "01 SD Hawkins  ED/Govt",
+	"parent": "958163",
+	"level": "5",
+	"items": [{
+	"id": "957572",
+	"name": "Rick Hawkins - 01100",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957581",
+	"name": "Available - 01104",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957561",
+	"name": "Lily Larranaga - 01109",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957543",
+	"name": "Don Keith - 01119",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957525",
+	"name": "McLain/Colbert - 01124",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "1111959",
+	"name": "Available - 01125",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957555",
+	"name": "Joe Giustiniano - 01128",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957567",
+	"name": "Michael Jacobs - 01132",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957534",
+	"name": "Chris Sparley - 01135",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957559",
+	"name": "Available - 01145",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957571",
+	"name": "Rich Macho - 01152",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "1111721",
+	"name": "Blake Vanderwiel - 01153",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "958775",
+	"name": "Kaufman Transition - 01182",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957524",
+	"name": "Randy Kaufman - 01185",
+	"parent": "1111230",
+	"level": "6",
+	"items": []},{
+	"id": "957533",
+	"name": "Cathy Flakes - 01186",
+	"parent": "1111230",
+	"level": "6",
+	"items": []}},{
+	"id": "1111231",
+	"name": "01 SD Horvath BSC/CRE",
+	"parent": "958163",
+	"level": "5",
+	"items": [{
+	"id": "957529",
+	"name": "Mailly/Valenzuela - 01117",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957546",
+	"name": "Francisco Casas - 01118",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957551",
+	"name": "Jacqueline Romero - 01134",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957574",
+	"name": "Ben Wujek - 01137",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957566",
+	"name": "Mark Mendez - 01141",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "1109921",
+	"name": "Ramon Martinez - 01161",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957553",
+	"name": "Available - 01163",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957563",
+	"name": "Manuel Gonzales - 01164",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "1109902",
+	"name": "James Castro - 01165",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "958238",
+	"name": "Available - 01166",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957578",
+	"name": "Angela Forfa - 01167",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957554",
+	"name": "Jorge Cisneros - 01168",
+	"parent": "1111231",
+	"level": "6",
+	"items": []},{
+	"id": "957526",
+	"name": "Brad Snyder - 01175",
+	"parent": "1111231",
+	"level": "6",
+	"items": []}},{
+	"id": "1111232",
+	"name": "01 SD Anderson Hlthcr/Hsptlty",
+	"parent": "958163",
+	"level": "5",
+	"items": [{
+	"id": "959763",
+	"name": "Umahl Anderson - 01114",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "959765",
+	"name": "Available - 01122",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "1107695",
+	"name": "Rich Younger - 01123",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "957528",
+	"name": "Bruce Jahangiri - 01126",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "1111988",
+	"name": "Logan Peil - 01133",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "957577",
+	"name": "Steve McCully - 01136",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "959758",
+	"name": "Melody DelCastillo - 01138",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "957522",
+	"name": "David Valenzuela- 01139",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "957527",
+	"name": "Brian Bogle - 01140",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "957557",
+	"name": "Kam Kamali - 01151",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "957523",
+	"name": "Blake Vanderwiel - 01154",
+	"parent": "1111232",
+	"level": "6",
+	"items": []},{
+	"id": "1109832",
+	"name": "Chris Rosner - 01159",
+	"parent": "1111232",
+	"level": "6",
+	"items": []}}}}},{
+	"id": "958159",
+	"name": "INTERMOUNTAIN REGION",
+	"parent": "100011",
+	"level": "2",
+	"items": [{
+	"id": "958192",
+	"name": "06 - UTAH & IDAHO",
+	"parent": "958159",
+	"level": "3",
+	"items": [{
+	"id": "958784",
+	"name": "06 House",
+	"parent": "958192",
+	"level": "4",
+	"items": [{
+	"id": "957830",
+	"name": "Craig McDaniel - 06600",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "958759",
+	"name": "Kurt Taylor - 06622",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957853",
+	"name": "Available - 06636",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "976296",
+	"name": "Available - 06669",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "958244",
+	"name": "Available - 06684",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957828",
+	"name": "Available - 06687",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957832",
+	"name": "House - 06697",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957833",
+	"name": "House - 06699",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957844",
+	"name": "Corporate Account - 06901",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957977",
+	"name": "House - 17199",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957975",
+	"name": "Corporate Account - 17901",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957989",
+	"name": "House - 18199",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957987",
+	"name": "Corporate Account - 18901",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "958004",
+	"name": "Available - 19109",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "958009",
+	"name": "Available - 19110",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "958000",
+	"name": "House - 19199",
+	"parent": "958784",
+	"level": "5",
+	"items": []},{
+	"id": "957998",
+	"name": "Corporate Account  - 19901",
+	"parent": "958784",
+	"level": "5",
+	"items": []}},{
+	"id": "958780",
+	"name": "06 Salt Lake Shop",
+	"parent": "958192",
+	"level": "4",
+	"items": [{
+	"id": "957834",
+	"name": "Jared Colledge - 06800",
+	"parent": "958780",
+	"level": "5",
+	"items": []},{
+	"id": "958717",
+	"name": "David Mendoza - 06801",
+	"parent": "958780",
+	"level": "5",
+	"items": []},{
+	"id": "957836",
+	"name": "Luke Hossom - 06802",
+	"parent": "958780",
+	"level": "5",
+	"items": []},{
+	"id": "957840",
+	"name": "Available - 06803",
+	"parent": "958780",
+	"level": "5",
+	"items": []},{
+	"id": "957839",
+	"name": "Rich Counter - 06804",
+	"parent": "958780",
+	"level": "5",
+	"items": []},{
+	"id": "957827",
+	"name": "Available - 06805",
+	"parent": "958780",
+	"level": "5",
+	"items": []},{
+	"id": "957826",
+	"name": "Available - 06807",
+	"parent": "958780",
+	"level": "5",
+	"items": []}},{
+	"id": "958781",
+	"name": "06 St George Shop",
+	"parent": "958192",
+	"level": "4",
+	"items": [{
+	"id": "957972",
+	"name": "Available - 17800",
+	"parent": "958781",
+	"level": "5",
+	"items": []},{
+	"id": "958720",
+	"name": "Thomas Halladay - 17801",
+	"parent": "958781",
+	"level": "5",
+	"items": []},{
+	"id": "957976",
+	"name": "Available - 17802",
+	"parent": "958781",
+	"level": "5",
+	"items": []}},{
+	"id": "958782",
+	"name": "06 Boise Shop",
+	"parent": "958192",
+	"level": "4",
+	"items": [{
+	"id": "957985",
+	"name": "Available - 18800",
+	"parent": "958782",
+	"level": "5",
+	"items": []},{
+	"id": "957984",
+	"name": "Available - 18801",
+	"parent": "958782",
+	"level": "5",
+	"items": []},{
+	"id": "957988",
+	"name": "Shop Tech - 18802",
+	"parent": "958782",
+	"level": "5",
+	"items": []}},{
+	"id": "959776",
+	"name": "18 Boise Taylor Team",
+	"parent": "958192",
+	"level": "4",
+	"items": []},{
+	"id": "958783",
+	"name": "06 Idaho Falls Shop",
+	"parent": "958192",
+	"level": "4",
+	"items": [{
+	"id": "957999",
+	"name": "Available - 19800",
+	"parent": "958783",
+	"level": "5",
+	"items": []},{
+	"id": "958003",
+	"name": "James Fairlee - 19801",
+	"parent": "958783",
+	"level": "5",
+	"items": []}},{
+	"id": "958202",
+	"name": "06 SALT LAKE TEAM",
+	"parent": "958192",
+	"level": "4",
+	"items": [{
+	"id": "957845",
+	"name": "Curt Rimann - 06606",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "1111258",
+	"name": "Available - 06607",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "1109891",
+	"name": "Gary Rogers - 06608",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957852",
+	"name": "Ann Williams - 06615",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958538",
+	"name": "Neal Potter - 06625",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "1111521",
+	"name": "Available - 06631",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958743",
+	"name": "Available - 06652",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957847",
+	"name": "Available - 06655",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957848",
+	"name": "Jim Saley - 06660",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957850",
+	"name": "Lars Johnson - 06661",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958716",
+	"name": "Available - 06662",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957841",
+	"name": "Available - 06664",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957857",
+	"name": "Telesales - 06680",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957837",
+	"name": "Management - 06696",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957843",
+	"name": "Corporate Account - 06900",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "1112148",
+	"name": "Gary Rogers - 17608",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957979",
+	"name": "Lars Johnson - 17661",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957980",
+	"name": "Management - 17696",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957974",
+	"name": "Corporate Account - 17900",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958778",
+	"name": "Gary Rogers - 18105",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957993",
+	"name": "Jim Saley - 18106",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957994",
+	"name": "Lars Johnson - 18661",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957990",
+	"name": "Management - 18696",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957986",
+	"name": "Corporate Account - 18900",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958007",
+	"name": "Jim Saley - 19106",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "1112268",
+	"name": "Gary Rogers - 19608 - 19608",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958001",
+	"name": "Lars Johnson - 19661",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958002",
+	"name": "Management - 19696",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "957997",
+	"name": "Corporate Account - 19900",
+	"parent": "958202",
+	"level": "5",
+	"items": []},{
+	"id": "958779",
+	"name": "06 Salt Lake B Taylor Team",
+	"parent": "958202",
+	"level": "5",
+	"items": [{
+	"id": "957829",
+	"name": "Brent Taylor - 06602",
+	"parent": "958779",
+	"level": "6",
+	"items": []},{
+	"id": "957835",
+	"name": "Available - 06611",
+	"parent": "958779",
+	"level": "6",
+	"items": []},{
+	"id": "1106633",
+	"name": "Karen Bell - 06612",
+	"parent": "958779",
+	"level": "6",
+	"items": []},{
+	"id": "957855",
+	"name": "Rich Counter - 06635",
+	"parent": "958779",
+	"level": "6",
+	"items": []},{
+	"id": "1111653",
+	"name": "Tyler Hill - 06640",
+	"parent": "958779",
+	"level": "6",
+	"items": []},{
+	"id": "957851",
+	"name": "Lorna Steadman - 06665",
+	"parent": "958779",
+	"level": "6",
+	"items": []},{
+	"id": "957856",
+	"name": "Available - 06675",
+	"parent": "958779",
+	"level": "6",
+	"items": []}},{
+	"id": "958203",
+	"name": "06 Salt Lake Call Team",
+	"parent": "958202",
+	"level": "5",
+	"items": [{
+	"id": "958685",
+	"name": "Available - 06614",
+	"parent": "958203",
+	"level": "6",
+	"items": []},{
+	"id": "957854",
+	"name": "Scott Alexander - 06616",
+	"parent": "958203",
+	"level": "6",
+	"items": []},{
+	"id": "957838",
+	"name": "Reid Call - 06620",
+	"parent": "958203",
+	"level": "6",
+	"items": []},{
+	"id": "957858",
+	"name": "William Carden - 06651",
+	"parent": "958203",
+	"level": "6",
+	"items": []}},{
+	"id": "958204",
+	"name": "06 Salt Lake Hansen Team",
+	"parent": "958202",
+	"level": "5",
+	"items": [{
+	"id": "957831",
+	"name": "Available - 06617",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957849",
+	"name": "Kirk Hoffman - 06630",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957842",
+	"name": "Clint Jones - 06650",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957846",
+	"name": "David Hansen - 06663",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957978",
+	"name": "Available - 17111",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957982",
+	"name": "Available - 17112",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "1111283",
+	"name": "Russell Walker- 17113",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957981",
+	"name": "Available - 17120",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957973",
+	"name": "Chris Smith - 17125",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957983",
+	"name": "Available - 17155",
+	"parent": "958204",
+	"level": "6",
+	"items": []},{
+	"id": "957971",
+	"name": "David Servati - 17181",
+	"parent": "958204",
+	"level": "6",
+	"items": []}},{
+	"id": "958205",
+	"name": "06 Salt Lake J Watson Team",
+	"parent": "958202",
+	"level": "5",
+	"items": [{
+	"id": "1109831",
+	"name": "Dan Parker - 18102",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "958695",
+	"name": "Seth Nicholes - 18103",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "957992",
+	"name": "Gregory Taylor - 18104",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "957995",
+	"name": "Chris Bradley - 18108",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "957996",
+	"name": "Doug Peterson - 18109",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "958696",
+	"name": "Available - 18110",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "957991",
+	"name": "Available - 18111",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "958005",
+	"name": "Jason Watson - 19108",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "958010",
+	"name": "Available - 19120",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "958008",
+	"name": "Kurt Taylor - 19122",
+	"parent": "958205",
+	"level": "6",
+	"items": []},{
+	"id": "958006",
+	"name": "Jeff Waldron - 19123",
+	"parent": "958205",
+	"level": "6",
+	"items": []}}}},{
+	"id": "958193",
+	"name": "07 - LAS VEGAS ",
+	"parent": "958159",
+	"level": "3",
+	"items": [{
+	"id": "958208",
+	"name": "07 LAS VEGAS HOUSE",
+	"parent": "958193",
+	"level": "4",
+	"items": [{
+	"id": "957859",
+	"name": "Available - 07001",
+	"parent": "958208",
+	"level": "5",
+	"items": []},{
+	"id": "1112092",
+	"name": "Available - 07726",
+	"parent": "958208",
+	"level": "5",
+	"items": []},{
+	"id": "957864",
+	"name": "House - 07799",
+	"parent": "958208",
+	"level": "5",
+	"items": []},{
+	"id": "957865",
+	"name": "House 99410 - 07790",
+	"parent": "958208",
+	"level": "5",
+	"items": []},{
+	"id": "957869",
+	"name": "Samples - 07798",
+	"parent": "958208",
+	"level": "5",
+	"items": []},{
+	"id": "958245",
+	"name": "Lou Richards - 07700",
+	"parent": "958208",
+	"level": "5",
+	"items": []},{
+	"id": "958770",
+	"name": "Available - 07803",
+	"parent": "958208",
+	"level": "5",
+	"items": []}},{
+	"id": "958209",
+	"name": "07 LAS VEGAS SHOP",
+	"parent": "958193",
+	"level": "4",
+	"items": [{
+	"id": "957863",
+	"name": "Edward Rojas - 07806",
+	"parent": "958209",
+	"level": "5",
+	"items": []},{
+	"id": "957867",
+	"name": "Mike Ablang - 07805",
+	"parent": "958209",
+	"level": "5",
+	"items": []},{
+	"id": "957868",
+	"name": "Renaldo Viray - 07802",
+	"parent": "958209",
+	"level": "5",
+	"items": []},{
+	"id": "957870",
+	"name": "Tim Hunt - 07800",
+	"parent": "958209",
+	"level": "5",
+	"items": []},{
+	"id": "958755",
+	"name": "William Fudurich - 07804",
+	"parent": "958209",
+	"level": "5",
+	"items": []},{
+	"id": "957860",
+	"name": "Available - 07801",
+	"parent": "958209",
+	"level": "5",
+	"items": []}},{
+	"id": "958206",
+	"name": "07 LAS VEGAS TEAM",
+	"parent": "958193",
+	"level": "4",
+	"items": [{
+	"id": "957866",
+	"name": "Lars Johnson - 07661",
+	"parent": "958206",
+	"level": "5",
+	"items": []},{
+	"id": "957861",
+	"name": "Corporate Account - 07900",
+	"parent": "958206",
+	"level": "5",
+	"items": []},{
+	"id": "958207",
+	"name": "07 LAS VEGAS MARLOW TEAM",
+	"parent": "958206",
+	"level": "5",
+	"items": [{
+	"id": "958777",
+	"name": "Jarvis Marlow - 07701",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957880",
+	"name": "Available - 07703",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957888",
+	"name": "Available - 07704",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957887",
+	"name": "Available - 07705",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "1111145",
+	"name": "Available - 07706",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "959112",
+	"name": "Available - 07707",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957876",
+	"name": "Available - 07708",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957872",
+	"name": "Christine Sanders - 07709",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957871",
+	"name": "Barbara Sansone - 07710",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957879",
+	"name": "Danny Conard - 07711",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957862",
+	"name": "Corporate Accounts - 07712",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957881",
+	"name": "Quinn Klappenback - 07713",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957889",
+	"name": "Tim Thompson - 07714",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957874",
+	"name": "Timothy Pittsenbarger - 07715",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957882",
+	"name": "Available - 07716",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "958751",
+	"name": "Available - 07717",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957877",
+	"name": "Available - 07720",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "958748",
+	"name": "Available - 07721",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "958130",
+	"name": "Nathan Shaffer - 07722",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "958686",
+	"name": "Available - 07723",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957873",
+	"name": "Available - 07724",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957875",
+	"name": "Available - 07727",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957885",
+	"name": "Robert Deleon - 07728",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957890",
+	"name": "Tracey Joyner - 07783",
+	"parent": "958207",
+	"level": "6",
+	"items": []},{
+	"id": "957884",
+	"name": "Available - 07787",
+	"parent": "958207",
+	"level": "6",
+	"items": []}},{
+	"id": "958747",
+	"name": "07 LAS VEGAS TELESERVICE TEAM",
+	"parent": "958206",
+	"level": "5",
+	"items": [{
+	"id": "957878",
+	"name": "Available - 07784",
+	"parent": "958747",
+	"level": "6",
+	"items": []},{
+	"id": "957883",
+	"name": "Available - 07785",
+	"parent": "958747",
+	"level": "6",
+	"items": []},{
+	"id": "958718",
+	"name": "Available - 07789",
+	"parent": "958747",
+	"level": "6",
+	"items": []},{
+	"id": "957886",
+	"name": "Telesales - 07786",
+	"parent": "958747",
+	"level": "6",
+	"items": []}}}},{
+	"id": "958194",
+	"name": "14 - COLORADO",
+	"parent": "958159",
+	"level": "3",
+	"items": [{
+	"id": "958210",
+	"name": "14 DENVER ",
+	"parent": "958194",
+	"level": "4",
+	"items": [{
+	"id": "958211",
+	"name": "14 DENVER HOUSE TEAM",
+	"parent": "958210",
+	"level": "5",
+	"items": [{
+	"id": "958719",
+	"name": "Mike Midas - 14001",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957894",
+	"name": "Available - 14100",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957914",
+	"name": "Available - 14101",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957898",
+	"name": "Available - 14107",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957895",
+	"name": "Available - 14109",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "963846",
+	"name": "Available - 14113",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957902",
+	"name": "Available - 14130",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957896",
+	"name": "Available - 14133",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "958771",
+	"name": "Available - 14135",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957897",
+	"name": "Available - 14137",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957899",
+	"name": "Available - 14138",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957911",
+	"name": "Available - 14140",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957892",
+	"name": "House - 14199",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957891",
+	"name": "Corporate Account - 14200",
+	"parent": "958211",
+	"level": "6",
+	"items": []},{
+	"id": "957904",
+	"name": "Corporate Account - 14901",
+	"parent": "958211",
+	"level": "6",
+	"items": []}},{
+	"id": "958746",
+	"name": "14 DENVER SHOP",
+	"parent": "958210",
+	"level": "5",
+	"items": [{
+	"id": "957893",
+	"name": "Service Manager - 14800",
+	"parent": "958746",
+	"level": "6",
+	"items": []},{
+	"id": "958246",
+	"name": "Colordo Springs Service - 14801",
+	"parent": "958746",
+	"level": "6",
+	"items": []},{
+	"id": "958247",
+	"name": "Patrick Struthers - 14802",
+	"parent": "958746",
+	"level": "6",
+	"items": []},{
+	"id": "958705",
+	"name": "Patrick Struthers - 14803",
+	"parent": "958746",
+	"level": "6",
+	"items": []}},{
+	"id": "958212",
+	"name": "14 DENVER SALES TEAM",
+	"parent": "958210",
+	"level": "5",
+	"items": [{
+	"id": "1112044",
+	"name": "Gary Rogers - 14608",
+	"parent": "958212",
+	"level": "6",
+	"items": []},{
+	"id": "957912",
+	"name": "Lars Johnson - 14661",
+	"parent": "958212",
+	"level": "6",
+	"items": []},{
+	"id": "957903",
+	"name": "Corporate Account - 14900",
+	"parent": "958212",
+	"level": "6",
+	"items": []},{
+	"id": "958216",
+	"name": "14 DENVER BAUER SALES TEAM",
+	"parent": "958212",
+	"level": "6",
+	"items": [{
+	"id": "957901",
+	"name": "Brett Hitchcock - 14104",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957913",
+	"name": "Jim Mount - 14105",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "1111461",
+	"name": "Available - 14106",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957915",
+	"name": "Nancy Anderson - 14108",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957906",
+	"name": "Eric Anderson - 14110",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "963406",
+	"name": "Available - 14111",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "958758",
+	"name": "Brad Pierce - 14112",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957907",
+	"name": "Deven Eastridge - 14115",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "1111511",
+	"name": "Kevin Hager - 14121",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957905",
+	"name": "Craig Kosal - 14131",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957908",
+	"name": "Available - 14132",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957910",
+	"name": "Jason Reinke - 14134",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957900",
+	"name": "Available - 14136",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "957909",
+	"name": "Erica Pier - 14139",
+	"parent": "958216",
+	"level": "7",
+	"items": []},{
+	"id": "958539",
+	"name": "Denver Equip Sales - 14141",
+	"parent": "958216",
+	"level": "7",
+	"items": []}}}},{
+	"id": "958213",
+	"name": "15 COLORADO SPRINGS",
+	"parent": "958194",
+	"level": "4",
+	"items": [{
+	"id": "958219",
+	"name": "15 COLORADO SPRINGS HOUSE",
+	"parent": "958213",
+	"level": "5",
+	"items": [{
+	"id": "957923",
+	"name": "*NLE* - 13199",
+	"parent": "958219",
+	"level": "6",
+	"items": []},{
+	"id": "957928",
+	"name": "*NLE* - 13800",
+	"parent": "958219",
+	"level": "6",
+	"items": []},{
+	"id": "958540",
+	"name": "*NLE*  - 13900",
+	"parent": "958219",
+	"level": "6",
+	"items": []},{
+	"id": "957920",
+	"name": "*NLE* - Five Star San - 15044",
+	"parent": "958219",
+	"level": "6",
+	"items": []},{
+	"id": "957933",
+	"name": "Available - 15800",
+	"parent": "958219",
+	"level": "6",
+	"items": []},{
+	"id": "957926",
+	"name": "Available - 15801",
+	"parent": "958219",
+	"level": "6",
+	"items": []}},{
+	"id": "958218",
+	"name": "15 COLORADO SPRINGS SALES TEAM",
+	"parent": "958213",
+	"level": "5",
+	"items": [{
+	"id": "957918",
+	"name": "Corporate Account - 15900",
+	"parent": "958218",
+	"level": "6",
+	"items": []},{
+	"id": "1111233",
+	"name": "15 CS Filichia Team",
+	"parent": "958218",
+	"level": "6",
+	"items": [{
+	"id": "958706",
+	"name": "Ben Bell - 15000",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957917",
+	"name": "Bruce Rendon - 15001",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957925",
+	"name": "Kevin Hager - 15002",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957916",
+	"name": "Taylor Kottcamp - 15003",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "1112135",
+	"name": "Alex Fenlon - 15004",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957934",
+	"name": "Available - 15005",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957932",
+	"name": "Available - 15006",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957935",
+	"name": "Tim O'Brien - 15007",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957931",
+	"name": "Available - 15008",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957927",
+	"name": "Available - 15009",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957930",
+	"name": "Rick Essells - 15010",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957924",
+	"name": "Available - 15011",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957929",
+	"name": "Doug Nelson - 15012",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957921",
+	"name": "House - 15099",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "1109593",
+	"name": "Tim Filichia - 15100",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957922",
+	"name": "House - 15199",
+	"parent": "1111233",
+	"level": "7",
+	"items": []},{
+	"id": "957919",
+	"name": "Marketplace - 15200",
+	"parent": "1111233",
+	"level": "7",
+	"items": []}}}}},{
+	"id": "958195",
+	"name": "20 - PACIFIC NW DIV 20-25",
+	"parent": "958159",
+	"level": "3",
+	"items": [{
+	"id": "958221",
+	"name": "22 - ANCHORAGE",
+	"parent": "958195",
+	"level": "4",
+	"items": [{
+	"id": "958224",
+	"name": "22 ANCHORAGE HOUSE",
+	"parent": "958221",
+	"level": "5",
+	"items": [{
+	"id": "958048",
+	"name": "Available - 22103",
+	"parent": "958224",
+	"level": "6",
+	"items": []},{
+	"id": "958047",
+	"name": "Available - 22104",
+	"parent": "958224",
+	"level": "6",
+	"items": []},{
+	"id": "958043",
+	"name": "House - 22199",
+	"parent": "958224",
+	"level": "6",
+	"items": []},{
+	"id": "958062",
+	"name": "Available - 24101",
+	"parent": "958224",
+	"level": "6",
+	"items": []},{
+	"id": "958061",
+	"name": "House - 24199",
+	"parent": "958224",
+	"level": "6",
+	"items": []},{
+	"id": "958060",
+	"name": "Corporate Account - 24900",
+	"parent": "958224",
+	"level": "6",
+	"items": []}},{
+	"id": "958227",
+	"name": "22 ANCHORAGE TEAM",
+	"parent": "958221",
+	"level": "5",
+	"items": [{
+	"id": "958052",
+	"name": "Available - 22107",
+	"parent": "958227",
+	"level": "6",
+	"items": []},{
+	"id": "958049",
+	"name": "Corporate Account - 22900",
+	"parent": "958227",
+	"level": "6",
+	"items": []},{
+	"id": "958056",
+	"name": "Corporate Account - 23900",
+	"parent": "958227",
+	"level": "6",
+	"items": []},{
+	"id": "1111226",
+	"name": "Team Alaska",
+	"parent": "958227",
+	"level": "6",
+	"items": [{
+	"id": "958044",
+	"name": "Robert Sundberg - 22100",
+	"parent": "1111226",
+	"level": "7",
+	"items": []},{
+	"id": "958050",
+	"name": "Joseph Juvinall - 22101",
+	"parent": "1111226",
+	"level": "7",
+	"items": []},{
+	"id": "958046",
+	"name": "Jeff Avis - 22105",
+	"parent": "1111226",
+	"level": "7",
+	"items": []},{
+	"id": "958055",
+	"name": "Available - 23102",
+	"parent": "1111226",
+	"level": "7",
+	"items": []},{
+	"id": "958059",
+	"name": "Available - 24102",
+	"parent": "1111226",
+	"level": "7",
+	"items": []},{
+	"id": "958051",
+	"name": "Team Alaska - 22102",
+	"parent": "1111226",
+	"level": "7",
+	"items": []}}},{
+	"id": "958225",
+	"name": "22 ANCHORAGE SHOP",
+	"parent": "958221",
+	"level": "5",
+	"items": [{
+	"id": "958045",
+	"name": "Shop Manager - 22800",
+	"parent": "958225",
+	"level": "6",
+	"items": []},{
+	"id": "958721",
+	"name": "Tracey Case - 22801",
+	"parent": "958225",
+	"level": "6",
+	"items": []},{
+	"id": "958042",
+	"name": "Available - 22802",
+	"parent": "958225",
+	"level": "6",
+	"items": []},{
+	"id": "958058",
+	"name": "Available - 24800",
+	"parent": "958225",
+	"level": "6",
+	"items": []}},{
+	"id": "959771",
+	"name": "23 FAIRBANKS HOUSE",
+	"parent": "958221",
+	"level": "5",
+	"items": [{
+	"id": "958053",
+	"name": "House - 23199",
+	"parent": "959771",
+	"level": "6",
+	"items": []}},{
+	"id": "959772",
+	"name": "23 FAIRBANKS SHOP",
+	"parent": "958221",
+	"level": "5",
+	"items": [{
+	"id": "958054",
+	"name": "Shop Manager - 23800",
+	"parent": "959772",
+	"level": "6",
+	"items": []}},{
+	"id": "958228",
+	"name": "23 FAIRBANKS TEAM",
+	"parent": "958221",
+	"level": "5",
+	"items": [{
+	"id": "958057",
+	"name": "Available - 23101",
+	"parent": "958228",
+	"level": "6",
+	"items": []}}},{
+	"id": "958220",
+	"name": "PORTLAND & SEATTLE",
+	"parent": "958195",
+	"level": "4",
+	"items": [{
+	"id": "958223",
+	"name": "21 - SEATTLE ",
+	"parent": "958220",
+	"level": "5",
+	"items": [{
+	"id": "958235",
+	"name": "21 SEATTLE HOUSE",
+	"parent": "958223",
+	"level": "6",
+	"items": [{
+	"id": "958028",
+	"name": "House - 21199",
+	"parent": "958235",
+	"level": "7",
+	"items": []},{
+	"id": "958063",
+	"name": "House - 25199",
+	"parent": "958235",
+	"level": "7",
+	"items": []},{
+	"id": "958064",
+	"name": "*NLE* - Mike Bennett - 25800",
+	"parent": "958235",
+	"level": "7",
+	"items": []},{
+	"id": "963407",
+	"name": "Management - 25699",
+	"parent": "958235",
+	"level": "7",
+	"items": []}},{
+	"id": "958234",
+	"name": "21 SEATTLE SHOP",
+	"parent": "958223",
+	"level": "6",
+	"items": [{
+	"id": "958026",
+	"name": "Available - 21800",
+	"parent": "958234",
+	"level": "7",
+	"items": []},{
+	"id": "958027",
+	"name": "David Malloy - 21801",
+	"parent": "958234",
+	"level": "7",
+	"items": []}},{
+	"id": "958236",
+	"name": "21 SEATTLE TEAM",
+	"parent": "958223",
+	"level": "6",
+	"items": [{
+	"id": "958032",
+	"name": "Rick Jones - 21108",
+	"parent": "958236",
+	"level": "7",
+	"items": []},{
+	"id": "1111882",
+	"name": "Gary Rogers - 21608",
+	"parent": "958236",
+	"level": "7",
+	"items": []},{
+	"id": "958034",
+	"name": "Corporate Account - 21900",
+	"parent": "958236",
+	"level": "7",
+	"items": []},{
+	"id": "1111234",
+	"name": "21 SE Jones Team",
+	"parent": "958236",
+	"level": "7",
+	"items": [{
+	"id": "958038",
+	"name": "Nena Smith - 21100",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958040",
+	"name": "Paul Rebner - 21101",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958033",
+	"name": "Bruce Patin - 21102",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958036",
+	"name": "Kevin Getman - 21103",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958030",
+	"name": "Katherine Miyata - 21104",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958037",
+	"name": "Nicholas Aitoro - 21105",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958039",
+	"name": "Yuri Cortez- 21106",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958031",
+	"name": "Available - 21107",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958041",
+	"name": "Dominic Ballard - 21109",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958029",
+	"name": "Sustain One - 21110",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958025",
+	"name": "Available - 21111",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958248",
+	"name": "Available - 21112",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958035",
+	"name": "Hannah Cho - 21114",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "958689",
+	"name": "Available - 21115",
+	"parent": "1111234",
+	"level": "8",
+	"items": []},{
+	"id": "959764",
+	"name": "Available - 25102",
+	"parent": "1111234",
+	"level": "8",
+	"items": []}}}},{
+	"id": "958222",
+	"name": "20 PORTLAND",
+	"parent": "958220",
+	"level": "5",
+	"items": [{
+	"id": "958230",
+	"name": "20 PORTLAND SHOP",
+	"parent": "958222",
+	"level": "6",
+	"items": [{
+	"id": "958016",
+	"name": "Shop Tech - 20800",
+	"parent": "958230",
+	"level": "7",
+	"items": []},{
+	"id": "958014",
+	"name": "Robert Jones - 20801",
+	"parent": "958230",
+	"level": "7",
+	"items": []}},{
+	"id": "958232",
+	"name": "20 PORTLAND TEAM",
+	"parent": "958222",
+	"level": "6",
+	"items": [{
+	"id": "1112020",
+	"name": "Gary Rogers - 20608",
+	"parent": "958232",
+	"level": "7",
+	"items": []},{
+	"id": "958020",
+	"name": "Corporate Account - 20900",
+	"parent": "958232",
+	"level": "7",
+	"items": []},{
+	"id": "1111296",
+	"name": "20 PO Eaton Team",
+	"parent": "958232",
+	"level": "7",
+	"items": [{
+	"id": "958017",
+	"name": "Available - 20104",
+	"parent": "1111296",
+	"level": "8",
+	"items": []},{
+	"id": "958023",
+	"name": "Available - 20105",
+	"parent": "1111296",
+	"level": "8",
+	"items": []},{
+	"id": "958018",
+	"name": "Available - 20106",
+	"parent": "1111296",
+	"level": "8",
+	"items": []},{
+	"id": "958019",
+	"name": "Brian Smith - 20107",
+	"parent": "1111296",
+	"level": "8",
+	"items": []},{
+	"id": "958022",
+	"name": "Jeremy Eaton - 20108",
+	"parent": "1111296",
+	"level": "8",
+	"items": []},{
+	"id": "958024",
+	"name": "Available - 20109",
+	"parent": "1111296",
+	"level": "8",
+	"items": []},{
+	"id": "958065",
+	"name": "Bryan Fuller - 25101",
+	"parent": "1111296",
+	"level": "8",
+	"items": []}}},{
+	"id": "958229",
+	"name": "20 PORTLAND HOUSE",
+	"parent": "958222",
+	"level": "6",
+	"items": [{
+	"id": "958067",
+	"name": "Available - 20101",
+	"parent": "958229",
+	"level": "7",
+	"items": []},{
+	"id": "958013",
+	"name": "Available - 20102",
+	"parent": "958229",
+	"level": "7",
+	"items": []},{
+	"id": "958015",
+	"name": "Samples - 20197",
+	"parent": "958229",
+	"level": "7",
+	"items": []},{
+	"id": "958011",
+	"name": "House - 20199",
+	"parent": "958229",
+	"level": "7",
+	"items": []},{
+	"id": "958012",
+	"name": "Lars Johnson - 20661",
+	"parent": "958229",
+	"level": "7",
+	"items": []},{
+	"id": "958021",
+	"name": "Corporate Account Split - 20901",
+	"parent": "958229",
+	"level": "7",
+	"items": []},{
+	"id": "958066",
+	"name": "Corporate Account Split - 25900",
+	"parent": "958229",
+	"level": "7",
+	"items": []}}}}},{
+	"id": "958191",
+	"name": "05 - ARIZONA ",
+	"parent": "958159",
+	"level": "3",
+	"items": [{
+	"id": "958196",
+	"name": "05 ARIZONA HOUSE TEAM",
+	"parent": "958191",
+	"level": "4",
+	"items": [{
+	"id": "1112176",
+	"name": "Available - 05001",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957794",
+	"name": "Eric Frei - 05501",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957781",
+	"name": "AZ STATE - 05502",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957771",
+	"name": "Jim Fischer - 05503",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957790",
+	"name": "Corporate Account - 05508",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957778",
+	"name": "Available - 05512",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957819",
+	"name": "Available - 05531",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957817",
+	"name": "Ryan Pace - 05532",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957809",
+	"name": "Available - 05536",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "958243",
+	"name": "Available - 05537",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "958742",
+	"name": "Available - 05538",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957811",
+	"name": "Available - 05584",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957796",
+	"name": "IA Accounts - 05592",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957776",
+	"name": "Transfers - 05598",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957768",
+	"name": "House - 05599",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "1111125",
+	"name": "Available - 05805",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957784",
+	"name": "Corporate Account - 05901",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957785",
+	"name": "Corporate Account - 05902",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957786",
+	"name": "Corporate Account - 05903",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957787",
+	"name": "Corporate Account - 05904",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957789",
+	"name": "Corporate Account - 09902",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957788",
+	"name": "Corporate Account - 09900",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957803",
+	"name": "Available - 09919",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957812",
+	"name": "Available - 09920",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "958712",
+	"name": "Available - 09921",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957820",
+	"name": "Available - 09922",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957815",
+	"name": "Available - 09923",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957808",
+	"name": "Available - 09925",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957795",
+	"name": "Available - 09926",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957780",
+	"name": "Available - 09928",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "1111421",
+	"name": "Available - 09930",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957813",
+	"name": "Available - 09933",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957798",
+	"name": "Available - 09934",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957821",
+	"name": "Mary Olsen - 09982",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957764",
+	"name": "Available - 09987",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957799",
+	"name": "Available - 09984",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "1109592",
+	"name": "Available - 09986",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "957769",
+	"name": "House - 09999",
+	"parent": "958196",
+	"level": "5",
+	"items": []},{
+	"id": "1111247",
+	"name": "Available - 09929",
+	"parent": "958196",
+	"level": "5",
+	"items": []}},{
+	"id": "958197",
+	"name": "05 ARIZONA SHOP TEAM",
+	"parent": "958191",
+	"level": "4",
+	"items": [{
+	"id": "957762",
+	"name": "Scott Johnson - 05800",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957775",
+	"name": "Available - 05801",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957772",
+	"name": "Kurt Mueller - 05802",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "958766",
+	"name": "Bill Rhoades - 05803",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957770",
+	"name": "Installer - 05804",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957763",
+	"name": "Chhoeun Pech - 05806",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "958787",
+	"name": "Craig Cooley - 05807",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957767",
+	"name": "Available - 05808",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957766",
+	"name": "Eustacio Padilla - 05809",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957773",
+	"name": "Available - 05812",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957774",
+	"name": "Service Manager - 09800",
+	"parent": "958197",
+	"level": "5",
+	"items": []},{
+	"id": "957765",
+	"name": "David Walker - 09802",
+	"parent": "958197",
+	"level": "5",
+	"items": []}},{
+	"id": "958198",
+	"name": "05 ARIZONA TEAM",
+	"parent": "958191",
+	"level": "4",
+	"items": [{
+	"id": "1109920",
+	"name": "Mike Muscara - 05504",
+	"parent": "958198",
+	"level": "5",
+	"items": []},{
+	"id": "957805",
+	"name": "Lars Johnson - 05661",
+	"parent": "958198",
+	"level": "5",
+	"items": []},{
+	"id": "957804",
+	"name": "Lars Johnson - 09661",
+	"parent": "958198",
+	"level": "5",
+	"items": []},{
+	"id": "957783",
+	"name": "Corporate Account - 05900",
+	"parent": "958198",
+	"level": "5",
+	"items": []},{
+	"id": "958200",
+	"name": "05 ARIZONA SMITH TEAM",
+	"parent": "958198",
+	"level": "5",
+	"items": [{
+	"id": "957801",
+	"name": "Kim Dougherty - 05505",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957825",
+	"name": "William Gibbons - 05510",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957800",
+	"name": "Karl Kreiling - 05511",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957814",
+	"name": "Rick Smith - 05514",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957807",
+	"name": "Thomas Borny - 05518",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957818",
+	"name": "Scott Moore - 05521",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957823",
+	"name": "Ashton Ready - 05529",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "981650",
+	"name": "Rosey Kerchal - 05530",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "1111948",
+	"name": "Team Solutions - 05533",
+	"parent": "958200",
+	"level": "6",
+	"items": []},{
+	"id": "957791",
+	"name": "Mary Olsen - 05585",
+	"parent": "958200",
+	"level": "6",
+	"items": []}},{
+	"id": "958199",
+	"name": "05 ARIZONA ABELN TEAM",
+	"parent": "958198",
+	"level": "5",
+	"items": [{
+	"id": "957792",
+	"name": "Dan Barrett - 05507",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957806",
+	"name": "Laura L. Chapnek - 05515",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957777",
+	"name": "Ann Williams - 05517",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957779",
+	"name": "John Dugan - 05519",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "1111392",
+	"name": "Rob Abeln - 05520",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957824",
+	"name": "Israel Ocampo - 05522",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957802",
+	"name": "Geoffrey Black - 05523",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957810",
+	"name": "Goodwill Team - 05524",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "963908",
+	"name": "Dan Good - 05528",
+	"parent": "958199",
+	"level": "6",
+	"items": []},{
+	"id": "957782",
+	"name": "Brenda Karns - 05583",
+	"parent": "958199",
+	"level": "6",
+	"items": []}},{
+	"id": "958201",
+	"name": "05 ARIZONA O'DELL TEAM",
+	"parent": "958198",
+	"level": "5",
+	"items": [{
+	"id": "957797",
+	"name": "James O'Dell - 09910",
+	"parent": "958201",
+	"level": "6",
+	"items": []},{
+	"id": "958242",
+	"name": "James Lambert - 09916",
+	"parent": "958201",
+	"level": "6",
+	"items": []},{
+	"id": "957822",
+	"name": "Terry Kearns - 09917",
+	"parent": "958201",
+	"level": "6",
+	"items": []},{
+	"id": "957793",
+	"name": "Jose Gil - 09918",
+	"parent": "958201",
+	"level": "6",
+	"items": []},{
+	"id": "1111623",
+	"name": "Carlos Guerra - 09924",
+	"parent": "958201",
+	"level": "6",
+	"items": []},{
+	"id": "963405",
+	"name": "Lea Pein - 09927",
+	"parent": "958201",
+	"level": "6",
+	"items": []}},{
+	"id": "1112108",
+	"name": "05 ARIZONA KIRBY TEAM",
+	"parent": "958198",
+	"level": "5",
+	"items": [{
+	"id": "957816",
+	"name": "Lori Kirby - 05506",
+	"parent": "1112108",
+	"level": "6",
+	"items": []}}}}},{
+	"id": "1111227",
+	"name": "CORPORATE HOUSE",
+	"parent": "100011",
+	"level": "2",
+	"items": [{
+	"id": "958694",
+	"name": "CA - Jim Fischer - 98001",
+	"parent": "1111227",
+	"level": "3",
+	"items": []},{
+	"id": "957532",
+	"name": "CA - John Giles - 98002",
+	"parent": "1111227",
+	"level": "3",
+	"items": []},{
+	"id": "957530",
+	"name": "CA - Andy Vanderwiel - 98004",
+	"parent": "1111227",
+	"level": "3",
+	"items": []},{
+	"id": "957531",
+	"name": "CA - Eric Keller - 98008",
+	"parent": "1111227",
+	"level": "3",
+	"items": []},{
+	"id": "1112149",
+	"name": "CA - John Olea - 98160",
+	"parent": "1111227",
+	"level": "3",
+	"items": []},{
+	"id": "1102686",
+	"name": "CA - Corporate House - 98199",
+	"parent": "1111227",
+	"level": "3",
+	"items": []}}}

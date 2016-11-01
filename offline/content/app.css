@@ -7,7 +7,35 @@
   box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
+/* 
+    needed to ovverride this class and add height and overflow 
+    i couldn't figure out how to extend the original class in the
+    bootstrap theme
+*/
+.dropdown-menu {
+  height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+}
 /* inner menu are the styles for the recursive template */
 .inner-menu > li{
     list-style-type: none;

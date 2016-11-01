@@ -1,0 +1,981 @@
+[
+  {
+    "id": "1114268",
+    "name": "Entire Organization",
+    "parent": "",
+    "level": "1",
+    "items": [
+      {
+        "id": "1144701",
+        "name": "* Michael Steers Sales Leader",
+        "parent": "1114268",
+        "level": "2",
+        "items": [
+          {
+            "id": "1144730",
+            "name": "391 - Gary Wood",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144731",
+            "name": "392 - Billy Whitney",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144732",
+            "name": "393 - Todd Laansma",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144733",
+            "name": "394 - Pete Mooklar",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144735",
+            "name": "397 - Pete Tornga",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144736",
+            "name": "398 - Bret Conti",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1145884",
+            "name": "388 - Gary Kronfield",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1145885",
+            "name": "389 - Dan Cookson",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1145886",
+            "name": "390 - Dustin Krauzer",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1146030",
+            "name": "385 - John Happ",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1146047",
+            "name": "399 - Zach Johnston",
+            "parent": "1144701",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144716",
+            "name": "* Equipment Service Sales Leader",
+            "parent": "1144701",
+            "level": "3",
+            "items": [
+              {
+                "id": "1144769",
+                "name": "mts - Mike Steers",
+                "parent": "1144716",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1144702",
+        "name": "420 - OPEN",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1144703",
+        "name": "103 - Seminar Fee",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1144707",
+        "name": "316 - .Open",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1144708",
+        "name": "325 - .Open",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1144711",
+        "name": "445 - Open",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156314",
+        "name": "146 - Evan Aamodt",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156355",
+        "name": "101 - Internal Usage",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156356",
+        "name": "102 - Samples",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156358",
+        "name": "927 - Open",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156359",
+        "name": "* Open - RH Sales Leader",
+        "parent": "1114268",
+        "level": "2",
+        "items": [
+          {
+            "id": "1156360",
+            "name": "106 - Sustainable Solutions",
+            "parent": "1156359",
+            "level": "3",
+            "items": [ ]
+          }
+        ]
+      },
+      {
+        "id": "1156435",
+        "name": "kjn - Karen Nykamp",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156446",
+        "name": "noh - Nicole Hopp",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156635",
+        "name": "149 - .Open",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1156902",
+        "name": "keb - Kathy Bowles",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1158291",
+        "name": "aac - Ashley Campbell",
+        "parent": "1114268",
+        "level": "2",
+        "items": [ ]
+      },
+      {
+        "id": "1144700",
+        "name": "* Hal Grossman Sales Leader",
+        "parent": "1114268",
+        "level": "2",
+        "items": [
+          {
+            "id": "1144717",
+            "name": "* Glen Huizenga Sales Leader",
+            "parent": "1144700",
+            "level": "3",
+            "items": [
+              {
+                "id": "1148035",
+                "name": "* Dawn Gerdeman Sales Leader",
+                "parent": "1144717",
+                "level": "4",
+                "items": [
+                  {
+                    "id": "1144748",
+                    "name": "135 - Shelby Hunter",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1144761",
+                    "name": "505 - Dave Hoy",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1144762",
+                    "name": "545 - Chris King",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1144766",
+                    "name": "914 - Tom Jones",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1144767",
+                    "name": "915 - Dawn Gerdeman",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1144768",
+                    "name": "916 - Shannon Budzynski",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1145823",
+                    "name": "655 - Heather Meixel",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1145825",
+                    "name": "657 - Bill Riddick",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1145829",
+                    "name": "661 - Bridget Villeneuve",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1145830",
+                    "name": "662 - Renee McCoppin",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1145866",
+                    "name": "920 - Pete Evans",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1144742",
+                    "name": "912 - Jack MIller",
+                    "parent": "1148035",
+                    "level": "5",
+                    "items": [ ]
+                  }
+                ]
+              },
+              {
+                "id": "1144743",
+                "name": "114 - Dan Fase",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1156700",
+                "name": "115 - Derek Herrema",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144745",
+                "name": "118 - Steve Dunlap",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144746",
+                "name": "120 - Mike Klemp",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144747",
+                "name": "133 - Hutch Putney",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144750",
+                "name": "138 - Erik Beckstrom",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1146090",
+                "name": "148 - Sarah Gibson",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144753",
+                "name": "260 - Glen Huizenga",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144724",
+                "name": "263 - Steve Rydbeck",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144754",
+                "name": "264 - Warren Harrison",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1156942",
+                "name": "280 - Brian Pleune",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144758",
+                "name": "401 - Steve Somers",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144759",
+                "name": "405 - Charlie Heiler",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144760",
+                "name": "501 - Dan Jez",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1146169",
+                "name": "670 - Chuck DeMorrow",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1156357",
+                "name": "336 - Patrick Dermyer",
+                "parent": "1144717",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          },
+          {
+            "id": "1144718",
+            "name": "000 - Unassigned",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144720",
+            "name": "139 - Hal Grossman",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144721",
+            "name": "140 - Inside Sales - Kelly Suchecki",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144722",
+            "name": "141 - Bill Ogden",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144725",
+            "name": "265 - Jack Scheerhorn",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144737",
+            "name": "403 - Inside Sales - Luanne Bytwerk",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144738",
+            "name": "544 - Don Spokes",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1145902",
+            "name": "668 - Jerry Heuerman",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1147862",
+            "name": "117 - Chris LaVallee",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1148034",
+            "name": "* Chris Dishong",
+            "parent": "1144700",
+            "level": "3",
+            "items": [
+              {
+                "id": "1145819",
+                "name": "651 - Linda Barnes",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145820",
+                "name": "652 - Steve Miller",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145821",
+                "name": "653 - Tom Hennessey",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145822",
+                "name": "654 - Randy Sanner",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145824",
+                "name": "656 - Mike Rachuba",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145826",
+                "name": "658 - Chris Kelley",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145827",
+                "name": "659 - Open - LB",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145828",
+                "name": "660 - Sara Frost",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145832",
+                "name": "664 - Bowling Green - House",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145833",
+                "name": "665 - Cindy Krauzer",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145872",
+                "name": "666 - Peter Feeny",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145901",
+                "name": "667 - Perfection",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148105",
+                "name": "676 - Kristi Graf",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148106",
+                "name": "677 - Gina Cafolla",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145818",
+                "name": "650 - Jill Kegler",
+                "parent": "1148034",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          },
+          {
+            "id": "1148036",
+            "name": "* Other",
+            "parent": "1144700",
+            "level": "3",
+            "items": [
+              {
+                "id": "1144705",
+                "name": "143 - Cintas - LeighAnn Beede",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144706",
+                "name": "145 - Customer Service",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144709",
+                "name": "327 - .open",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144712",
+                "name": "509 - Open - DS",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144713",
+                "name": "908 - House - Rochester Hills",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144714",
+                "name": "910 - Open - Rochester Hills",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144719",
+                "name": "137 - Luanne Bytwerk",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144723",
+                "name": "142 - Leigh Ann Beede",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144729",
+                "name": "331 - Dick Billadeau",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144734",
+                "name": "396 - Michael Steers",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144744",
+                "name": "116 - Kelly Snider",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144749",
+                "name": "136 - Edward Snider",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144752",
+                "name": "156 - .Open - GM",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144755",
+                "name": "267 - Sid Scheerhorn",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144757",
+                "name": "395 - NES - GR",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144763",
+                "name": "909 - NES - Rochester Hills",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144764",
+                "name": "911 - Maury Bric",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144765",
+                "name": "913 - MJ Healy",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145831",
+                "name": "663 - Bowling Green-Open",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1145883",
+                "name": "387 - Jim Kabat",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1146006",
+                "name": "386 - NES - BG",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148040",
+                "name": "132 - .Open - MP",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148042",
+                "name": "147 - Open - RH",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148043",
+                "name": "151 - Cleanwise",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148044",
+                "name": "321 - .Open",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148045",
+                "name": "900 - ICS",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1148099",
+                "name": "* Cleveland Sales Leader",
+                "parent": "1148036",
+                "level": "4",
+                "items": [
+                  {
+                    "id": "1146180",
+                    "name": "672 - Larry Sollisch",
+                    "parent": "1148099",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1146181",
+                    "name": "673 - Tom Johnson",
+                    "parent": "1148099",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1146182",
+                    "name": "674 - Jacki Fiocca",
+                    "parent": "1148099",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1146183",
+                    "name": "675 - House - Cleveland",
+                    "parent": "1148099",
+                    "level": "5",
+                    "items": [ ]
+                  },
+                  {
+                    "id": "1146179",
+                    "name": "671 - Howard Movshin",
+                    "parent": "1148099",
+                    "level": "5",
+                    "items": [ ]
+                  }
+                ]
+              },
+              {
+                "id": "1144704",
+                "name": "124 - Redistribution",
+                "parent": "1148036",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          },
+          {
+            "id": "1148037",
+            "name": "* Meijer",
+            "parent": "1144700",
+            "level": "3",
+            "items": [
+              {
+                "id": "1148041",
+                "name": "144 - Meijer - Fulfillment",
+                "parent": "1148037",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144710",
+                "name": "330 - MEIJER",
+                "parent": "1148037",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          },
+          {
+            "id": "1148038",
+            "name": "* P&G",
+            "parent": "1144700",
+            "level": "3",
+            "items": [
+              {
+                "id": "1144740",
+                "name": "602 - Harry Brown",
+                "parent": "1148038",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144741",
+                "name": "603 - P&G Territory",
+                "parent": "1148038",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144739",
+                "name": "601 - Nick Samuels",
+                "parent": "1148038",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          },
+          {
+            "id": "1158312",
+            "name": "678 - Wendy Morrison-White",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1158325",
+            "name": "679 - Chris Dishong",
+            "parent": "1144700",
+            "level": "3",
+            "items": [ ]
+          },
+          {
+            "id": "1144715",
+            "name": "* Chris Caird Sales Leader",
+            "parent": "1144700",
+            "level": "3",
+            "items": [
+              {
+                "id": "1144727",
+                "name": "275 - Chris Caird",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144728",
+                "name": "276 - Chris Caird",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144751",
+                "name": "150 - Tony Rewers",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144756",
+                "name": "274 - Chris Caird",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1146012",
+                "name": "669 - Ben Miller",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1147863",
+                "name": "122 - Mark Peterson",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              },
+              {
+                "id": "1144726",
+                "name": "273 - Chris Caird",
+                "parent": "1144715",
+                "level": "4",
+                "items": [ ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

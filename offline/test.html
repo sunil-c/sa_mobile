@@ -16,14 +16,41 @@
     <script src="scripts/sa-util.js"></script>
     <script src="scripts/sa-Report-Writer.js"></script>
     <script src="scripts/reports.js"></script>
+    <script src="scripts/sa-filter.js"></script>
 
     <script>
-        $('document').ready(function() {
-            
+        $('document').ready(function () {
+
             var colRpt = new ColumnReport();
             var rowRpt = new RowReport();
             var chartRpt = new ChartReport();
             var chartInstance = {};
+
+            var getOrgHierarchy = function (callBack) {
+                var data = {};
+                var url = "/data/nichols.json";
+                $.ajax({
+                    method: "GET",
+                    url: url,
+                    data: data,
+                    dataType: "script",
+                    beforeSend: function () {
+
+                    },
+                    success: function (data) {
+                        data = JSON.parse(data);
+                        var func = callBack;
+                        func.call(null, data);
+                    },
+                    error: function (err) {
+                        console.log("error: " + err);
+                    }
+                });
+            };
+
+            var showFilter = function () {
+                console.log("showFilter");
+            };
 
             var showColInfo = function () {
                 console.log("showColReport");
@@ -35,6 +62,11 @@
 
             var showChart = function () {
                 console.log("showChart");
+            };
+
+            var getFilter = function () {
+                console.log("getFilter");
+                getOrgHierarchy(renderFilter);
             };
 
             var getColData = function () {
@@ -75,13 +107,12 @@
                 }
 
                 chartInstance = chartRpt.renderChart(dataSource, series, "chart", {
-                    title:  data[0].header.title,
+                    title: data[0].header.title,
                     argumentField: data[0].header.argumentField,
                     valueAxisFormat: data[0].header.valueAxisFormat
                 });
 
             };
-
 
             var renderPieChart = function (data) {
                 console.log("renderPieChart");
@@ -115,8 +146,22 @@
                 $(x).appendTo('#row-data-out');
             };
 
+            var renderFilter = function (data) {
+                console.log("renderFilter");
+                var filter = new Filter();
+                var nodes = filter.processFilterData(data);
+                var baseEl = filter.getDropDownFilter(nodes, "Org", "orgList");
+
+                $("#filterArea").append(baseEl);
+            };
+
+            //private method for building UI
+            var buildAnchor = function (node) {
+                return $("<a href='#' />").text(node.name);
+            };
+
             var allroutes = function () {
-                //everything from the # onwards
+                //everything in url from the # onwards
                 var hash = window.location.hash;
                 //get the second token
                 var route = window.location.hash.slice(2);
@@ -138,11 +183,13 @@
                 '/col': showColInfo,
                 '/row': showRowInfo,
                 '/chart': showChart,
+                '/filter': showFilter,
                 '/getColData': getColData,
                 '/getRowData': getRowData,
                 '/getChartData': getChartData,
                 '/getPieChartData': getPieChartData,
-                '/getMultiChartData': getMultiChartData
+                '/getMultiChartData': getMultiChartData,
+                '/getFilter': getFilter
             };
 
             var router = Router(routes);
@@ -156,16 +203,31 @@
 
 <body>
     <ul>
+        <li><a href="#/filter">filter</a></li>
         <li><a href="#/col">column report</a></li>
         <li><a href="#/row">row report</a></li>
         <li><a href="#/chart">chart report</a></li>
     </ul>
 
+    <section data-route="filter" style="display:none;">
+        <h1>filter</h1>
+        <a href="#/getFilter">Build Filter</a>
+
+        <div id="filter-out">
+            <div class="container mgn-bottom-5">
+                <div class="row">
+                    <div id="filterArea" class="col-xs-12 col-sm-3 col-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section data-route="col" style="display:none;">
         <h1>column data</h1>
         <a href="#/getColData">Build Column Table</a>
 
-        <div id="col-data-out" >
+        <div id="col-data-out">
 
         </div>
     </section>
@@ -183,9 +245,9 @@
             <li><a href="#/getPieChartData">build pie chart</a></li>
             <li><a href="#/getMultiChartData">build multi series chart</a></li>
         </ul>
-        
-        
-        
+
+
+
         <div id="chart-data-out">
             <div id="chart"></div>
         </div>
