@@ -58,14 +58,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cache.appcache" />
     <Content Include="content\bootstrap-theme-flatly.css" />
     <Content Include="content\bootstrap-theme-flatly.min.css" />
     <Content Include="content\bootstrap-theme-superhero.css" />
     <Content Include="content\bootstrap-theme-superhero.min.css" />
     <Content Include="content\bootstrap-theme-united.css" />
     <Content Include="content\bootstrap-theme-united.min.css" />
-    <Content Include="filter.html" />
     <Content Include="profile.html" />
     <Content Include="content\app.css" />
     <Content Include="content\bootstrap-theme.css" />
@@ -91,7 +89,7 @@
     <Content Include="data\new-cust-revenue.json" />
     <Content Include="data\time-between-orders.json" />
     <Content Include="data\team-performance.json" />
-    <Content Include="data\nichols.json" />
+    <Content Include="data\test-hierarchy.json" />
     <None Include="Properties\PublishProfiles\tst-m.pubxml" />
     <None Include="scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="scripts\dx.viz.debug.js" />
