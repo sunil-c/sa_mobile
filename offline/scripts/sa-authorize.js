@@ -59,9 +59,6 @@ Authorize.prototype.login = function (userName, password, callBack) {
         },
         success: function (data) {
             console.log("Login Success", data);
-            //hide login controls
-            $("#loginSection").removeClass("show");
-            $("#loginSection").addClass("hide");
 
             self.setToken(data.token);
             self.setAuthorized(true);

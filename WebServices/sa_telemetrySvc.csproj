@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorizeController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\StatsController.cs" />

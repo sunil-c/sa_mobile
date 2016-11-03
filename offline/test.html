@@ -12,6 +12,7 @@
     <script src="scripts/director.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/handlebars.js"></script>
+    <script src="scripts/sa-error-handler.js"></script>
     <script src="scripts/sa-authorize.js"></script>
     <script src="scripts/sa-util.js"></script>
     <script src="scripts/sa-Report-Writer.js"></script>
@@ -20,6 +21,9 @@
 
     <script>
         $('document').ready(function () {
+            var errorhandler = new ErrorHandler(null);
+            //set the bubble up function
+            window.onerror = errorhandler.onError;
 
             var colRpt = new ColumnReport();
             var rowRpt = new RowReport();
@@ -29,6 +33,7 @@
             var getOrgHierarchy = function (callBack) {
                 var data = {};
                 var url = "/data/nichols.json";
+
                 $.ajax({
                     method: "GET",
                     url: url,
@@ -155,9 +160,9 @@
                 $("#filterArea").append(baseEl);
             };
 
-            //private method for building UI
-            var buildAnchor = function (node) {
-                return $("<a href='#' />").text(node.name);
+            //method for building canvas UI
+            var drawCanvas = function () {
+                
             };
 
             var allroutes = function () {
@@ -189,7 +194,8 @@
                 '/getChartData': getChartData,
                 '/getPieChartData': getPieChartData,
                 '/getMultiChartData': getMultiChartData,
-                '/getFilter': getFilter
+                '/getFilter': getFilter,
+                '/canvas': drawCanvas
             };
 
             var router = Router(routes);
@@ -207,7 +213,19 @@
         <li><a href="#/col">column report</a></li>
         <li><a href="#/row">row report</a></li>
         <li><a href="#/chart">chart report</a></li>
+        <li><a href="#/canvas">canvas test</a></li>
     </ul>
+
+    <section data-route="canvas" style="display:none;">
+        <h1>filter</h1>
+        <a href="#/getFilter">Build Canvas</a>
+
+        <div id="canvas-out">
+            <canvas id="canvas1">
+
+            </canvas>
+        </div>
+    </section>
 
     <section data-route="filter" style="display:none;">
         <h1>filter</h1>

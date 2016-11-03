@@ -84,10 +84,13 @@ Filter.prototype.getData = function (url, params, callBack, errCallBack) {
 };
 Filter.prototype.getDropDownFilter = function (nodes, filterName, filterID) {
 
-    //create the base
+    //make sure we have a name and id
+    filterName = filterName || "filterName" + (Math.random() * 50).toString();
+    filterID = filterID || "filterID" + (Math.random() * 50).toString();
+    //create the base component
     var baseEl = $("<div class='dropdown pull-left dropdown-height-200' />").attr("id", filterID);
-    baseEl.append($("<button class='btn btn-sm dropdown-toggle control-150' type='button' id='menu1' data-toggle='dropdown' />").text(filterName).append("<span class='caret' />"));
-    baseEl.append($('<ul data-level="1" class="dropdown-menu" role="menu" aria-labelledby="menu1" />'));
+    baseEl.append($("<button class='btn btn-sm dropdown-toggle control-150' type='button' data-toggle='dropdown' />").attr("id", "menu" + filterID).text(filterName).append("<span class='caret' />"));
+    baseEl.append($('<ul data-level="1" class="dropdown-menu" role="menu" />').attr("aria-labelledby", "menu" + filterID));
 
     var parent = 0, node, ul, parentLI, newLevel, ulExists;
 

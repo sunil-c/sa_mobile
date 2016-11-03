@@ -33,6 +33,10 @@
     Handlebars.registerHelper('eq', function (a, b, options) {
         return a === b ? options.fn(this) : options.inverse(this);
     });
+    //init the error object
+    var errorhandler = new ErrorHandler(gServicePath + "/error/logerror");
+    //set the bubble up function
+    window.onerror = errorhandler.onError;
 
     //initialize the Util object
     var util = new Util();
@@ -148,6 +152,11 @@
 
     var getCompanyStats = function () {
         console.log('getStatsForCompanies');
+
+        //hide login controls
+        $("#loginSection").removeClass("show");
+        $("#loginSection").addClass("hide");
+
         getReportData(0, 0, renderCompanyStats);
         return;
     };
@@ -172,6 +181,7 @@
         $('#companyLoadStatsData').empty();
         $(x).appendTo('#companyLoadStatsData');
         util.showSection('loadStats');
+
     };
     var renderCompanyReports = function (compData) {
         console.log('renderCompanyReports');

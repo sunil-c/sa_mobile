@@ -2,7 +2,6 @@
     'use strict';
 
     console.log('starting script');
-
     var gServicePath = "",
         gAuthPath = "",
         gCompanyID = 0,
@@ -16,6 +15,13 @@
         gAuthPath = '/api';
         gServicePath = '/api';
     }
+    var errorhandler = new ErrorHandler(gServicePath + "/error/logerror");
+    var onerror = function (msg, url, line, col, error) {
+        errorhandler.onError(msg, url, line, col, error);
+    };
+    //set the bubble up function
+    window.onerror = onerror;
+
     //initialize the authorization object
     var authorize = new Authorize({}, gAuthPath);
     //initialize the Util object
@@ -211,7 +217,9 @@
 
     var getAvailableReports = function () {
         console.log('getAvailableReports');
-        //get the stats across all companies
+        //hide login controls
+        $("#loginSection").removeClass("show");
+        $("#loginSection").addClass("hide");
 
         // collect the criteria for the call
         var parameters = {

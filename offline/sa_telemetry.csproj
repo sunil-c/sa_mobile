@@ -74,7 +74,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="potential.html" />
     <Content Include="scripts\sa-authorize.js" />
-    <Content Include="scripts\Canvas.js" />
     <Content Include="scripts\profile.js" />
     <Content Include="scripts\cldr.js" />
     <Content Include="scripts\cldr\event.js" />
@@ -114,6 +113,7 @@
     <Content Include="data\vectormap-data\usa.js" />
     <Content Include="data\vectormap-data\world.js" />
     <Content Include="scripts\potential.js" />
+    <Content Include="scripts\sa-error-handler.js" />
     <Content Include="scripts\sa-filter.js" />
     <Content Include="scripts\sa-Report-Writer.js" />
     <Content Include="scripts\sa-util.js" />
