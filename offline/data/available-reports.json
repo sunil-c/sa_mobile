@@ -1,0 +1,26 @@
+﻿[
+  {
+    "reportID": "1",
+    "reportName": "Growing Customers",
+    "hasRoute": "true",
+    "route": "report/1"
+  },
+  {
+    "reportID": "3",
+    "reportName": "Team Performance",
+    "hasRoute": "true",
+    "route": "report/3"
+  },
+  {
+    "reportID": "6",
+    "reportName": "Trends",
+    "hasRoute": "true",
+    "route": "chart"
+  },
+  {
+    "reportID": "7",
+    "reportName": "Customer Potential",
+    "hasRoute": "true",
+    "route": "potential"
+  }
+]

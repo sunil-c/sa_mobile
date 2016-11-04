@@ -1,7 +1,12 @@
 ﻿var ErrorHandler = function (serviceURL) {
     if (this instanceof ErrorHandler) {
-        //something
+        //instance variables
         this.serviceURL = serviceURL || "";
+        this.msg = "";
+        this.error = "";
+        this.errorURL = "";
+        this.line = 0;
+        this.col = 0;
     } else {
         return new ErrorHandler(serviceURL);
     }
@@ -9,14 +14,29 @@
         return this.serviceURL;
     }
 };
+ErrorHandler.prototype.getError = function () {
+    var formattedMsg;
+    formattedMsg  = !this.msg ? '' : '\nMessage: ' + this.msg;
+    formattedMsg += !this.errorURL ? '' : '\nLocation: ' + this.errorURL;
+    formattedMsg += !this.line ? '' : '\nLine: ' + this.line;
+    formattedMsg += !this.col ? '' : '\nColumn: ' + this.col;
+    formattedMsg += !this.error ? '' : '\nError: ' + this.error;
+
+    return formattedMsg;
+};
 ErrorHandler.prototype.onError = function (msg, url, line, col, error) {
     // Note that col & error are new to the HTML 5 spec and may not be 
-    // supported in every browser.  It worked for me in Chrome.
-    var extra = !col ? '' : '\ncolumn: ' + col;
-    extra += !error ? '' : '\nerror: ' + error;
+    // supported in every browser. 
+
+    //store in instance variables
+    this.msg = msg;
+    this.errorURL = url;
+    this.line = line;
+    this.col = !col ? '' : col;
+    this.error = !error ? '' : error;
 
     // You can view the information in an alert to see things working like this:
-    //alert("Error: " + msg + "\nurl: " + url + "\nline: " + line + extra);
+    //alert("Error: " + this.getError());
 
     // Report this error via ajax so you can keep track of what pages have JS issues
     //ignore result

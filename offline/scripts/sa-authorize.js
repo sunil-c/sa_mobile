@@ -35,6 +35,12 @@ Authorize.prototype.setCallBack = function (val) {
 };
 
 Authorize.prototype.login = function (userName, password, callBack) {
+    //temporary bypass
+    this.setToken("12345");
+    this.setAuthorized(true);
+    callBack();
+    return;
+
     //check the callback
     if (typeof callBack === "function") {
         this.setCallBack(callBack)

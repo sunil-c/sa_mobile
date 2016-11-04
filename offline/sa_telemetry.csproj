@@ -90,6 +90,7 @@
     <Content Include="data\time-between-orders.json" />
     <Content Include="data\team-performance.json" />
     <Content Include="data\test-hierarchy.json" />
+    <Content Include="data\available-reports.json" />
     <None Include="Properties\PublishProfiles\tst-m.pubxml" />
     <None Include="scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="scripts\dx.viz.debug.js" />

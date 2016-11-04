@@ -16,8 +16,24 @@
         gServicePath = '/api';
     }
     var errorhandler = new ErrorHandler(gServicePath + "/error/logerror");
+
+    var buildErrorMessage = function (msg) {
+        var domObj = $('<div class="alert alert-warning alert-dismissible fade in" role="alert" />');
+        var btnObj = $('<button type="button" class="close" data-dismiss="alert" aria-label="Close" />');
+        var spanObj = $('<span aria-hidden="true">&times;</span>');
+        var pObj = $('<p />').text(msg);
+        btnObj.append(spanObj);
+        domObj.append(btnObj);
+        domObj.append(pObj);
+
+        return domObj;
+    }
     var onerror = function (msg, url, line, col, error) {
         errorhandler.onError(msg, url, line, col, error);
+        var domObj = buildErrorMessage(errorhandler.getError());
+        $("#msgContent").append(domObj);
+
+        return true;
     };
     //set the bubble up function
     window.onerror = onerror;
@@ -57,7 +73,6 @@
     };
     var loginRoute = function () {
         console.log('loginRoute');
-
         if (!authorize.isAuthorized()) {
             //call authorize code here
             authorize.login($('#userNameInp').val, $('#passwordInp').val, getAvailableReports);
@@ -126,7 +141,7 @@
         //normally there would be a call to the service to get the filters
         //and then some coe to iterate and render them
         var filter = new Filter();
-        filter.getData("/data/nichols.json", {}, renderOrgDD, renderOrgDD);
+        filter.getData("/data/test-hierarchy.json", {}, renderOrgDD, renderOrgDD);
         filter = new Filter();
         filter.getData("/data/time-hierarchy.json", {}, renderTimeDD, renderTimeDD);
         
@@ -229,26 +244,41 @@
         var token = authorize.getToken();
         //make a call
         $.ajax({
-            type: 'GET',
-            data: null,
-            contentType: 'application/x-www-form-urlencoded',
-            url: gServicePath + '/reports/getavailablereports?token=' + token,
-            dataType: "json",
+            method: "GET",
+            url: '/data/available-reports.json',
+            dataType: "script",
             beforeSend: function () {
 
             },
             success: function (data) {
-                console.log("Avaliable Reports", data);
-
+                data = JSON.parse(data);
                 renderAvailableReports(data);
             },
             error: function (err) {
                 console.log("Error obtaining reports: " + err.responseText);
-            },
-            complete: function () {
-
             }
         });
+        //$.ajax({
+        //    type: 'GET',
+        //    data: null,
+        //    contentType: 'application/x-www-form-urlencoded',
+        //    url: gServicePath + '/reports/getavailablereports?token=' + token,
+        //    dataType: "json",
+        //    beforeSend: function () {
+
+        //    },
+        //    success: function (data) {
+        //        console.log("Avaliable Reports", data);
+
+        //        renderAvailableReports(data);
+        //    },
+        //    error: function (err) {
+        //        console.log("Error obtaining reports: " + err.responseText);
+        //    },
+        //    complete: function () {
+
+        //    }
+        //});
     };
 
     var chartRoute = function () {
